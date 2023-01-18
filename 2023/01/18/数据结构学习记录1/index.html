@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/archives" />
+    <link rel="canonical" href="http://example.com/2023/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            归档 |
+            数据结构学习记录1 |
         
         MyBlog
     </title>
@@ -109,7 +109,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/archives"  >
                                     
                                         
@@ -162,7 +162,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/archives"  >
                              
                                 
@@ -192,45 +192,114 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[3]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录1</h1></span>
             </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
-                        >数据结构学习记录1</a>
-                        <span class="article-date">01-18</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
-                        >我的第一篇博客文章</a>
-                        <span class="article-date">01-17</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/08/Start/"
-                        >Start</a>
-                        <span class="article-date">01-08</span>
-                    </li>
-                
-            </ul>
-        </section>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/knight.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Knight</span>
+                            
+                                <span class="author-label">AI</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 11:39:45</span>
+        <span class="mobile">2023-01-18 11:39</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="串和广义表"><a href="#串和广义表" class="headerlink" title="串和广义表"></a>串和广义表</h1><h3 id="串的定义和运算"><a href="#串的定义和运算" class="headerlink" title="串的定义和运算"></a>串的定义和运算</h3><p>1.串是由零个或任意多个字符组成的有限序列<br>2.子串是串中任意连续的字符组成的子序列<br>注：空串是任意串的子串，任意串是自身的子串<br>3.模式匹配是一种求子串在主串中第一次出现的第一个字符的位置<br>4.串的操作有很多种，比如赋值，复制，求串的长度，串的连接，插入删除等等<br>5.串的存储结构有顺序存储和链式存储<br>6.在实际应用中，可以采用堆分配存储（动态存储）<br>堆分配存储的方法：<br>（1）开辟一块地址连续的存储空间，该存储空间称为“堆”<br>（2）建立一个索引表，用来存储串的名字，长度和该串在堆中的起始位置<br>（3）程序执行过程中，每产生一个串，系统就从堆中分配一块大小和串长度相等的连续空间，用来存储该串的值，并且在索引表中增加一个索引项，用于记录串的信息。</p>
+<h3 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h3><p>1.广义表是n个数据元素的有序序列，它是线性表的推广，也称为“列表”<br>2.广义表是一种多层次的数据结构，其中的元素可以是单元素，也可以是子表<br>3.广义表可以是递归的表，即它可以是自身的子表<br>4.广义表可以被其他表所共享<br>5.广义表常采用链式存储结构，有头尾表示法和孩子兄弟表示法两种存储方式</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：数据结构学习记录1</li>
+        <li>本文作者：Knight</li>
+        <li>创建时间：2023-01-18 11:39:45</li>
+        <li>
+            本文链接：http://youxia123-cloud.github.io/2023/01/18/数据结构学习记录1/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">我的第一篇博客文章</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B2%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8"><span class="nav-text">串和广义表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%AE%97"><span class="nav-text">串的定义和运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E8%A1%A8"><span class="nav-text">广义表</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -301,6 +370,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -429,6 +515,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
