@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/tags" />
+    <link rel="canonical" href="http://example.com/2023/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%BA%AA%E5%BD%952/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            标签 |
+            数据结构学习纪录2 |
         
         MyBlog
     </title>
@@ -125,7 +125,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/tags"  >
                                     
                                         
@@ -209,7 +209,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/tags"  >
                              
                                 
@@ -253,18 +253,184 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-header">
-                <h1 style="margin: 15px 5px; margin-bottom: 30px;">标签</h1>
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习纪录2</h1></span>
             </div>
-            <div class="tagcloud-content">
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1rem;">博客</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1rem;">数据结构</a>
-            </div>
-        </div>
-    </div>
 
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/knight.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Knight</span>
+                            
+                                <span class="author-label">AI</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 17:40:10</span>
+        <span class="mobile">2023-01-18 17:40</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="树形结构"><a href="#树形结构" class="headerlink" title="树形结构"></a>树形结构</h1><h3 id="树的定义："><a href="#树的定义：" class="headerlink" title="树的定义："></a>树的定义：</h3><p>1.树是n（n&gt;&#x3D;0）个有限数据元素的集合。</p>
+<p>2.树满足的条件：</p>
+<p>（1）有且仅有一个根节点</p>
+<p>（2）其余的节点分为m（m&gt;&#x3D;0）个互不相交的非空集合，其中每个集合本身就是一棵树，称为根的子树</p>
+<h3 id="树的表示方法："><a href="#树的表示方法：" class="headerlink" title="树的表示方法："></a>树的表示方法：</h3><p>1.树形表示法</p>
+<p>2.嵌套集合表示法</p>
+<p>3.凹入表示法</p>
+<p>4.广义表示法</p>
+<h3 id="树的基本术语："><a href="#树的基本术语：" class="headerlink" title="树的基本术语："></a>树的基本术语：</h3><p>1.结点：树的结点包含一个数据元素及若干指向其子树的分支</p>
+<p>2.结点的度：结点所拥有的分支数目或后继结点个数</p>
+<p>3.树的度：树中各结点度的最大值</p>
+<p>4.叶子（终端结点）：度为零的结点称为叶子结点</p>
+<p>5.分支（非终端结点）：度不为零的结点</p>
+<p>6.孩子结点：一个结点的后继称为该结点的孩子结点</p>
+<p>7.双亲结点：一个结点是其后继结点的双亲节点</p>
+<p>8.兄弟结点：同一个双亲结点下的孩子节点互称为兄弟结点</p>
+<p>9.堂兄弟：双亲互为兄弟的两个结点互称为堂兄弟</p>
+<p>10.子孙结点：一个结点的所有子树的结点</p>
+<p>11.祖先结点：从树根结点到达一个结点路径上的所有结点称为该结点的祖先结点</p>
+<p>12.结点的层次：根结点的层次为1，其余结点的层次等于它双亲结点的层次加一</p>
+<p>13.树的深度：树中结点的最大层次称为树的深度（或高度）</p>
+<p>14.有序树、无序树：交换某结点各子树的相对位置，会构成不同的树，这样的树称为有序树，反之则是无序树</p>
+<p>15.森林：m（m&gt;&#x3D;0）棵互不相交的树的集合</p>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p>1.二叉树是有n（n&gt;&#x3D;0）个结点的有限集合，该集合或者为空，或者由一个根结点及两个不相交的子树组成（左子树和右子树）</p>
+<p>2.左子树和右子树同样都是二叉树</p>
+<p>3.二叉树是特殊的有序树</p>
+<p>4.二叉树的性质：</p>
+<p>（1）在二叉树的第i层至多有2^(i-1)个结点</p>
+<p>（2）深度为h的二叉树中至多有(2^h) - 1结点</p>
+<p>（3）对任意一棵二叉树T，如果其叶子结点数为n0，度为2的结点数为n2，则有n0 &#x3D; n2 + 1</p>
+<p>（4）具有n个结点的完全二叉树的深度为log2n（以2为底的对数） + 1</p>
+<p>（5）如果一棵n个结点的完全二叉树的结点按层次有：</p>
+<p>如果i&#x3D;1，结点i是根结点，无双亲；如果i&gt;1。则其双亲结点是结点i&#x2F;2</p>
+<p>如果2i&gt;n，则结点i无左孩子，该结点为叶子结点；否则其左孩子是结点2i</p>
+<p>如果2i+1&gt;n，则结点i无右孩子，该结点为叶子结点；否则其右孩子是结点2i+1</p>
+<p>5.二叉树的存储结构：</p>
+<p>（1）顺序存储</p>
+<p>（2）链式存储</p>
+<p>6.二叉树的遍历方式：</p>
+<p>（1）先序遍历：根—-左—–右</p>
+<p>（2）中序遍历：左—-根—-右</p>
+<p>（3）后序遍历：左—-右—-根</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：数据结构学习纪录2</li>
+        <li>本文作者：Knight</li>
+        <li>创建时间：2023-01-18 17:40:10</li>
+        <li>
+            本文链接：http://youxia123-cloud.github.io/2023/01/18/数据结构学习纪录2/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">数据结构学习记录1</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84"><span class="nav-text">树形结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-text">树的定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">树的表示方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD%EF%BC%9A"><span class="nav-text">树的基本术语：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">二叉树</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
 
 
                 
@@ -336,6 +502,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -464,6 +647,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
