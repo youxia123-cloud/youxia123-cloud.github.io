@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/categories" />
+    <link rel="canonical" href="http://example.com/2023/01/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            分类 |
+            数据结构学习记录3 |
         
         MyBlog
     </title>
@@ -141,7 +141,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/categories"  >
                                     
                                         
@@ -224,7 +224,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/categories"  >
                              
                                 
@@ -254,16 +254,165 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-list-container">
-        <div class="tagcloud-header">
-            <h1 style="margin: 15px 0px; margin-bottom: 30px;">分类</h1>
-        </div>
-        <div class="category-list-content">
-            <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a><span class="all-category-list-count">2</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="all-category-list-count">3</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="all-category-list-count">1</span></li></ul>
-        </div>
-        <div class="category-comments">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录3</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/knight.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Knight</span>
+                            
+                                <span class="author-label">AI</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-19 16:26:54</span>
+        <span class="mobile">2023-01-19 16:26</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="图结构"><a href="#图结构" class="headerlink" title="图结构"></a>图结构</h1><h3 id="图的定义："><a href="#图的定义：" class="headerlink" title="图的定义："></a>图的定义：</h3><p>1.图是一个由非空的顶点集合和一个描述顶点之间的关系即边（Edges）的有限集合组成的一种数据结构。</p>
+<p>可以定义为一个二元组：</p>
+<p>G&#x3D;（V,E）</p>
+<p>V是顶点集合，E是边的集合</p>
+<p>2.按照图中的边是否有方向，图分为有向图和无向图两类</p>
+<h3 id="图的相关术语："><a href="#图的相关术语：" class="headerlink" title="图的相关术语："></a>图的相关术语：</h3><p>（1）无向图：在一个图中，每条边都没有方向</p>
+<p>（2）有向图：在一个图中，每条边都有方向</p>
+<p>（3）无向完全图：在一个无向图中，任意两个顶点都有一条直接边相连。在一个含有n个顶点的无向完全图中，有（n-1）n&#x2F;2 条边</p>
+<p>（4）有向完全图：在一个有向图中，任意两顶点之间都有方向互为相反的两条弧相连接</p>
+<p>（5）顶点的度：一个顶点所拥有的边数</p>
+<p>（6）顶点的入度：在有向图中，一个顶点拥有的弧头的数目</p>
+<p>（7）顶点的出度：在有向图中，一个顶点拥有的弧尾的数目</p>
+<p>一个顶点的度 &#x3D;  顶点的入度 + 顶点的出度</p>
+<p>（8）权：图的边或弧有时具有与它相关的数据信息，这个数据信息称为权（权重）</p>
+<p>（9）网：带权的图称为网，同样可以分为有向网和无向网</p>
+<p>（10）回路或环：在一个路径中，若其第一个顶点和最后一个顶点是相同的，则称该路径为一个回路或环</p>
+<p>（11）简单路径：表示路径的顶点序列中的顶点各不相同</p>
+<p>（12）简单回路：除了第一个和最后一个顶点之外，其余各顶点均不重复出现</p>
+<p>（13）稀疏图：有很少条边的图称为稀疏图</p>
+<p>（14）连通图：无向图中，任意两个顶点都是连通的图称为连通图。无向图的极大连通子图称为连通分量</p>
+<p>（15）强连通图：对于有向图来说，图中任意一对顶点Vi和Vj均有从一个顶点Vi到另一个顶点Vj有路径，也有从Vj到Vi的路径，则称该有向图是强连通图。有向图的极大强连通子图称为强连通分量</p>
+<p>（16）生成树：连通图G的一个子图如果是一棵包含G的所有顶点的树，则该子图称为G的生成树</p>
+<h3 id="图的存储结构："><a href="#图的存储结构：" class="headerlink" title="图的存储结构："></a>图的存储结构：</h3><p>（1）邻接矩阵</p>
+<p>（2）邻接表</p>
+<h3 id="图的遍历："><a href="#图的遍历：" class="headerlink" title="图的遍历："></a>图的遍历：</h3><p>1.深度优先搜索（DFS）</p>
+<p>2.广度优先搜索（BFS）</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：数据结构学习记录3</li>
+        <li>本文作者：Knight</li>
+        <li>创建时间：2023-01-19 16:26:54</li>
+        <li>
+            本文链接：http://youxia123-cloud.github.io/2023/01/19/数据结构学习记录3/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">算法学习记录1</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
             
         </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E7%BB%93%E6%9E%84"><span class="nav-text">图结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-text">图的定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD%EF%BC%9A"><span class="nav-text">图的相关术语：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-text">图的存储结构：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%EF%BC%9A"><span class="nav-text">图的遍历：</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
     </div>
 </div>
 
@@ -337,6 +486,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -465,6 +631,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
