@@ -307,4 +307,32 @@
         <tag>机器学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器学习记录2</title>
+    <url>/2023/01/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
+    <content><![CDATA[<h1 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h1><h4 id="一、线性回归"><a href="#一、线性回归" class="headerlink" title="一、线性回归"></a>一、线性回归</h4><p>1.线性回归要把离散转换为连续</p>
+<p>2.离散属性的处理：</p>
+<p>若有序，则连续化；否则，转换为k维向量</p>
+<p>3.使用最小二乘法求解目标函数的最小值</p>
+<h4 id="二、多元线性回归"><a href="#二、多元线性回归" class="headerlink" title="二、多元线性回归"></a>二、多元线性回归</h4><p>1.引入正则化（归纳偏好）</p>
+<h4 id="三、广义线性模型"><a href="#三、广义线性模型" class="headerlink" title="三、广义线性模型"></a>三、广义线性模型</h4><p>1.对数线性回归，用线性回归来逼近对数的目标</p>
+<h4 id="四、对率回归（logistic-regression）"><a href="#四、对率回归（logistic-regression）" class="headerlink" title="四、对率回归（logistic regression）"></a>四、对率回归（logistic regression）</h4><p>1.二分类任务，使用对率函数</p>
+<p>2.对率回归的优点：</p>
+<p>（1）无需事先假设数据分布</p>
+<p>（2）可得到“类别”的近似概率预测</p>
+<p>（3）可直接应用现有的数值优化算法求取最优解</p>
+<p>3.对率回归是分类学习算法</p>
+<h4 id="五、类别不平衡"><a href="#五、类别不平衡" class="headerlink" title="五、类别不平衡"></a>五、类别不平衡</h4><p>1.不同类别的样本比例相差很大，“小类”往往更重要</p>
+<p>2.常用的类别不平衡学习方法：</p>
+<p>（1）过采样</p>
+<p>（2）欠采样</p>
+<p>（3）阈值移动</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
 </search>
