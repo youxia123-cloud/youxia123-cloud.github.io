@@ -335,4 +335,23 @@
         <tag>机器学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器学习记录3</title>
+    <url>/2023/01/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/</url>
+    <content><![CDATA[<h1 id="XGBoost"><a href="#XGBoost" class="headerlink" title="XGBoost"></a>XGBoost</h1><p>之前只是听说过xgboost这个模型，但是没有具体的学习。这次的学习总结就来具体的认识xgboost，这里没有深入的研究其中的数学原理，仅仅是从初学者的角度来认识，一些地方存在错误是在所难免的，希望大家多多指正交流。</p>
+<p>1.Xgboost是一个监督模型，其对应于特殊的决策树——分类回归树（CART树）</p>
+<p>2.用CART树做预测：将各个树的预测分数相加</p>
+<p>3.对于监督学习来说，建立模型后的参数调整是非常重要的，知识藏在这些参数之中</p>
+<p>4.xgboost的目标函数包含了损失函数和正则项</p>
+<p>5.xgboost模型由CART树组成，参数存在于每棵CART树中</p>
+<p>6.xgboost用GBDT（梯度提升树）算法分步骤优化目标函数，先优化第一棵树，在优化第二棵，直到第k棵</p>
+<p>7.由官方的文档我们可以得知，xgboost代表极端梯度提升</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
 </search>
