@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/" />
+    <link rel="canonical" href="http://example.com/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            机器学习记录4 |
+            机器学习记录5 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">机器学习记录4</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">机器学习记录5</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-28 00:00:49</span>
-        <span class="mobile">2023-01-28 00:00</span>
+        <span class="pc">2023-01-28 00:04:56</span>
+        <span class="mobile">2023-01-28 00:04</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,15 +320,29 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Sklearn"><a href="#Sklearn" class="headerlink" title="Sklearn"></a>Sklearn</h1><h3 id="一、基本概念："><a href="#一、基本概念：" class="headerlink" title="一、基本概念："></a>一、基本概念：</h3><p>1.sklearn是一个开源的python机器学习算法库</p>
-<h3 id="二、-线性分类"><a href="#二、-线性分类" class="headerlink" title="二、 线性分类"></a>二、 线性分类</h3><p>1.鸢尾花数据的分类：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">X_iris,y_iris = iris.data,iris.target</span><br><span class="line">X,y = X_iris[:, :<span class="number">2</span>],y_iris</span><br><span class="line"><span class="comment"># print(X.shape)</span></span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.25</span>,random_state=<span class="number">33</span>)</span><br><span class="line"><span class="built_in">print</span>(X_train.shape,y_train.shape)</span><br><span class="line"></span><br><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train = scaler.transform(X_train)</span><br><span class="line">X_test  = scaler.transform(X_test)</span><br><span class="line"></span><br><span class="line">colors = [<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;greenyellow&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(colors)):</span><br><span class="line">	xs = X_train[:,<span class="number">0</span>][y_train == i]</span><br><span class="line">	ys = X_train[:,<span class="number">1</span>][y_train == i]</span><br><span class="line">	plt.scatter(xs,ys,c=colors[i])</span><br><span class="line">plt.legend(iris.target_names)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Sepal length&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Sepal width&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment"># 山鸢尾setosa</span></span><br><span class="line"><span class="comment"># 杂色鸢尾vcersicolor</span></span><br><span class="line"><span class="comment"># 弗吉尼亚鸢尾 virginca0</span></span><br><span class="line"><span class="comment"># 上面的模型对山鸢尾的分类效果很好，但是不能将杂色鸢尾和弗吉尼亚鸢尾很好的分开</span></span><br></pre></td></tr></table></figure></div>
-
-<p>2.在线性模型中使用梯度下降法：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> SGDClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">X_iris,y_iris = iris.data,iris.target</span><br><span class="line">X,y = X_iris[:, :<span class="number">2</span>],y_iris</span><br><span class="line"><span class="comment"># print(X.shape)</span></span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.25</span>,random_state=<span class="number">33</span>)</span><br><span class="line"><span class="built_in">print</span>(X_train.shape,y_train.shape)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">clf = SGDClassifier()</span><br><span class="line">clf.fit(X_train,y_train)</span><br><span class="line"><span class="built_in">print</span>(clf.coef_)</span><br><span class="line"></span><br><span class="line"><span class="comment"># sklearn中的三种流行的评估函数</span></span><br><span class="line"><span class="comment"># 精确率</span></span><br><span class="line"><span class="comment"># 召回率</span></span><br><span class="line"><span class="comment"># F1度量</span></span><br><span class="line">y_train_pred = clf.predict(X_train)</span><br><span class="line"><span class="built_in">print</span>(metrics.accuracy_score(y_train,y_train_pred))</span><br><span class="line">y_pred = clf.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(metrics.accuracy_score(y_test,y_pred))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(metrics.classification_report(y_test,y_pred,target_names=iris.target_names))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;----------------------------------&quot;</span>)</span><br><span class="line"><span class="comment"># 打印混淆矩阵</span></span><br><span class="line"><span class="built_in">print</span>(metrics.confusion_matrix(y_test,y_pred))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="二、支持向量机和图像识别"><a href="#二、支持向量机和图像识别" class="headerlink" title="二、支持向量机和图像识别"></a>二、支持向量机和图像识别</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> fetch_olivetti_faces</span><br><span class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score,KFold</span><br><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> sem</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line">faces = fetch_olivetti_faces()</span><br><span class="line"><span class="built_in">print</span>(faces.DESCR)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(faces.keys())</span><br><span class="line"></span><br><span class="line">svc_1 = SVC(kernel=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(faces.data,faces.target,test_size=<span class="number">0.25</span>,random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">evalute_cross_validation</span>(<span class="params">clf,X,y,K</span>)</span><br><span class="line">    cv = KFold(<span class="built_in">len</span>(y),K,shuffle=<span class="literal">True</span>,random_state=<span class="number">0</span>)</span><br><span class="line">    scores = cross_val_score(clf,X,y,cv=cv)</span><br><span class="line">    <span class="built_in">print</span>(scores)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Mean score:&#123;0:.3f&#125;(+/-&#123;1:.3f&#125;))&quot;</span>.<span class="built_in">format</span>(np.mean(scores),sem(scores))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">evalute_cross_validation(svc_1,X_train,y_train,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">train_and_evaluate</span>(<span class="params">clf,X_train,X_test,y_train,y_test</span>):</span><br><span class="line">    clf.fit(X_train,y_train)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Accuracy on training set:&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(clf.score(X_train,y_train))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Accuracy on testing set:&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(clf.score(X_test,y_test))</span><br><span class="line">    y_pred = clf.predict(X_test)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Classification Report:&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(metrics.classification_report(y_test,y_pred))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Confusion Matrix:&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(metrics.confusion_matrix(y_test,y_pred))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">train_and_evaluate(svc_1,X_train,X_test,y_train,y_test)</span><br></pre></td></tr></table></figure></div>
-
+                <h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><h3 id="一、决策树模型："><a href="#一、决策树模型：" class="headerlink" title="一、决策树模型："></a>一、决策树模型：</h3><p>1.决策树基于“树”的结构进行决策</p>
+<p>每个“内部”结点对应某个属性上的“测试”</p>
+<p>每个分支对应于该测试的一种可能结果（即该属性的某个取值）</p>
+<p>每个“叶结点”对应于一个“预测结果”</p>
+<p>2.学习过程：</p>
+<p>通过对训练样本的分析来确定“划分属性”（即内部结点所对应的属性）</p>
+<p>3.预测过程：</p>
+<p>将测试实例从根结点开始，沿着划分属性所构成的“判定测试序列”下行，直到叶结点	</p>
+<p>4.三种停止的条件：</p>
+<p>（1）当前结点包含的样本全属于同一类别，无需划分；</p>
+<p>（2）当前属性集为空，或是所有样本在所有属性上的取值相同，无需划分</p>
+<p>（3）当前结点所包含的样本集合为空，不能划分</p>
+<h3 id="二、信息增益的划分："><a href="#二、信息增益的划分：" class="headerlink" title="二、信息增益的划分："></a>二、信息增益的划分：</h3><p>1.信息增益直接以信息熵为基础，计算当前划分对信息熵所造成的影响（ID3算法使用）</p>
+<h3 id="三、其他属性的划分："><a href="#三、其他属性的划分：" class="headerlink" title="三、其他属性的划分："></a>三、其他属性的划分：</h3><p>1.增益率</p>
+<p>2.启发式：先从候选划分属性中找到信息增益高于平均水平的，再从中选取增益率最高的（C4.5算法使用）</p>
+<p>3.基尼系数</p>
+<p>在候选属性集合中，选取那个使划分后基尼系数最小的属性（CART算法使用）</p>
+<h3 id="四、决策树的剪枝："><a href="#四、决策树的剪枝：" class="headerlink" title="四、决策树的剪枝："></a>四、决策树的剪枝：</h3><p>1.剪枝是决策树用来防止过拟合的主要手段</p>
+<p>2.基本策略：</p>
+<p>预剪枝</p>
+<p>后剪枝</p>
+<p>3.在使用单个决策树的时候，一定要考虑剪枝</p>
+<h3 id="五、缺失值的处理："><a href="#五、缺失值的处理：" class="headerlink" title="五、缺失值的处理："></a>五、缺失值的处理：</h3><p>1.样本赋权，权重划分</p>
 
             </div>
 
@@ -336,11 +350,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：机器学习记录4</li>
+        <li>本文标题：机器学习记录5</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-01-28 00:00:49</li>
+        <li>创建时间：2023-01-28 00:04:56</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/01/28/机器学习记录4/
+            本文链接：http://youxia123-cloud.github.io/2023/01/28/机器学习记录5/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -364,29 +378,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">机器学习记录5</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/"
+                            href="/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">机器学习记录3</span>
+                                    <span class="post-nav-title-item">机器学习记录4</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -406,7 +405,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sklearn"><span class="nav-text">Sklearn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-text">一、基本概念：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB"><span class="nav-text">二、 线性分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%E5%92%8C%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB"><span class="nav-text">二、支持向量机和图像识别</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91"><span class="nav-text">决策树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="nav-text">一、决策树模型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A%E7%9A%84%E5%88%92%E5%88%86%EF%BC%9A"><span class="nav-text">二、信息增益的划分：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%92%E5%88%86%EF%BC%9A"><span class="nav-text">三、其他属性的划分：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E5%89%AA%E6%9E%9D%EF%BC%9A"><span class="nav-text">四、决策树的剪枝：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%9A%84%E5%A4%84%E7%90%86%EF%BC%9A"><span class="nav-text">五、缺失值的处理：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
