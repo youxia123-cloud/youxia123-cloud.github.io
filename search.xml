@@ -442,4 +442,33 @@
         <tag>java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器学习记录6</title>
+    <url>/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/</url>
+    <content><![CDATA[<h1 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h1><h3 id="一、支持向量机基本型："><a href="#一、支持向量机基本型：" class="headerlink" title="一、支持向量机基本型："></a>一、支持向量机基本型：</h3><p>1.线性分类器：正中间的鲁棒性好，泛化能力强</p>
+<p>2.间隔与支持向量</p>
+<p>3.寻找最大间隔（凸优化）</p>
+<p>4.寻找一个线性可分的超平面</p>
+<h3 id="二、对偶问题与解的特性："><a href="#二、对偶问题与解的特性：" class="headerlink" title="二、对偶问题与解的特性："></a>二、对偶问题与解的特性：</h3><p>1.使用拉格朗日乘子法</p>
+<p>2.解必须满足KKT条件</p>
+<p>3.解的稀疏性：训练完成后，最终模型仅与支持向量有关</p>
+<h3 id="三、求解方法："><a href="#三、求解方法：" class="headerlink" title="三、求解方法："></a>三、求解方法：</h3><p>1.求解方法：SMO（求解凸优化问题）</p>
+<p>2.通常使用所有支持向量求解的平均值</p>
+<h3 id="四、特征空间的映射："><a href="#四、特征空间的映射：" class="headerlink" title="四、特征空间的映射："></a>四、特征空间的映射：</h3><p>1.如果原始空间是有限维（属性数有限），那么一定存在一个高维特征空间使样本线性可分</p>
+<h3 id="五、核函数（kernel-function）："><a href="#五、核函数（kernel-function）：" class="headerlink" title="五、核函数（kernel function）："></a>五、核函数（kernel function）：</h3><p>1.绕过显式考虑特征映射，以及计算高维内积的困难</p>
+<p>2.Mercer定理：若一个对称函数所对应的核矩阵半正定，则它就能作为核函数使用</p>
+<p>3.任何一个核函数，都隐式地定义了一个RKHS（再生核希尔伯特空间）</p>
+<p>4.核函数选择成为了决定支持向量机性能的关键</p>
+<h3 id="六、如何使用SVM："><a href="#六、如何使用SVM：" class="headerlink" title="六、如何使用SVM："></a>六、如何使用SVM：</h3><p>1.以回归学习为例：</p>
+<p>允许模型输出与实际输出之间存在2ε的差别</p>
+<p>2.支持向量回归使用的ε-不敏感损失函数</p>
+<p>3.支持向量回归（SVR）</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
 </search>
