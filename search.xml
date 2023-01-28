@@ -408,4 +408,38 @@
         <tag>机器学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>java学习记录1</title>
+    <url>/2023/01/28/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</url>
+    <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h3 id="一、面向对象的概念："><a href="#一、面向对象的概念：" class="headerlink" title="一、面向对象的概念："></a>一、面向对象的概念：</h3><p>1.在面向对象（oop）中，程序被看做相互协作的对象集合，每个对象都是某个类的实例，所有类构成一个通过继承关系相联系的层次结构。</p>
+<p>2.面向对象的特性：</p>
+<p>封装、继承、多态</p>
+<h3 id="二、类和对象："><a href="#二、类和对象：" class="headerlink" title="二、类和对象："></a>二、类和对象：</h3><p>1.在java中使用class关键字来定义类，使用new关键字可以实例化一个对象。</p>
+<p>2.可以在类体中声明两种类的成员：成员变量和成员方法</p>
+<p>成员变量是类的属性</p>
+<p>3.一个方法最多只能有一个变长参数</p>
+<p>4.this关键字指向的是当前对象的引用 </p>
+<p>5.系统常用的类：</p>
+<p>Date类、GregorianCalendar类</p>
+<h3 id="三、访问控制符："><a href="#三、访问控制符：" class="headerlink" title="三、访问控制符："></a>三、访问控制符：</h3><p>1.java中有公共的（public）、私有的（private）、保护的（protected）和默认的（default）四种访问控制符</p>
+<p>public：所定义的类中的成员变量或方法能够被其他包中的类所访问</p>
+<p>default：什么访问控制符都不加，就是默认访问级别，表示一个类的资源仅允许在包内访问，同一子类不能访问</p>
+<p>protected：定义为保护级别的成员除了可以在同一类中被访问外，还可以被同一包中的类和子类访问，同一子类可以访问</p>
+<p>private：凡是private声明的成员变量或方法只能在类内访问</p>
+<p>2.static关键字表示“全局”、“静态”的概念。被static修饰的成员变量和成员方法独立于该类的任何对象，不依赖类的特定实例，被类的所有实例共享。</p>
+<p>static修饰的成员变量和成员方法习惯上被称为静态变量和静态方法，可以直接通过类名来访问</p>
+<p>3.final关键字表示“不可变”</p>
+<p>final成员变量在对象生成时只初始化一次</p>
+<p>4.package的使用：</p>
+<p>package是类（接口）的集合</p>
+<p>包名一般为小写，而类名的第一个字母一般为大写</p>
+<p>使用import关键字导入包</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>
