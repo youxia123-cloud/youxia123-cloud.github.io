@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/01/29/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/" />
+    <link rel="canonical" href="http://example.com/2023/01/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            java学习记录2 |
+            深度学习记录1 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">java学习记录2</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">深度学习记录1</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-29 13:55:42</span>
-        <span class="mobile">2023-01-29 13:55</span>
+        <span class="pc">2023-01-29 21:15:34</span>
+        <span class="mobile">2023-01-29 21:15</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -285,7 +285,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/java/">java</a>&nbsp;
+                        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -297,7 +297,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/java/">java</a>&nbsp;
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -320,28 +320,30 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h3 id="一、什么是继承："><a href="#一、什么是继承：" class="headerlink" title="一、什么是继承："></a>一、什么是继承：</h3><p>1.面向对象类中存在以下常见的关系：</p>
-<p>USES-A关系，类A用到了类B</p>
-<p>HAS-A关系，类A中有类B的成员引用变量，则类A拥有类B</p>
-<p>IS-A关系，继承关系，一个类是另一个类的一种</p>
-<p>2.被继承的类一般称为“超类”或“父类”，继承的类被称为“子类”</p>
-<p>3.使用extends关键字来描述继承</p>
-<p>4.一个类可以同时被任意多个类继承</p>
-<h3 id="二、继承与隐藏："><a href="#二、继承与隐藏：" class="headerlink" title="二、继承与隐藏："></a>二、继承与隐藏：</h3><p>1.当成员变量声明为private类型时，任何子类均不能继承该成员</p>
-<p>2.当成员变量被修饰为protected类型时，若访问该变量的类位于包外，则只有通过继承才能访问该变量</p>
-<h3 id="三、方法的重写："><a href="#三、方法的重写：" class="headerlink" title="三、方法的重写："></a>三、方法的重写：</h3><p>1.在子类自身的方法中，若与继承过来的方法具有相同的签名，便构成了方法的重写</p>
-<p>2.如果子类重写了方法，则调用子类重写的方法，否则将调用从父类继承的方法</p>
-<p>3.重写是基于继承的，如果不能继承一个方法，则不能构成重写，也就不必遵循重写规则</p>
-<p>4.可以使用super调用父类被重写的方法</p>
-<h3 id="四、方法的重载："><a href="#四、方法的重载：" class="headerlink" title="四、方法的重载："></a>四、方法的重载：</h3><p>1.方法重载是指在同一个类里面，有两个使用或两个以上具有相同名称、不同参数序列的方法</p>
-<h3 id="五、final与继承："><a href="#五、final与继承：" class="headerlink" title="五、final与继承："></a>五、final与继承：</h3><p>1.任何其他类都不能继承用final修饰的类</p>
-<p>2.什么时候使用final修饰类：需要确保类中的所有方法都不要被重写改进</p>
-<h3 id="六、抽象类："><a href="#六、抽象类：" class="headerlink" title="六、抽象类："></a>六、抽象类：</h3><p>1.把很多类具有相同特征的事物归为一个抽象类</p>
-<p>2.使用abstract关键字声明抽象类</p>
-<p>3.抽象类不能实例化，即不能创建对象</p>
-<p>4.当某类继承自抽象类时，如果其本身不是抽象类，则必须实现所继承抽象类中的抽象方法。</p>
-<p>也就是说抽象类的第一个非抽象子类必须实现其父类所有的抽象方法，其中也包括父类继承的抽象方法</p>
-<p>5.方法永远不可能同时标识为abstract和final，其之间存在着相反的含义</p>
+                <h1 id="Numpy基础"><a href="#Numpy基础" class="headerlink" title="Numpy基础"></a>Numpy基础</h1><h4 id="一、生成numpy数组："><a href="#一、生成numpy数组：" class="headerlink" title="一、生成numpy数组："></a>一、生成numpy数组：</h4><p>1.numpy封装了一个新的数据类型ndarray，它是一个多维数组对象</p>
+<p>2.可以直接对列表、元组等进行转换来生成ndarray</p>
+<p>3.使用random模块生成数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">np.random.random   <span class="comment"># 生成0到1之间的随机数</span></span><br><span class="line">np.random.uniform  <span class="comment"># 生成均匀分布的随机数</span></span><br><span class="line">np.random.randn    <span class="comment"># 生成标准正态的随机数</span></span><br><span class="line">np.random.randint  <span class="comment"># 生成随机的整数</span></span><br><span class="line">np.random.normal   <span class="comment"># 生成正态分布</span></span><br><span class="line">np.random.shuffle  <span class="comment"># 随机打乱顺序</span></span><br><span class="line">np.random.seed     <span class="comment"># 设置随机种子</span></span><br><span class="line">random_sample      <span class="comment"># 生成随机的浮点数</span></span><br></pre></td></tr></table></figure></div>
+
+<p>4.创建特定形状的多维数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((<span class="number">3</span>,<span class="number">4</span>))    <span class="comment"># 创建3*4的元素全为0的数组</span></span><br><span class="line">np.ones((<span class="number">3</span>,<span class="number">4</span>))     <span class="comment"># 创建3*4的元素全为1的数组</span></span><br><span class="line">np.empty((<span class="number">2</span>,<span class="number">3</span>))    <span class="comment"># 创建2*3的空数组，数据的值并不为0，而是没有初始化的垃圾值</span></span><br><span class="line">np.zero_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为0数组</span></span><br><span class="line">np.ones_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为1数组</span></span><br><span class="line">np.empty_like(ndarr)<span class="comment"># 以ndarr相同维度创建空数组</span></span><br><span class="line">np.eye(<span class="number">5</span>)          <span class="comment"># 该函数用来创建一个5*5的矩阵，对角线元素为1，其余元素都为0</span></span><br><span class="line">np.full((<span class="number">3</span>,<span class="number">5</span>),<span class="number">666</span>) <span class="comment"># 创建3*5的元素全为666数组，666为指定值</span></span><br></pre></td></tr></table></figure></div>
+
+<p>5.利用arange、linspace函数生成数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arange([start,],[stop][,step,],dtype=<span class="literal">None</span>)</span><br><span class="line">linspace(start,stop,num=<span class="number">50</span>,endpoint=<span class="literal">True</span>,restep=<span class="literal">False</span>,dtype=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="二、获取元素："><a href="#二、获取元素：" class="headerlink" title="二、获取元素："></a>二、获取元素：</h4><p>1.使用切片的方式获取对应的数据</p>
+<h4 id="三、numpy算术运算："><a href="#三、numpy算术运算：" class="headerlink" title="三、numpy算术运算："></a>三、numpy算术运算：</h4><p>1.np.multiply用于数组或函数对应元素相乘</p>
+<p>2.numpy.dot用来计算矩阵的点积</p>
+<h4 id="四、更改数组的形状："><a href="#四、更改数组的形状：" class="headerlink" title="四、更改数组的形状："></a>四、更改数组的形状：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">arr.reshape    <span class="comment"># 重新将向量arr维度进行改变，不改变向量本身</span></span><br><span class="line">arr.resize     <span class="comment"># 重新将向量arr维度进行变换，修改向量本身</span></span><br><span class="line">arr.T          <span class="comment"># 对向量arr进行转置</span></span><br><span class="line">arr.ravel      <span class="comment"># 对向量arr进行展平，即将多维数组变为一维数组，不会产生原来数组的副本</span></span><br><span class="line">arr.flatten    <span class="comment"># 对向量arr进行展平，即将多维数组变成一维数组，返回原数组的副本</span></span><br><span class="line">arr.squeeze    <span class="comment"># 只能对维数为1的维度进行降维</span></span><br><span class="line">arr.transpose  <span class="comment"># 对高维矩阵进行轴对换</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="五、合并数组："><a href="#五、合并数组：" class="headerlink" title="五、合并数组："></a>五、合并数组：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.append      <span class="comment"># 内存占用较大</span></span><br><span class="line">np.concatenate <span class="comment"># 没有内存问题</span></span><br><span class="line">np.stack       <span class="comment"># 沿着新的轴加入一系列数组</span></span><br><span class="line">np.hstack      <span class="comment"># 堆栈数组垂直顺序（行）</span></span><br><span class="line">np.vstack      <span class="comment"># 堆栈数组垂直顺序（列）</span></span><br><span class="line">np.dstack      <span class="comment"># 堆栈数组按顺序深入（沿第三维）</span></span><br><span class="line">np.vsplit      <span class="comment"># 将数组分解成垂直的多个子数组列表</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="六、广播机制："><a href="#六、广播机制：" class="headerlink" title="六、广播机制："></a>六、广播机制：</h4><p>1.numpy的Universal functions中要求输入的数组shape是一致的，当数组的shape不相等 时，则会使用广播机制 </p>
+<p>2.广播机制满足的规则：</p>
+<p>（1）让所有输入数组都向其中shape最长的数组看齐，不足的部分则通过在前面加1补齐</p>
+<p>（2）输出数组的shape是输入数组shape的各个轴上的最大值 </p>
+<p>（3）如果输入数组的某个轴和输出数组的对应轴的长度相同或者某个轴的长度为1时， 这个数组能被用来计算，否则出错 </p>
+<p>（4）当输入数组的某个轴的长度为1时，沿着此轴运算时都用（或复制）此轴上的第一组值 </p>
 
             </div>
 
@@ -349,11 +351,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：java学习记录2</li>
+        <li>本文标题：深度学习记录1</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-01-29 13:55:42</li>
+        <li>创建时间：2023-01-29 21:15:34</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/01/29/java学习记录2/
+            本文链接：http://youxia123-cloud.github.io/2023/01/29/深度学习记录1/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -368,7 +370,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/java/">#java</a>&nbsp;
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -377,29 +379,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">深度学习记录1</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/"
+                            href="/2023/01/29/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">机器学习记录6</span>
+                                    <span class="post-nav-title-item">java学习记录2</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -419,7 +406,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="nav-text">一、什么是继承：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E9%9A%90%E8%97%8F%EF%BC%9A"><span class="nav-text">二、继承与隐藏：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99%EF%BC%9A"><span class="nav-text">三、方法的重写：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%EF%BC%9A"><span class="nav-text">四、方法的重载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81final%E4%B8%8E%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="nav-text">五、final与继承：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%9A"><span class="nav-text">六、抽象类：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Numpy%E5%9F%BA%E7%A1%80"><span class="nav-text">Numpy基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%9F%E6%88%90numpy%E6%95%B0%E7%BB%84%EF%BC%9A"><span class="nav-text">一、生成numpy数组：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-text">二、获取元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81numpy%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%EF%BC%9A"><span class="nav-text">三、numpy算术运算：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%9B%B4%E6%94%B9%E6%95%B0%E7%BB%84%E7%9A%84%E5%BD%A2%E7%8A%B6%EF%BC%9A"><span class="nav-text">四、更改数组的形状：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%90%88%E5%B9%B6%E6%95%B0%E7%BB%84%EF%BC%9A"><span class="nav-text">五、合并数组：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6%EF%BC%9A"><span class="nav-text">六、广播机制：</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

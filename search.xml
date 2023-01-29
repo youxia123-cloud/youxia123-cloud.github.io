@@ -504,4 +504,39 @@
         <tag>java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>深度学习记录1</title>
+    <url>/2023/01/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</url>
+    <content><![CDATA[<h1 id="Numpy基础"><a href="#Numpy基础" class="headerlink" title="Numpy基础"></a>Numpy基础</h1><h4 id="一、生成numpy数组："><a href="#一、生成numpy数组：" class="headerlink" title="一、生成numpy数组："></a>一、生成numpy数组：</h4><p>1.numpy封装了一个新的数据类型ndarray，它是一个多维数组对象</p>
+<p>2.可以直接对列表、元组等进行转换来生成ndarray</p>
+<p>3.使用random模块生成数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">np.random.random   <span class="comment"># 生成0到1之间的随机数</span></span><br><span class="line">np.random.uniform  <span class="comment"># 生成均匀分布的随机数</span></span><br><span class="line">np.random.randn    <span class="comment"># 生成标准正态的随机数</span></span><br><span class="line">np.random.randint  <span class="comment"># 生成随机的整数</span></span><br><span class="line">np.random.normal   <span class="comment"># 生成正态分布</span></span><br><span class="line">np.random.shuffle  <span class="comment"># 随机打乱顺序</span></span><br><span class="line">np.random.seed     <span class="comment"># 设置随机种子</span></span><br><span class="line">random_sample      <span class="comment"># 生成随机的浮点数</span></span><br></pre></td></tr></table></figure></div>
+
+<p>4.创建特定形状的多维数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">np.zeros((<span class="number">3</span>,<span class="number">4</span>))    <span class="comment"># 创建3*4的元素全为0的数组</span></span><br><span class="line">np.ones((<span class="number">3</span>,<span class="number">4</span>))     <span class="comment"># 创建3*4的元素全为1的数组</span></span><br><span class="line">np.empty((<span class="number">2</span>,<span class="number">3</span>))    <span class="comment"># 创建2*3的空数组，数据的值并不为0，而是没有初始化的垃圾值</span></span><br><span class="line">np.zero_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为0数组</span></span><br><span class="line">np.ones_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为1数组</span></span><br><span class="line">np.empty_like(ndarr)<span class="comment"># 以ndarr相同维度创建空数组</span></span><br><span class="line">np.eye(<span class="number">5</span>)          <span class="comment"># 该函数用来创建一个5*5的矩阵，对角线元素为1，其余元素都为0</span></span><br><span class="line">np.full((<span class="number">3</span>,<span class="number">5</span>),<span class="number">666</span>) <span class="comment"># 创建3*5的元素全为666数组，666为指定值</span></span><br></pre></td></tr></table></figure></div>
+
+<p>5.利用arange、linspace函数生成数组：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">arange([start,],[stop][,step,],dtype=<span class="literal">None</span>)</span><br><span class="line">linspace(start,stop,num=<span class="number">50</span>,endpoint=<span class="literal">True</span>,restep=<span class="literal">False</span>,dtype=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="二、获取元素："><a href="#二、获取元素：" class="headerlink" title="二、获取元素："></a>二、获取元素：</h4><p>1.使用切片的方式获取对应的数据</p>
+<h4 id="三、numpy算术运算："><a href="#三、numpy算术运算：" class="headerlink" title="三、numpy算术运算："></a>三、numpy算术运算：</h4><p>1.np.multiply用于数组或函数对应元素相乘</p>
+<p>2.numpy.dot用来计算矩阵的点积</p>
+<h4 id="四、更改数组的形状："><a href="#四、更改数组的形状：" class="headerlink" title="四、更改数组的形状："></a>四、更改数组的形状：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">arr.reshape    <span class="comment"># 重新将向量arr维度进行改变，不改变向量本身</span></span><br><span class="line">arr.resize     <span class="comment"># 重新将向量arr维度进行变换，修改向量本身</span></span><br><span class="line">arr.T          <span class="comment"># 对向量arr进行转置</span></span><br><span class="line">arr.ravel      <span class="comment"># 对向量arr进行展平，即将多维数组变为一维数组，不会产生原来数组的副本</span></span><br><span class="line">arr.flatten    <span class="comment"># 对向量arr进行展平，即将多维数组变成一维数组，返回原数组的副本</span></span><br><span class="line">arr.squeeze    <span class="comment"># 只能对维数为1的维度进行降维</span></span><br><span class="line">arr.transpose  <span class="comment"># 对高维矩阵进行轴对换</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="五、合并数组："><a href="#五、合并数组：" class="headerlink" title="五、合并数组："></a>五、合并数组：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">np.append      <span class="comment"># 内存占用较大</span></span><br><span class="line">np.concatenate <span class="comment"># 没有内存问题</span></span><br><span class="line">np.stack       <span class="comment"># 沿着新的轴加入一系列数组</span></span><br><span class="line">np.hstack      <span class="comment"># 堆栈数组垂直顺序（行）</span></span><br><span class="line">np.vstack      <span class="comment"># 堆栈数组垂直顺序（列）</span></span><br><span class="line">np.dstack      <span class="comment"># 堆栈数组按顺序深入（沿第三维）</span></span><br><span class="line">np.vsplit      <span class="comment"># 将数组分解成垂直的多个子数组列表</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="六、广播机制："><a href="#六、广播机制：" class="headerlink" title="六、广播机制："></a>六、广播机制：</h4><p>1.numpy的Universal functions中要求输入的数组shape是一致的，当数组的shape不相等 时，则会使用广播机制 </p>
+<p>2.广播机制满足的规则：</p>
+<p>（1）让所有输入数组都向其中shape最长的数组看齐，不足的部分则通过在前面加1补齐</p>
+<p>（2）输出数组的shape是输入数组shape的各个轴上的最大值 </p>
+<p>（3）如果输入数组的某个轴和输出数组的对应轴的长度相同或者某个轴的长度为1时， 这个数组能被用来计算，否则出错 </p>
+<p>（4）当输入数组的某个轴的长度为1时，沿着此轴运算时都用（或复制）此轴上的第一组值 </p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
 </search>
