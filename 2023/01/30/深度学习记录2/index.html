@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/01/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" />
+    <link rel="canonical" href="http://example.com/2023/01/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            深度学习记录1 |
+            深度学习记录2 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">深度学习记录1</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">深度学习记录2</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-29 21:15:34</span>
-        <span class="mobile">2023-01-29 21:15</span>
+        <span class="pc">2023-01-30 16:37:25</span>
+        <span class="mobile">2023-01-30 16:37</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,42 +320,53 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Numpy基础"><a href="#Numpy基础" class="headerlink" title="Numpy基础"></a>Numpy基础</h1><h4 id="一、生成numpy数组："><a href="#一、生成numpy数组：" class="headerlink" title="一、生成numpy数组："></a>一、生成numpy数组：</h4><p>1.numpy封装了一个新的数据类型ndarray，它是一个多维数组对象</p>
-<p>2.可以直接对列表、元组等进行转换来生成ndarray</p>
-<p>3.使用random模块生成数组：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">np.random.random   <span class="comment"># 生成0到1之间的随机数</span></span><br><span class="line">np.random.uniform  <span class="comment"># 生成均匀分布的随机数</span></span><br><span class="line">np.random.randn    <span class="comment"># 生成标准正态的随机数</span></span><br><span class="line">np.random.randint  <span class="comment"># 生成随机的整数</span></span><br><span class="line">np.random.normal   <span class="comment"># 生成正态分布</span></span><br><span class="line">np.random.shuffle  <span class="comment"># 随机打乱顺序</span></span><br><span class="line">np.random.seed     <span class="comment"># 设置随机种子</span></span><br><span class="line">random_sample      <span class="comment"># 生成随机的浮点数</span></span><br></pre></td></tr></table></figure></div>
+                <h1 id="Pytorch基础"><a href="#Pytorch基础" class="headerlink" title="Pytorch基础"></a>Pytorch基础</h1><h3 id="一、什么是pytorch："><a href="#一、什么是pytorch：" class="headerlink" title="一、什么是pytorch："></a>一、什么是pytorch：</h3><p>1.Pytorch是一个建立在Torch库上的python包</p>
+<p>2.pytorch主要的四个组成：</p>
+<p>(1).torch：类似于numpy的通用数组库，可以将张量类型转换为torch.cuda.TensorFloat，在GPU上进行计算</p>
+<p>(2).torch.autograd：用于构建计算图形并自动获取梯度的包</p>
+<p>(3).torch.nn：具有共享层和损失函数的神经网络库</p>
+<p>(4).torch.optim：具有通用优化算法的优化包</p>
+<h3 id="二、创建Tensor"><a href="#二、创建Tensor" class="headerlink" title="二、创建Tensor:"></a>二、创建Tensor:</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">torch.Tensor(*size)     <span class="comment"># 直接从参数构建一个张量，支持list，numpy数组</span></span><br><span class="line">torch.eye(row,column)   <span class="comment"># 创建指定行数，列数的二维单位Tensor</span></span><br><span class="line">torch.linspace(srart,end,steps)   <span class="comment"># 从start到end，均匀切成steps份</span></span><br><span class="line">torch.logspace(start,end,steps)   <span class="comment"># 从10^start，到10^end，均匀切分成steps份</span></span><br><span class="line">torch.rand/randn(*size) <span class="comment"># 生成[0,1)均匀分布/标准正态分布的数据</span></span><br><span class="line">torch.ones(*size)       <span class="comment"># 返回指定shape的张量，元素初始化为1</span></span><br><span class="line">torch.zeros(*size)      <span class="comment"># 返回指定shape的张量，元素初始化为0</span></span><br><span class="line">torch.ones_like(t)      <span class="comment"># 返回与t的shape相同的张量，元素初始化为1</span></span><br><span class="line">torch.zeros_like(t)     <span class="comment"># 返回与他的shape相同的张量，元素初始化为0</span></span><br><span class="line">torch.arange(start,end,step)      <span class="comment"># 在区间[start,end)上以间隔step生成一个序列张量</span></span><br><span class="line">torch.from_Numpy(ndarray)         <span class="comment"># 从ndarray创建一个Tensor</span></span><br></pre></td></tr></table></figure></div>
 
-<p>4.创建特定形状的多维数组：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((<span class="number">3</span>,<span class="number">4</span>))    <span class="comment"># 创建3*4的元素全为0的数组</span></span><br><span class="line">np.ones((<span class="number">3</span>,<span class="number">4</span>))     <span class="comment"># 创建3*4的元素全为1的数组</span></span><br><span class="line">np.empty((<span class="number">2</span>,<span class="number">3</span>))    <span class="comment"># 创建2*3的空数组，数据的值并不为0，而是没有初始化的垃圾值</span></span><br><span class="line">np.zero_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为0数组</span></span><br><span class="line">np.ones_like(ndarr)<span class="comment"># 以ndarr相同维度创建元素全为1数组</span></span><br><span class="line">np.empty_like(ndarr)<span class="comment"># 以ndarr相同维度创建空数组</span></span><br><span class="line">np.eye(<span class="number">5</span>)          <span class="comment"># 该函数用来创建一个5*5的矩阵，对角线元素为1，其余元素都为0</span></span><br><span class="line">np.full((<span class="number">3</span>,<span class="number">5</span>),<span class="number">666</span>) <span class="comment"># 创建3*5的元素全为666数组，666为指定值</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="三、修改tensor的形状："><a href="#三、修改tensor的形状：" class="headerlink" title="三、修改tensor的形状："></a>三、修改tensor的形状：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">size()         <span class="comment"># 返回张量的shape属性值</span></span><br><span class="line">numel(<span class="built_in">input</span>)   <span class="comment"># 计算tensor的元素个数</span></span><br><span class="line">view(*shape)   <span class="comment"># 修改tensor的shape，返回原来的tensor</span></span><br><span class="line">resize         <span class="comment"># 类似于view，但是size超出时会重新分配内存空间</span></span><br><span class="line">item           <span class="comment"># 若tensor为单元素，则返回python的标量</span></span><br><span class="line">unsqueeze      <span class="comment"># 在指定的维度增加一个“1”</span></span><br><span class="line">squeeze        <span class="comment"># 在指定的维度压缩一个“1”</span></span><br></pre></td></tr></table></figure></div>
 
-<p>5.利用arange、linspace函数生成数组：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arange([start,],[stop][,step,],dtype=<span class="literal">None</span>)</span><br><span class="line">linspace(start,stop,num=<span class="number">50</span>,endpoint=<span class="literal">True</span>,restep=<span class="literal">False</span>,dtype=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="四、索引操作："><a href="#四、索引操作：" class="headerlink" title="四、索引操作："></a>四、索引操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">index_select(<span class="built_in">input</span>,dim,index)   <span class="comment"># 在指定维度上选择一些行或列</span></span><br><span class="line">nonzero(<span class="built_in">input</span>)                  <span class="comment"># 获取非0元素的下标</span></span><br><span class="line">masked_select(<span class="built_in">input</span>,mask)       <span class="comment"># 使用二元值进行选择</span></span><br><span class="line">gather(<span class="built_in">input</span>,dim,index)         <span class="comment"># 在指定维度上选择数据，输出形状与index一致</span></span><br><span class="line">scatter_(<span class="built_in">input</span>,dim,index,src)   <span class="comment"># 为gather的反操作，根据指定索引补充数据</span></span><br></pre></td></tr></table></figure></div>
 
-<h4 id="二、获取元素："><a href="#二、获取元素：" class="headerlink" title="二、获取元素："></a>二、获取元素：</h4><p>1.使用切片的方式获取对应的数据</p>
-<h4 id="三、numpy算术运算："><a href="#三、numpy算术运算：" class="headerlink" title="三、numpy算术运算："></a>三、numpy算术运算：</h4><p>1.np.multiply用于数组或函数对应元素相乘</p>
-<p>2.numpy.dot用来计算矩阵的点积</p>
-<h4 id="四、更改数组的形状："><a href="#四、更改数组的形状：" class="headerlink" title="四、更改数组的形状："></a>四、更改数组的形状：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">arr.reshape    <span class="comment"># 重新将向量arr维度进行改变，不改变向量本身</span></span><br><span class="line">arr.resize     <span class="comment"># 重新将向量arr维度进行变换，修改向量本身</span></span><br><span class="line">arr.T          <span class="comment"># 对向量arr进行转置</span></span><br><span class="line">arr.ravel      <span class="comment"># 对向量arr进行展平，即将多维数组变为一维数组，不会产生原来数组的副本</span></span><br><span class="line">arr.flatten    <span class="comment"># 对向量arr进行展平，即将多维数组变成一维数组，返回原数组的副本</span></span><br><span class="line">arr.squeeze    <span class="comment"># 只能对维数为1的维度进行降维</span></span><br><span class="line">arr.transpose  <span class="comment"># 对高维矩阵进行轴对换</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="五、广播机制："><a href="#五、广播机制：" class="headerlink" title="五、广播机制："></a>五、广播机制：</h3><p>1.与numpy中的广播机制类似，pytorch也支持广播机制</p>
+<h3 id="六、归并操作："><a href="#六、归并操作：" class="headerlink" title="六、归并操作："></a>六、归并操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cumprod(t,axis)     <span class="comment"># 在指定维度对t进行累积</span></span><br><span class="line">cumsum              <span class="comment"># 在指定维度对t进行累加</span></span><br><span class="line">dist(a,b,p=<span class="number">2</span>)       <span class="comment"># 返回a,b之间的p阶范数</span></span><br><span class="line">mean/median         <span class="comment"># 均值/中位数</span></span><br><span class="line">std/var             <span class="comment"># 标准差/方差</span></span><br><span class="line">norm(t,p=<span class="number">2</span>)         <span class="comment"># 返回t的p阶范数</span></span><br><span class="line">prod(t)/<span class="built_in">sum</span>(t)      <span class="comment"># 返回t的所有元素的积/和</span></span><br></pre></td></tr></table></figure></div>
 
-<h4 id="五、合并数组："><a href="#五、合并数组：" class="headerlink" title="五、合并数组："></a>五、合并数组：</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.append      <span class="comment"># 内存占用较大</span></span><br><span class="line">np.concatenate <span class="comment"># 没有内存问题</span></span><br><span class="line">np.stack       <span class="comment"># 沿着新的轴加入一系列数组</span></span><br><span class="line">np.hstack      <span class="comment"># 堆栈数组垂直顺序（行）</span></span><br><span class="line">np.vstack      <span class="comment"># 堆栈数组垂直顺序（列）</span></span><br><span class="line">np.dstack      <span class="comment"># 堆栈数组按顺序深入（沿第三维）</span></span><br><span class="line">np.vsplit      <span class="comment"># 将数组分解成垂直的多个子数组列表</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="七、比较操作："><a href="#七、比较操作：" class="headerlink" title="七、比较操作："></a>七、比较操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">eq                  <span class="comment"># 比较tensor是否相等，支持broadcast</span></span><br><span class="line">equal               <span class="comment"># 比较tensor是否有相同的shape与值</span></span><br><span class="line">ge/le/gt/lt         <span class="comment"># 大于/小于比较/大于等于/小于等于比较</span></span><br><span class="line"><span class="built_in">max</span>/<span class="built_in">min</span>(t,axis)     <span class="comment"># 返回最值，若指定axis，则额外返回下标</span></span><br><span class="line">top(t,k,axis)       <span class="comment"># 在指定的axis维上取最高的K个值</span></span><br></pre></td></tr></table></figure></div>
 
-<h4 id="六、广播机制："><a href="#六、广播机制：" class="headerlink" title="六、广播机制："></a>六、广播机制：</h4><p>1.numpy的Universal functions中要求输入的数组shape是一致的，当数组的shape不相等 时，则会使用广播机制 </p>
-<p>2.广播机制满足的规则：</p>
-<p>（1）让所有输入数组都向其中shape最长的数组看齐，不足的部分则通过在前面加1补齐</p>
-<p>（2）输出数组的shape是输入数组shape的各个轴上的最大值 </p>
-<p>（3）如果输入数组的某个轴和输出数组的对应轴的长度相同或者某个轴的长度为1时， 这个数组能被用来计算，否则出错 </p>
-<p>（4）当输入数组的某个轴的长度为1时，沿着此轴运算时都用（或复制）此轴上的第一组值 </p>
-
+<h3 id="八、矩阵操作："><a href="#八、矩阵操作：" class="headerlink" title="八、矩阵操作："></a>八、矩阵操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dot(t1,t2)         <span class="comment"># 计算张量（1D）的内积或点积</span></span><br><span class="line">mm(mat1,mat2)/bmm(batch1,batch2)   <span class="comment"># 计算矩阵乘法/含batch的3D矩阵乘法</span></span><br><span class="line">mv(t1,v1)          <span class="comment"># 计算矩阵与向量乘法</span></span><br><span class="line">t                  <span class="comment"># 计算转置</span></span><br><span class="line">svd(t)             <span class="comment"># 计算t的SVD分解</span></span><br></pre></td></tr></table></figure></div>
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：深度学习记录1</li>
+        <li>本文标题：深度学习记录2</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-01-29 21:15:34</li>
+        <li>创建时间：2023-01-30 16:37:25</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/01/29/深度学习记录1/
+            本文链接：http://youxia123-cloud.github.io/2023/01/30/深度学习记录2/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -379,29 +390,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">深度学习记录2</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/29/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/"
+                            href="/2023/01/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">java学习记录2</span>
+                                    <span class="post-nav-title-item">深度学习记录1</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -421,7 +417,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Numpy%E5%9F%BA%E7%A1%80"><span class="nav-text">Numpy基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%9F%E6%88%90numpy%E6%95%B0%E7%BB%84%EF%BC%9A"><span class="nav-text">一、生成numpy数组：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-text">二、获取元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81numpy%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%EF%BC%9A"><span class="nav-text">三、numpy算术运算：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%9B%B4%E6%94%B9%E6%95%B0%E7%BB%84%E7%9A%84%E5%BD%A2%E7%8A%B6%EF%BC%9A"><span class="nav-text">四、更改数组的形状：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%90%88%E5%B9%B6%E6%95%B0%E7%BB%84%EF%BC%9A"><span class="nav-text">五、合并数组：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6%EF%BC%9A"><span class="nav-text">六、广播机制：</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pytorch%E5%9F%BA%E7%A1%80"><span class="nav-text">Pytorch基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFpytorch%EF%BC%9A"><span class="nav-text">一、什么是pytorch：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BATensor"><span class="nav-text">二、创建Tensor:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%AE%E6%94%B9tensor%E7%9A%84%E5%BD%A2%E7%8A%B6%EF%BC%9A"><span class="nav-text">三、修改tensor的形状：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%B4%A2%E5%BC%95%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="nav-text">四、索引操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6%EF%BC%9A"><span class="nav-text">五、广播机制：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%BD%92%E5%B9%B6%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="nav-text">六、归并操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="nav-text">七、比较操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="nav-text">八、矩阵操作：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

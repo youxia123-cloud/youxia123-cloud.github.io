@@ -539,4 +539,50 @@
         <tag>深度学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>深度学习记录2</title>
+    <url>/2023/01/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
+    <content><![CDATA[<h1 id="Pytorch基础"><a href="#Pytorch基础" class="headerlink" title="Pytorch基础"></a>Pytorch基础</h1><h3 id="一、什么是pytorch："><a href="#一、什么是pytorch：" class="headerlink" title="一、什么是pytorch："></a>一、什么是pytorch：</h3><p>1.Pytorch是一个建立在Torch库上的python包</p>
+<p>2.pytorch主要的四个组成：</p>
+<p>(1).torch：类似于numpy的通用数组库，可以将张量类型转换为torch.cuda.TensorFloat，在GPU上进行计算</p>
+<p>(2).torch.autograd：用于构建计算图形并自动获取梯度的包</p>
+<p>(3).torch.nn：具有共享层和损失函数的神经网络库</p>
+<p>(4).torch.optim：具有通用优化算法的优化包</p>
+<h3 id="二、创建Tensor"><a href="#二、创建Tensor" class="headerlink" title="二、创建Tensor:"></a>二、创建Tensor:</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">torch.Tensor(*size)     <span class="comment"># 直接从参数构建一个张量，支持list，numpy数组</span></span><br><span class="line">torch.eye(row,column)   <span class="comment"># 创建指定行数，列数的二维单位Tensor</span></span><br><span class="line">torch.linspace(srart,end,steps)   <span class="comment"># 从start到end，均匀切成steps份</span></span><br><span class="line">torch.logspace(start,end,steps)   <span class="comment"># 从10^start，到10^end，均匀切分成steps份</span></span><br><span class="line">torch.rand/randn(*size) <span class="comment"># 生成[0,1)均匀分布/标准正态分布的数据</span></span><br><span class="line">torch.ones(*size)       <span class="comment"># 返回指定shape的张量，元素初始化为1</span></span><br><span class="line">torch.zeros(*size)      <span class="comment"># 返回指定shape的张量，元素初始化为0</span></span><br><span class="line">torch.ones_like(t)      <span class="comment"># 返回与t的shape相同的张量，元素初始化为1</span></span><br><span class="line">torch.zeros_like(t)     <span class="comment"># 返回与他的shape相同的张量，元素初始化为0</span></span><br><span class="line">torch.arange(start,end,step)      <span class="comment"># 在区间[start,end)上以间隔step生成一个序列张量</span></span><br><span class="line">torch.from_Numpy(ndarray)         <span class="comment"># 从ndarray创建一个Tensor</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="三、修改tensor的形状："><a href="#三、修改tensor的形状：" class="headerlink" title="三、修改tensor的形状："></a>三、修改tensor的形状：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">size()         <span class="comment"># 返回张量的shape属性值</span></span><br><span class="line">numel(<span class="built_in">input</span>)   <span class="comment"># 计算tensor的元素个数</span></span><br><span class="line">view(*shape)   <span class="comment"># 修改tensor的shape，返回原来的tensor</span></span><br><span class="line">resize         <span class="comment"># 类似于view，但是size超出时会重新分配内存空间</span></span><br><span class="line">item           <span class="comment"># 若tensor为单元素，则返回python的标量</span></span><br><span class="line">unsqueeze      <span class="comment"># 在指定的维度增加一个“1”</span></span><br><span class="line">squeeze        <span class="comment"># 在指定的维度压缩一个“1”</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="四、索引操作："><a href="#四、索引操作：" class="headerlink" title="四、索引操作："></a>四、索引操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">index_select(<span class="built_in">input</span>,dim,index)   <span class="comment"># 在指定维度上选择一些行或列</span></span><br><span class="line">nonzero(<span class="built_in">input</span>)                  <span class="comment"># 获取非0元素的下标</span></span><br><span class="line">masked_select(<span class="built_in">input</span>,mask)       <span class="comment"># 使用二元值进行选择</span></span><br><span class="line">gather(<span class="built_in">input</span>,dim,index)         <span class="comment"># 在指定维度上选择数据，输出形状与index一致</span></span><br><span class="line">scatter_(<span class="built_in">input</span>,dim,index,src)   <span class="comment"># 为gather的反操作，根据指定索引补充数据</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="五、广播机制："><a href="#五、广播机制：" class="headerlink" title="五、广播机制："></a>五、广播机制：</h3><p>1.与numpy中的广播机制类似，pytorch也支持广播机制</p>
+<h3 id="六、归并操作："><a href="#六、归并操作：" class="headerlink" title="六、归并操作："></a>六、归并操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">cumprod(t,axis)     <span class="comment"># 在指定维度对t进行累积</span></span><br><span class="line">cumsum              <span class="comment"># 在指定维度对t进行累加</span></span><br><span class="line">dist(a,b,p=<span class="number">2</span>)       <span class="comment"># 返回a,b之间的p阶范数</span></span><br><span class="line">mean/median         <span class="comment"># 均值/中位数</span></span><br><span class="line">std/var             <span class="comment"># 标准差/方差</span></span><br><span class="line">norm(t,p=<span class="number">2</span>)         <span class="comment"># 返回t的p阶范数</span></span><br><span class="line">prod(t)/<span class="built_in">sum</span>(t)      <span class="comment"># 返回t的所有元素的积/和</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="七、比较操作："><a href="#七、比较操作：" class="headerlink" title="七、比较操作："></a>七、比较操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">eq                  <span class="comment"># 比较tensor是否相等，支持broadcast</span></span><br><span class="line">equal               <span class="comment"># 比较tensor是否有相同的shape与值</span></span><br><span class="line">ge/le/gt/lt         <span class="comment"># 大于/小于比较/大于等于/小于等于比较</span></span><br><span class="line"><span class="built_in">max</span>/<span class="built_in">min</span>(t,axis)     <span class="comment"># 返回最值，若指定axis，则额外返回下标</span></span><br><span class="line">top(t,k,axis)       <span class="comment"># 在指定的axis维上取最高的K个值</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="八、矩阵操作："><a href="#八、矩阵操作：" class="headerlink" title="八、矩阵操作："></a>八、矩阵操作：</h3><ol>
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">dot(t1,t2)         <span class="comment"># 计算张量（1D）的内积或点积</span></span><br><span class="line">mm(mat1,mat2)/bmm(batch1,batch2)   <span class="comment"># 计算矩阵乘法/含batch的3D矩阵乘法</span></span><br><span class="line">mv(t1,v1)          <span class="comment"># 计算矩阵与向量乘法</span></span><br><span class="line">t                  <span class="comment"># 计算转置</span></span><br><span class="line">svd(t)             <span class="comment"># 计算t的SVD分解</span></span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
 </search>
