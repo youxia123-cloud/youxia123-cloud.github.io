@@ -626,4 +626,52 @@
         <tag>机器学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器学习记录9</title>
+    <url>/2023/02/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/</url>
+    <content><![CDATA[<h1 id="集成学习和聚类"><a href="#集成学习和聚类" class="headerlink" title="集成学习和聚类"></a>集成学习和聚类</h1><h3 id="一、集成学习："><a href="#一、集成学习：" class="headerlink" title="一、集成学习："></a>一、集成学习：</h3><p>1.使用多个模型来学习</p>
+<p>分为同质集成学习和异质集成学习</p>
+<h3 id="二、好而不同："><a href="#二、好而不同：" class="headerlink" title="二、好而不同："></a>二、好而不同：</h3><p>1.个体学习器“好而不同”</p>
+<p>2.误差-分歧分解</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AF%AF%E5%B7%AE-%E5%88%86%E6%AD%A7%E5%88%86%E8%A7%A3.png"
+                     
+                ></p>
+<h3 id="三、两类常用的集成学习方法："><a href="#三、两类常用的集成学习方法：" class="headerlink" title="三、两类常用的集成学习方法："></a>三、两类常用的集成学习方法：</h3><p>1.序列化方法：boosting</p>
+<p>2.并行化方法：bagging</p>
+<h3 id="四、Boosting："><a href="#四、Boosting：" class="headerlink" title="四、Boosting："></a>四、Boosting：</h3><p>1.残差最小化，残差逼近</p>
+<p>2.序列化模型</p>
+<h3 id="五、Bagging："><a href="#五、Bagging：" class="headerlink" title="五、Bagging："></a>五、Bagging：</h3><p>1.使用可重复采样</p>
+<p>2.投票做分类，平均做回归</p>
+<h3 id="六、多样性度量："><a href="#六、多样性度量：" class="headerlink" title="六、多样性度量："></a>六、多样性度量：</h3><p>1.多样性是集成学习的关键</p>
+<p>2.多样性度量：一般通过两分类器的预测结果列联表定义</p>
+<p>如不合度量、相关系数、Q-统计量、K-统计量</p>
+<h3 id="七、聚类："><a href="#七、聚类：" class="headerlink" title="七、聚类："></a>七、聚类：</h3><p>1.聚类是“无监督学习”中研究最多、应用最广的任务</p>
+<p>2.聚类的目标：将数据样本划分为若干个通常不相交的“簇”</p>
+<p>既可以作为一个单独任务（用于寻找数据内在的分布结构），也可以作为分类等其他学习任务的前驱过程</p>
+<h3 id="八、聚类方法概述："><a href="#八、聚类方法概述：" class="headerlink" title="八、聚类方法概述："></a>八、聚类方法概述：</h3><p>1.聚类的好坏不存在绝对标准</p>
+<p>2.在聚类中，总能找到一个新的“标准”，使得以往的算法对它无能为力</p>
+<p>3.常用的聚类方法：</p>
+<p>（1）原型聚类：亦称为“基于原型的聚类”</p>
+<p>​	 假设：聚类结构能通过一组原型刻画</p>
+<p>​	 过程：先对原型初始化，然后对原型进行迭代更新求解</p>
+<p>​	 代表：K均值聚类，学习向量量化（LVQ），高斯混合聚类</p>
+<p>（2）密度聚类：亦称为“基于密度的聚类”</p>
+<p>​	 假设：聚类结构能通过样本分布的紧密程度确定</p>
+<p>​	 过程：从样本密度的角度来考察样本之间的可连接性，并基于可连接性样本不断扩展聚类簇</p>
+<p>​	 代表：DBSCAN，OPTICS，DENCLUE</p>
+<p>（3）层次聚类：</p>
+<p>​	 假设：能够产生不同粒度的聚类结果</p>
+<p>​	 过程：在不同层次对数据集进行划分，从而形成树形的聚类结构</p>
+<p>​	 代表：AGNES（自底向上），DIANA（自顶向下）</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
 </search>
