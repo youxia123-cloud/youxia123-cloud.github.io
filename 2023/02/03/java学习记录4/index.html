@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/tags/java" />
+    <link rel="canonical" href="http://example.com/2023/02/03/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            标签: java |
+            java学习记录4 |
         
         MyBlog
     </title>
@@ -125,7 +125,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/tags"  >
                                     
                                         
@@ -209,7 +209,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/tags"  >
                              
                                 
@@ -254,63 +254,157 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fa-solid fa-tag"></i>&nbsp;java
-        </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[4]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">java学习记录4</h1></span>
             </div>
-            <ul class="article-list">
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/knight.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Knight</span>
+                            
+                                <span class="author-label">AI</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-02-03 16:28:39</span>
+        <span class="mobile">2023-02-03 16:28</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/02/03/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/"
-                        >java学习记录4</a>
-                        <span class="article-date">02-03</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/02/02/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/"
-                        >java学习记录3</a>
-                        <span class="article-date">02-02</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/29/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/"
-                        >java学习记录2</a>
-                        <span class="article-date">01-29</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/28/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
-                        >java学习记录1</a>
-                        <span class="article-date">01-28</span>
+                    <li>
+                        <a href="/categories/java/">java</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/java/">java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="接口与枚举"><a href="#接口与枚举" class="headerlink" title="接口与枚举"></a>接口与枚举</h1><h4 id="一、接口"><a href="#一、接口" class="headerlink" title="一、接口"></a>一、接口</h4><p>1.接口的结构与抽象类非常类似。其本身也有数据成员、抽象方法、默认方法和静态方法</p>
+<p>2.接口的数据成员都是静态的且必须初始化，即数据成员必须是静态常量	</p>
+<p>3.接口中除了声明抽象方法外，还可以定义静态方法和默认方法</p>
+<p>4.接口中的静态方法是用public static修饰的；而默认方法是用public default修饰的。接口中的抽象方法不能有方法的实现，即不能有方法体</p>
+<p>5.接口与抽象类一样不能使用new运算符直接创建对象。</p>
+<p>6.接口的事项类似于继承，在声明类的同时使用implements关键字来实现一个接口</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class 类名 implements 接口名</span><br><span class="line">&#123;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>7.接口可以实现多重继承</p>
+<p>8.如果子接口中定义了与父接口同名的常量或者相同名称的方法，则父接口中的常量被隐藏，方法被覆盖。</p>
+<h4 id="二、枚举"><a href="#二、枚举" class="headerlink" title="二、枚举"></a>二、枚举</h4><p>1.枚举是一种特殊的类，所以枚举也称为枚举类，它是一种引用类型</p>
+<p>其语法格式如下：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[修饰符]<span class="keyword">enum</span> 枚举类型名</span><br><span class="line">&#123;</span><br><span class="line">	枚举成员</span><br><span class="line">        方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>2.枚举的所有枚举成员必须在枚举体的第一行显式列出，否则该枚举不能产生枚举成员</p>
+<p>3.枚举可以实现一个或多个接口，使用enum关键字声明的枚举默认继承了java.lang.Enum类</p>
+<p>4.使用enum定义非抽象的枚举类时默认使用final修饰，因此枚举类不能派生子类</p>
+<p>5.创建枚举类型的对象时不能使用new运算符，而是直接将枚举成员赋值给枚举对象</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：java学习记录4</li>
+        <li>本文作者：Knight</li>
+        <li>创建时间：2023-02-03 16:28:39</li>
+        <li>
+            本文链接：http://youxia123-cloud.github.io/2023/02/03/java学习记录4/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/java/">#java</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/02/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">计算机网络学习记录1</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
         </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%9E%9A%E4%B8%BE"><span class="nav-text">接口与枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%8E%A5%E5%8F%A3"><span class="nav-text">一、接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9E%9A%E4%B8%BE"><span class="nav-text">二、枚举</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
-
-    <div class="tag-paginator">
-        <div class="paginator">
-    
-
-    
 </div>
-
+            </div>
+        
     </div>
 </div>
 
@@ -384,6 +478,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -512,6 +623,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
