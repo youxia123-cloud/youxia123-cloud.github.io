@@ -931,4 +931,58 @@
         <tag>java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Mysql学习记录1</title>
+    <url>/2023/02/04/Mysql%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</url>
+    <content><![CDATA[<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><h4 id="一、mysql的基本概念："><a href="#一、mysql的基本概念：" class="headerlink" title="一、mysql的基本概念："></a>一、mysql的基本概念：</h4><p>1.MySQL是一个小型关系数据库管理系统。</p>
+<p>2.mysql的主要优势：</p>
+<p>速度快、可移植性强、接口丰富</p>
+<p>3.mysql8.0的新特性：</p>
+<p>（1）数据字典</p>
+<p>（2）原子数据定义</p>
+<p>（3）安全和账户管理</p>
+<p>（4）资源管理</p>
+<p>（5）InnoDB的增强</p>
+<p>（6）字符集的支持</p>
+<p>（7）增强json功能</p>
+<p>（8）数据类型支持</p>
+<p>（9）查询优化</p>
+<p>（10）共用表表达式</p>
+<p>（11）窗口函数</p>
+<p>（12）统计直方图</p>
+<p>（13）备份锁</p>
+<h4 id="二、数据库基本操作："><a href="#二、数据库基本操作：" class="headerlink" title="二、数据库基本操作："></a>二、数据库基本操作：</h4><p>1.创建数据库：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">show databases;   # 查看当前所有存在的数据库</span><br><span class="line">create database database_name; # 创建一个数据库</span><br></pre></td></tr></table></figure></div>
+
+<p>2.删除数据库：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">drop database database_name;   # 删除数据库 </span><br></pre></td></tr></table></figure></div>
+
+<p>3.从MySQL 8.0开始，系统表全部换成事务型的InnoDB表，默认的MySQL实例将不包含任何MyISAM表，除非手动创建MyISAM表</p>
+<h4 id="三、数据表的基本操作："><a href="#三、数据表的基本操作：" class="headerlink" title="三、数据表的基本操作："></a>三、数据表的基本操作：</h4><p>1.创建数据表：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 创建员工数据表</span><br><span class="line">CREATE TABLE tb_emp1</span><br><span class="line">(</span><br><span class="line">    id   INT(11),</span><br><span class="line">    NAME VARCHAR(25),</span><br><span class="line">    deptid INT(11),</span><br><span class="line">    salary FLOAT</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
+
+<p>2.主键约束：</p>
+<p>主键，又称主码，是表中一列或多列的组合。主键约束（Primary Key Constraint）要求主键列的数据唯一，并且不允许为空</p>
+<p>3.主键分为单字段主键和多字段联合主键</p>
+<p>4.外键约束：</p>
+<p>外键用来在两个表的数据之间建立连接，可以是一列或者多列。一个表可以有一个或多个外键</p>
+<p>外键：首先它是表中的一个字段，虽可以不是本表的主键，但要对应另外一个表的主键。</p>
+<p>5.非空约束：</p>
+<p>非空约束（Not Null Constraint）指字段的值不能为空。对于使用了非空约束的字段，如果用户在添加数据时没有指定值，数据库系统会报错唯一性约束</p>
+<p>6.唯一性约束</p>
+<p>唯一性约束（Unique Constraint）要求该列唯一，允许为空，但只能出现一个空值。唯一约束可以确保一列或者几列不出现重复值</p>
+<p>7.查看数据表的结构：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">describe 表名;   # 查看表的基本结构</span><br><span class="line">show create table 表名; # 查看表的详细结构</span><br></pre></td></tr></table></figure></div>
+
+<p>8.修改数据表：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alter table &lt;旧表名&gt; rename &lt;新表名&gt;; </span><br><span class="line"># 修改表名，修改表名并不修改表的结构，因此修改名称后的表和修改名称前的表的结构必然是相同的</span><br><span class="line"></span><br><span class="line">ALTER TABLE tb_emp6 MODIFY NAME VARBINARY(30);  # 修改表的字段类型</span><br><span class="line"></span><br><span class="line">ALTER TABLE tb_emp1 ADD managerId INT(10) PRIMARY KEY;  #在表的最后添加字段</span><br><span class="line"></span><br><span class="line">ALTER TABLE tb_emp1 ADD column3 INT(11) AFTER NAME;  #在表的指定列添加一个字段</span><br><span class="line"></span><br><span class="line">ALTER TABLE tb_emp1 DROP column3;  # 删除字段</span><br><span class="line"></span><br><span class="line">ALTER TABLE tb_emp1 MODIFY NAME VARCHAR(25) FIRST;  # 修改name字段为表的第一个字段</span><br><span class="line">DROP TABLE IF EXISTS tb_emp7; # 删除数据表tb_emp7</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>Mysql</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
 </search>
