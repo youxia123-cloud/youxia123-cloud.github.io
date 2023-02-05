@@ -985,4 +985,62 @@
         <tag>Mysql</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Mysql学习记录2</title>
+    <url>/2023/02/05/Mysql%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
+    <content><![CDATA[<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><h3 id="一、数学函数："><a href="#一、数学函数：" class="headerlink" title="一、数学函数："></a>一、数学函数：</h3><p>1.绝对值函数ABS（）</p>
+<p>2.返回圆周率的函数PI（）</p>
+<p>3.平方根函数SQRT（）</p>
+<p>4.求余数函数MOD（x，y）</p>
+<p>5.获取整数的函数CEIL（x），CEILING（x）和FLOOR（x）</p>
+<p>6.获取随机数的函数RAND（）和RAND（x）</p>
+<p>7.四舍五入ROUND（x）</p>
+<p>8.符号函数SIGN（x）</p>
+<p>9.幂运算POW（x,y）</p>
+<p>10.对数运算LOG（x），返回自然对数</p>
+<p>11.角度与弧度转换：</p>
+<p>RADIANS（x）将角度转换为弧度</p>
+<p>DEGREES（x）将弧度转换为角度</p>
+<p>12.正弦函数SIN（x）</p>
+<p>13.反正弦函数ASIN（x）</p>
+<p>14.余弦函数COS（x）</p>
+<p>15.反余弦函数ACOS（x）</p>
+<p>16.正切函数TAN（x）</p>
+<p>17.反正切函数ATAN（x）</p>
+<p>18.余切函数COT（x）</p>
+<p>注：使用函数时要加select</p>
+<h3 id="二、字符串函数："><a href="#二、字符串函数：" class="headerlink" title="二、字符串函数："></a>二、字符串函数：</h3><p>1.CHAR_LENGTH(str)返回值为字符串str所包含的字符个数。一个多字节字符算作一个单字符</p>
+<p>2.LENGTH(str)返回值为字符串的字节长度，使用utf8编码字符集时，一个汉字是3字节，一个数字或字母算1字节</p>
+<p>3.CONCAT(s1,s2……)返回结果为连接参数产生的字符串，或许有一个或多个参数</p>
+<p>4.CONCAT_WS函数连接带分隔符的字符串</p>
+<p>5.INSERT(s1,x,len,s2)返回字符串s1，其子字符串起始于x位置和被字符串s2取代的len字符</p>
+<p>6.LOWER (str)或者LCASE (str)可以将字符串str中的字母字符全部转换成小写字母</p>
+<p>7.LEFT(s,n)返回字符串s开始的最左边n个字符</p>
+<p>8.RIGHT(s,n)返回字符串str最右边的n个字符</p>
+<p>9.LPAD(s1,len,s2)返回字符串s1，其左边由字符串s2填补到len字符长度。假如s1的长度大于len，则返回值被缩短至len字符</p>
+<p>10.PAD(s1,len,s2)返回字符串sl，其右边被字符串s2填补至len字符长度。假如字符串s1的长度大于len，则返回值被缩短到len字符长度</p>
+<p>11.LTRIM(s)返回字符串s，字符串左侧空格字符被删除</p>
+<p>12.RTRIM(s)返回字符串s，字符串右侧空格字符被删除。</p>
+<p>13.TRIM(s)删除字符串s两侧的空格</p>
+<p>14.TRIM(s1 FROM s)删除字符串s中两端所有的子字符串s1。s1为可选项，在未指定情况下，删除空格1</p>
+<p>15.REPEAT(s,n)返回一个由重复的字符串s组成的字符串，字符串s的数目等于n。若n&lt;&#x3D;0，则返回一个空字符串。若s或n为NULL，则返回NULL</p>
+<p>16.SPACE(n)返回一个由n个空格组成的字符串</p>
+<p>17.REPLACE(s,s1,s2)使用字符串s2替代字符串s中所有的字符串s1</p>
+<p>18.STRCMP(s1,s2)：若所有的字符串均相同，则返回0；若根据当前分类次序，第一个参数小于第二个，则返回-1；其他情况返回1</p>
+<p>19.SUBSTRING(s,n,len)带有len参数的格式，从字符串s返回一个长度与len字符相同的子字符串，起始于位置n</p>
+<p>20.MID()函数获取指定位置处的子字符串</p>
+<p>21.LOCATE(str1,str)、POSITION(str1 IN str)和INSTR(str, str1)3个函数的作用相同，返回子字符串str1在字符串str中的开始位置</p>
+<p>22.REVERSE(s)将字符串s反转，返回的字符串的顺序和s字符串顺序相反</p>
+<p>23.ELT(N，字符串1，字符串2，字符串3，…，字符串N)：若N &#x3D; 1，则返回值为字符串1；若N&#x3D;2，则返回值为字符串2；以此类推；若N小于1或大于参数的数目，则返回值为NULL</p>
+<p>24.FIELD(s,s1,s2,…,sn)返回字符串s在列表s1,s2,…,sn中第一次出现的位置，在找不到s的情况下，返回值为0。如果s为NULL，则返回值为0，原因是NULL不能同任何值进行同等比较</p>
+<p>25.FIND_IN_SET(s1,s2)返回字符串s1在字符串列表s2中出现的位置，字符串列表是一个由多个逗号‘,’分开的字符串组成的列表</p>
+<p>26.MAKE_SET(x,s1,s2,…,sn)函数按x的二进制数从s1，s2,…,sn中选取字符串</p>
+]]></content>
+      <categories>
+        <category>Mysql</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
 </search>
