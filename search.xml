@@ -1043,4 +1043,34 @@
         <tag>Mysql</tag>
       </tags>
   </entry>
+  <entry>
+    <title>java学习记录5</title>
+    <url>/2023/02/06/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/</url>
+    <content><![CDATA[<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h3 id="一、什么是JDBC："><a href="#一、什么是JDBC：" class="headerlink" title="一、什么是JDBC："></a>一、什么是JDBC：</h3><p>1.jdbc表示java数据库连接，是用java语言与数据库连接的API</p>
+<p>2.jdbc是一个规范，提供了一整套接口。通过JDBC API，用Java语言编写的应用程序能够执行SQL语句、获取结果、显示数据等，并且可以将所做的修改传回数据库</p>
+<p>3.通过jdbc与数据库建立连接，发送sql语句，处理sql语句执行的结果</p>
+<p>4.访问MySQL数据库需要使用MySQL JDBC驱动程序</p>
+<p>5.JDBC API主要位于Java的java.sql包与javax.sql包中</p>
+<h3 id="二、建立jdbc连接："><a href="#二、建立jdbc连接：" class="headerlink" title="二、建立jdbc连接："></a>二、建立jdbc连接：</h3><p>1.建立jdbc连接的步骤：</p>
+<p>（1）导入jdbc包</p>
+<p>（2）注册jdbc驱动程序</p>
+<p>（3）数据库url配置</p>
+<p>（4）创建连接对象</p>
+<p>2.使用java开发数据库应用需要用到的四个接口：</p>
+<p>Driver、Connection、Statement和ResultSet</p>
+<p>3.使用jdbc访问数据库的一般步骤：</p>
+<p>加载驱动程序、建立数据库连接、创建执行方式语句、执行sql语句、处理返回结果和关闭创建的各种对象</p>
+<p>4.jdbc中的三种sql查询方式：不含参数的静态查询、含有参数的动态查询和存储过程调用。分别对应Statement、PreparedStatement和CallableStatement接口</p>
+<p>5.通过Statement接口实现静态sql查询、通过PreparedStatement接口实现动态SQL查询、通过CallableStatement接口实现存储过程的调用</p>
+<p>6.通过DatebaseMentData接口获得关于数据库的信息，通过ResultSetMetaData接口获取结果集的结构</p>
+<p>7.通过ResultSet返回查询结果集，并使用记录指针对其记录进行定位</p>
+<p>8.可以使用setAutoCommit（）方法控制事物提交的方式，使用rollback（）方法实现事物回滚</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>
