@@ -1203,4 +1203,38 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录6</title>
+    <url>/2023/02/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/</url>
+    <content><![CDATA[<h1 id="总线结构"><a href="#总线结构" class="headerlink" title="总线结构"></a>总线结构</h1><h3 id="一、多总线结构"><a href="#一、多总线结构" class="headerlink" title="一、多总线结构"></a>一、多总线结构</h3><p>1.双总线结构</p>
+<p>通道：具有特殊功能的处理器，由通道对I&#x2F;O统一管理</p>
+<p>2.三总线结构：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.png"
+                     
+                ></p>
+<p>3.三总线结构的另一种形式：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%841.png"
+                     
+                ></p>
+<p>4.四总线结构：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%9B%9B%E6%80%BB%E7%BA%BF.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
