@@ -1309,4 +1309,32 @@
         <tag>深度学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>java学习记录6</title>
+    <url>/2023/02/13/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/</url>
+    <content><![CDATA[<h1 id="java中的异常机制"><a href="#java中的异常机制" class="headerlink" title="java中的异常机制"></a>java中的异常机制</h1><h3 id="一、异常的定义："><a href="#一、异常的定义：" class="headerlink" title="一、异常的定义："></a>一、异常的定义：</h3><p>1.操作的过程中可能有很多出错的情况，出错的原因可能是多方面的。非正常的情况在java中统一被认为是异常，java使用异常机制来统一处理</p>
+<p>2.异常是相对于return的一种退出机制，可以由系统触发，也可以由程序通过throw语句触发，异常可以通过try&#x2F;catch语句进行捕获并处理，如果没有捕获，则会导致程序退出并输出异常栈信息</p>
+<h3 id="二、异常类的体系："><a href="#二、异常类的体系：" class="headerlink" title="二、异常类的体系："></a>二、异常类的体系：</h3><p>1.以Throwable为根，Java定义了非常多的异常类，表示各种类型的异常</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%BC%82%E5%B8%B8%E7%B1%BB%E7%9A%84%E4%BD%93%E7%B3%BB.png"
+                     
+                ></p>
+<p>2.除了Java API中定义的异常类，也可以自己定义异常类，一般是继承Exception或者它的某个子类</p>
+<h3 id="三、异常的处理："><a href="#三、异常的处理：" class="headerlink" title="三、异常的处理："></a>三、异常的处理：</h3><p>1.java中对异常的处理有：catch、throw、finally、try-with-resources和throws</p>
+<p>2.catch可以有很多个，每一个对应一种异常类型。异常处理机制将根据抛出的异常类型找第一个匹配的catch块，找到后，执行catch块内的代码，不再执行其他catch块，如果没有找到，会继续到上层方法中查找</p>
+<p>3.在catch块内处理完后，可以重新抛出异常，异常可以是原来的，也可以是新建的</p>
+<p>4.异常机制中还有一个重要的部分，就是finally。catch后面可以跟finally语句。finally内的代码不管有无异常发生，都会执行</p>
+<p>5.异常机制中，还有一个和throw很像的关键字throws，用于声明一个方法可能抛出的异常。throws跟在方法的括号后面，可以声明多个异常，以逗号分隔。这个声明的含义是，这个方法内可能抛出这些异常，且没有对这些异常进行处理，至少没有处理完，调用者必须进行处理</p>
+<p>6.无论是受检异常还是未受检异常，无论是否出现在throws声明中，都应该在合适的地方以适当的方式进行处理</p>
+<p>7.真正出现异常的时候，应该抛出异常，而不是返回特殊值</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>
