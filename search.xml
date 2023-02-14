@@ -1337,4 +1337,75 @@
         <tag>java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录7</title>
+    <url>/2023/02/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%957/</url>
+    <content><![CDATA[<h1 id="总线控制"><a href="#总线控制" class="headerlink" title="总线控制"></a>总线控制</h1><h3 id="一、总线的判优控制："><a href="#一、总线的判优控制：" class="headerlink" title="一、总线的判优控制："></a>一、总线的判优控制：</h3><p>1.主设备：对总线有控制权</p>
+<p>2.从设备：响应从主设备发来的总线命令</p>
+<p>3.<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E6%80%BB%E7%BA%BF%E5%88%A4%E4%BC%98%E6%8E%A7%E5%88%B6.png"
+                     
+                ></p>
+<p>4.链式查询：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E9%93%BE%E5%BC%8F%E6%9F%A5%E8%AF%A2.png"
+                     
+                ></p>
+<p>5.计数器定时查询：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E6%95%B0%E5%99%A8%E5%AE%9A%E6%97%B6%E6%9F%A5%E8%AF%A2.png"
+                     
+                ></p>
+<p>6.独立请求：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%8B%AC%E7%AB%8B%E8%AF%B7%E6%B1%82.png"
+                     
+                ></p>
+<h3 id="二、总线通信控制："><a href="#二、总线通信控制：" class="headerlink" title="二、总线通信控制："></a>二、总线通信控制：</h3><p>1.目的：解决通信双方协调配合的问题</p>
+<p>2.总线传输周期：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E6%80%BB%E7%BA%BF%E4%BC%A0%E8%BE%93%E5%91%A8%E6%9C%9F.png"
+                     
+                ></p>
+<p>3.总线通信的四种方式：</p>
+<p>（1）同步通信：由统一时标控制数据穿送</p>
+<p>（2）异步通信：采用应答方式，没有公共时钟标准</p>
+<p>（3）半同步通信：同步、异步结合</p>
+<p>（4）分离式通信：充分挖掘系统总线每个瞬间的潜力</p>
+<p>4.同步：发送方用时钟前沿发信号、接收方用系统时钟后沿判断、识别</p>
+<p>5.异步：允许不同速度的模块和谐工作，增加一条等待响应信号（wait信号）</p>
+<p>6.一个总线传输周期（以输入数据为例）：</p>
+<p>（1）主模块发地址、命令  （占用总线）</p>
+<p>（2）从模块准备数据    （不占用总线，总线空闲）</p>
+<p>（3）从模块向主模块发送数据    （占用总线）</p>
+<p>7.分离式通信：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%88%86%E7%A6%BB%E5%BC%8F%E9%80%9A%E4%BF%A1.png"
+                     
+                ></p>
+<p>8.分离通信的特点：</p>
+<p>（1）各模块有权申请占用总线</p>
+<p>（2）采用同步方式通信，不等对方回答</p>
+<p>（3）各模块准备数据时，不占用总线</p>
+<p>（4）总线被占用时，无空闲</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
