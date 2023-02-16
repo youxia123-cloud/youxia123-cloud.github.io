@@ -1455,4 +1455,55 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录9</title>
+    <url>/2023/02/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/</url>
+    <content><![CDATA[<h1 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.主存储器的基本组成：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%BB%E5%AD%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90.png"
+                     
+                ></p>
+<p>2.主存和CPU的联系：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%BB%E5%AD%98%E5%92%8CCPU%E7%9A%84%E8%81%94%E7%B3%BB.png"
+                     
+                ></p>
+<p>3.主存储器中存储单元地址的分配：</p>
+<p>12345678H在存储器中的存储</p>
+<p>（1）高位字节地址为字地址 、大端大尾方式</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%A4%A7%E7%AB%AF-%E5%A4%A7%E5%B0%BE.png"
+                     
+                ></p>
+<p>（2）低位字节地址为字地址、小端、小尾方式</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%B0%8F%E7%AB%AF-%E5%B0%8F%E5%B0%BE.png"
+                     
+                ></p>
+<p>（3）一个字四个字节</p>
+<p>假设地址线有24根，按字节寻址 2的24次方&#x3D;16MB</p>
+<p>若字长为16位，按字寻址，得到8MW</p>
+<p>若字长为32位，按字寻址，得到4MW</p>
+<p>4.主存的技术指标：</p>
+<p>（1）存储容量：主存存放二进制代码的总位数</p>
+<p>（2）存储速度：</p>
+<p>存取时间：存储器的访问时间、读出时间、访问时间</p>
+<p>存取周期：连续两次独立的存储器操作（读或写）所需要的最小间隔时间</p>
+<p>（3）存储器的带宽  位&#x2F;秒</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
