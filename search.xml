@@ -1506,4 +1506,33 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>深度学习记录5</title>
+    <url>/2023/02/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/</url>
+    <content><![CDATA[<h1 id="Tensorflow2学习记录1"><a href="#Tensorflow2学习记录1" class="headerlink" title="Tensorflow2学习记录1"></a>Tensorflow2学习记录1</h1><h3 id="一、Tensorflow的建模流程"><a href="#一、Tensorflow的建模流程" class="headerlink" title="一、Tensorflow的建模流程"></a>一、Tensorflow的建模流程</h3><p>1.准备数据</p>
+<p>数据的类型一般有结构化数据、图片数据、文本数据、时间序列数据</p>
+<p>2.定义模型</p>
+<p>3.训练模型</p>
+<p>4.评估模型</p>
+<p>5.使用模型</p>
+<p>6.保存模型 </p>
+<p>将模型打包导出为统一的格式，方便迁移和部署</p>
+<p>后续的模型部署也是我们应该关心的，比如在服务器上进行部署、在移动端和嵌入式设备上进行部署、在网页端部署等等</p>
+<h3 id="二、Tensorflow的核心概念"><a href="#二、Tensorflow的核心概念" class="headerlink" title="二、Tensorflow的核心概念"></a>二、Tensorflow的核心概念</h3><p>1.tensorflow是一个采用数据流图，用于数值计算的开源软件库</p>
+<p>2.tensorflow底层的核心概念是张量，计算图和自动微分</p>
+<p>3.张量</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">tf.constant()    <span class="comment"># 定义一个常量</span></span><br><span class="line">tf.tensor()      <span class="comment"># 定义一个张量</span></span><br><span class="line">tf.Variable()    <span class="comment"># 定义一个变量</span></span><br></pre></td></tr></table></figure></div>
+
+<p>4.在tensorflow2中使用动态计算图和自动微分</p>
+<p>5.可以说，tensorflow2是新的架构、新的开始</p>
+<h3 id="三、Tensorflow2的层次结构"><a href="#三、Tensorflow2的层次结构" class="headerlink" title="三、Tensorflow2的层次结构"></a>三、Tensorflow2的层次结构</h3><p>1.这里将tensorflow2分为5个层次结构：硬件层、内核层、低阶API、中阶API、高阶API</p>
+<p>2.在之后的学习中将会重点学习低阶API、中阶API、高阶API</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
 </search>

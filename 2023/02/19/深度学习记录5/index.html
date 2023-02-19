@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/02/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/" />
+    <link rel="canonical" href="http://example.com/2023/02/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机组成原理学习记录9 |
+            深度学习记录5 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录9</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">深度学习记录5</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-02-16 14:54:52</span>
-        <span class="mobile">2023-02-16 14:54</span>
+        <span class="pc">2023-02-19 22:34:27</span>
+        <span class="mobile">2023-02-19 22:34</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -285,7 +285,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>&nbsp;
+                        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -297,7 +297,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>&nbsp;
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -320,46 +320,24 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.主存储器的基本组成：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%BB%E5%AD%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90.png"
-                     
-                ></p>
-<p>2.主存和CPU的联系：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%BB%E5%AD%98%E5%92%8CCPU%E7%9A%84%E8%81%94%E7%B3%BB.png"
-                     
-                ></p>
-<p>3.主存储器中存储单元地址的分配：</p>
-<p>12345678H在存储器中的存储</p>
-<p>（1）高位字节地址为字地址 、大端大尾方式</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%A4%A7%E7%AB%AF-%E5%A4%A7%E5%B0%BE.png"
-                     
-                ></p>
-<p>（2）低位字节地址为字地址、小端、小尾方式</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%B0%8F%E7%AB%AF-%E5%B0%8F%E5%B0%BE.png"
-                     
-                ></p>
-<p>（3）一个字四个字节</p>
-<p>假设地址线有24根，按字节寻址 2的24次方&#x3D;16MB</p>
-<p>若字长为16位，按字寻址，得到8MW</p>
-<p>若字长为32位，按字寻址，得到4MW</p>
-<p>4.主存的技术指标：</p>
-<p>（1）存储容量：主存存放二进制代码的总位数</p>
-<p>（2）存储速度：</p>
-<p>存取时间：存储器的访问时间、读出时间、访问时间</p>
-<p>存取周期：连续两次独立的存储器操作（读或写）所需要的最小间隔时间</p>
-<p>（3）存储器的带宽  位&#x2F;秒</p>
+                <h1 id="Tensorflow2学习记录1"><a href="#Tensorflow2学习记录1" class="headerlink" title="Tensorflow2学习记录1"></a>Tensorflow2学习记录1</h1><h3 id="一、Tensorflow的建模流程"><a href="#一、Tensorflow的建模流程" class="headerlink" title="一、Tensorflow的建模流程"></a>一、Tensorflow的建模流程</h3><p>1.准备数据</p>
+<p>数据的类型一般有结构化数据、图片数据、文本数据、时间序列数据</p>
+<p>2.定义模型</p>
+<p>3.训练模型</p>
+<p>4.评估模型</p>
+<p>5.使用模型</p>
+<p>6.保存模型 </p>
+<p>将模型打包导出为统一的格式，方便迁移和部署</p>
+<p>后续的模型部署也是我们应该关心的，比如在服务器上进行部署、在移动端和嵌入式设备上进行部署、在网页端部署等等</p>
+<h3 id="二、Tensorflow的核心概念"><a href="#二、Tensorflow的核心概念" class="headerlink" title="二、Tensorflow的核心概念"></a>二、Tensorflow的核心概念</h3><p>1.tensorflow是一个采用数据流图，用于数值计算的开源软件库</p>
+<p>2.tensorflow底层的核心概念是张量，计算图和自动微分</p>
+<p>3.张量</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.constant()    <span class="comment"># 定义一个常量</span></span><br><span class="line">tf.tensor()      <span class="comment"># 定义一个张量</span></span><br><span class="line">tf.Variable()    <span class="comment"># 定义一个变量</span></span><br></pre></td></tr></table></figure></div>
+
+<p>4.在tensorflow2中使用动态计算图和自动微分</p>
+<p>5.可以说，tensorflow2是新的架构、新的开始</p>
+<h3 id="三、Tensorflow2的层次结构"><a href="#三、Tensorflow2的层次结构" class="headerlink" title="三、Tensorflow2的层次结构"></a>三、Tensorflow2的层次结构</h3><p>1.这里将tensorflow2分为5个层次结构：硬件层、内核层、低阶API、中阶API、高阶API</p>
+<p>2.在之后的学习中将会重点学习低阶API、中阶API、高阶API</p>
 
             </div>
 
@@ -367,11 +345,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机组成原理学习记录9</li>
+        <li>本文标题：深度学习记录5</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-02-16 14:54:52</li>
+        <li>创建时间：2023-02-19 22:34:27</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/02/16/计算机组成原理学习记录9/
+            本文链接：http://youxia123-cloud.github.io/2023/02/19/深度学习记录5/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -386,7 +364,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">#计算机组成原理</a>&nbsp;
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -395,29 +373,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/02/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%955/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">深度学习记录5</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/02/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%958/"
+                            href="/2023/02/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录8</span>
+                                    <span class="post-nav-title-item">计算机组成原理学习记录9</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -437,7 +400,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-text">主存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="nav-text">一、概述</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tensorflow2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951"><span class="nav-text">Tensorflow2学习记录1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Tensorflow%E7%9A%84%E5%BB%BA%E6%A8%A1%E6%B5%81%E7%A8%8B"><span class="nav-text">一、Tensorflow的建模流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Tensorflow%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-text">二、Tensorflow的核心概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Tensorflow2%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-text">三、Tensorflow2的层次结构</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
