@@ -1591,4 +1591,33 @@
         <tag>深度学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录10</title>
+    <url>/2023/02/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9510/</url>
+    <content><![CDATA[<h1 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h1><h3 id="一、半导体存储芯片的基本结构："><a href="#一、半导体存储芯片的基本结构：" class="headerlink" title="一、半导体存储芯片的基本结构："></a>一、半导体存储芯片的基本结构：</h3><p>1.<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E8%8A%AF%E7%89%87%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png"
+                     
+                ></p>
+<p>2.半导体片选线</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%89%87%E9%80%89%E7%BA%BF.png"
+                     
+                ></p>
+<p>3.片选线的作用：使某一个或某些芯片同时工作</p>
+<h3 id="二、半导体存储芯片的译码驱动方式："><a href="#二、半导体存储芯片的译码驱动方式：" class="headerlink" title="二、半导体存储芯片的译码驱动方式："></a>二、半导体存储芯片的译码驱动方式：</h3><p>1.线选法：对容量大的数据不适用</p>
+<p>2.重合法：行、列地址分别进行译码，只能有一组是有效的</p>
+<h3 id="三、随机存取存储器："><a href="#三、随机存取存储器：" class="headerlink" title="三、随机存取存储器："></a>三、随机存取存储器：</h3><p>1.静态RAM：</p>
+<p>基本电路由触发器、开关等元件组成</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
