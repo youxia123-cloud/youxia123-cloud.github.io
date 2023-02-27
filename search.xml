@@ -1620,4 +1620,41 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机网络学习记录2</title>
+    <url>/2023/02/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
+    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>1.物理层—–数据链路层——–网络层——–传输层——-应用层</p>
+<p>2.分层的优点：</p>
+<p>（1）各层之间相互独立</p>
+<p>（2）灵活性好</p>
+<p>（3）结构上可以分开</p>
+<p>（4）易于维护和实现</p>
+<p>（5）能够促进标准化工作</p>
+<p>3.协议：为网络中的数据交换建立的规则、标准或约定称之为协议</p>
+<p>4.协议的组成：语法、语义、同步</p>
+<p>5.常见的计算机网络协议：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE.png"
+                     
+                ></p>
+<p>6.协议是水平的、服务是垂直的</p>
+<p>7.实体：任何可以发送或接收信息的硬件或软件进程</p>
+<p>8.ICMP（互联网控制消息协议 ）：网络设备用来诊断网络通信问题的网络层协议 </p>
+<p>9.数据通信：计算机网络最基本的功能，包括连接控制、传输控制、差错控制、流量控制、路由选择、多路复用等子功能</p>
+<p>10.<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/OSI-TCP%E3%80%81IP.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
