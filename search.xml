@@ -1685,4 +1685,36 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录12</title>
+    <url>/2023/03/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9512/</url>
+    <content><![CDATA[<h3 id="半导体存储芯片的译码驱动方式"><a href="#半导体存储芯片的译码驱动方式" class="headerlink" title="半导体存储芯片的译码驱动方式"></a>半导体存储芯片的译码驱动方式</h3><h3 id="一、线选法"><a href="#一、线选法" class="headerlink" title="一、线选法"></a>一、线选法</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%BA%BF%E9%80%89%E6%B3%95.png"
+                     
+                ></p>
+<h3 id="二、重合法"><a href="#二、重合法" class="headerlink" title="二、重合法"></a>二、重合法</h3><p>1.行译码</p>
+<p>2.列译码</p>
+<h3 id="随机存取存储器（RAM）"><a href="#随机存取存储器（RAM）" class="headerlink" title="随机存取存储器（RAM）"></a>随机存取存储器（RAM）</h3><p>一、静态RAM（SARM）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E9%9D%99%E6%80%81RAM.png"
+                     
+                ></p>
+<p>T1~4是触发器；T5、T6是行开关；T7、T8是列开关；T7、T8一列共用；A是触发器的原端</p>
+<p>二、动态RAM（DRAM）</p>
+<p>读数据线、写数据线</p>
+<p>1.读出与原信息相反，写入与输入信息相同</p>
+<p>2.三管动态RAM芯片</p>
+<p>3.单管动态RAM（4116）</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
