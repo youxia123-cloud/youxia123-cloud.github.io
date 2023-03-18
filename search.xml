@@ -677,12 +677,12 @@
   <entry>
     <title>计算机组成原理学习记录1</title>
     <url>/2023/02/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</url>
-    <content><![CDATA[<h1 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h1><h4 id="一、计算机系统的组成"><a href="#一、计算机系统的组成" class="headerlink" title="一、计算机系统的组成"></a>一、计算机系统的组成</h4><p><img  
+    <content><![CDATA[<h1 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h1><h4 id="一、计算机系统的组成"><a href="#一、计算机系统的组成" class="headerlink" title="一、计算机系统的组成"></a>一、计算机系统的组成</h4><p><a href="https://imgse.com/i/ppJosot"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJosot.png"
+                      alt="ppJosot.png"
+                ></a></p>
 <h4 id="二、软件"><a href="#二、软件" class="headerlink" title="二、软件"></a>二、软件</h4><p>（1）系统软件：</p>
 <p>​	语言处理系统</p>
 <p>​	操作系统</p>
@@ -698,12 +698,12 @@
 <p>   高级语言——————-虚拟的机器M3</p>
 <h4 id="四、计算机组成："><a href="#四、计算机组成：" class="headerlink" title="四、计算机组成："></a>四、计算机组成：</h4><p>1.实现计算机体系结构所体现出来的属性（集体指令的实现）</p>
 <h4 id="五、计算机的基本组成："><a href="#五、计算机的基本组成：" class="headerlink" title="五、计算机的基本组成："></a>五、计算机的基本组成：</h4><p>1.（冯诺依曼计算机）计算机由五大部件组成</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJowsH"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJowsH.png"
+                      alt="ppJowsH.png"
+                ></a></p>
 <p>2.指令和数据以同等的地位存储在存储器中，可以按照地址访问</p>
 <p>3.指令和数据由二进制表示</p>
 <p>4.指令由操作码和地址码组成 </p>
@@ -713,12 +713,12 @@
 <p>控制器（CU）的功能：分析指令，发出控制信号</p>
 <h4 id="六、冯诺依曼系统的改进"><a href="#六、冯诺依曼系统的改进" class="headerlink" title="六、冯诺依曼系统的改进"></a>六、冯诺依曼系统的改进</h4><p>1.以存储器为核心</p>
 <p>2.将运算器（ALU）和控制器（CU）合起来组成CPU</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYSFpj"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%8E%B0%E4%BB%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E6%A1%86%E5%9B%BE.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSFpj.png"
+                      alt="ppYSFpj.png"
+                ></a></p>
 ]]></content>
       <categories>
         <category>计算机组成原理</category>
@@ -876,12 +876,12 @@
 <h4 id="六、分组交换："><a href="#六、分组交换：" class="headerlink" title="六、分组交换："></a>六、分组交换：</h4><p>1.分组交换采用存储转发技术</p>
 <p>2.在发送端，先把较长的报文划分成较短的、固定长度的数据段</p>
 <p>3.在每一个数据段前面添加上首部构成分组</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYpqsI"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%88%86%E7%BB%84.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYpqsI.png"
+                      alt="ppYpqsI.png"
+                ></a></p>
 <p>4.分组交换网以“分组”作为数据传输单元，依次把各个分组发送到接收端</p>
 <p>5.每一个分组的首部都含有地址和控制信息</p>
 <p>6.每一个分组在互联网独立地选择传输路径</p>
@@ -1103,12 +1103,12 @@
     <title>计算机组成原理学习记录4</title>
     <url>/2023/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/</url>
     <content><![CDATA[<h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h3 id="一、计算机的产生和发展："><a href="#一、计算机的产生和发展：" class="headerlink" title="一、计算机的产生和发展："></a>一、计算机的产生和发展：</h3><p>1.1946年，美国ENIAC</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJocJf"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9B%B4%E8%BF%AD.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJocJf.png"
+                      alt="ppJocJf.png"
+                ></a></p>
 <p>2.现代计算机产生的驱动：需求、技术发展</p>
 <p>3.微型计算机的出现和发展：</p>
 <p>inter公司为代表</p>
@@ -1151,34 +1151,34 @@
 <p>2.总线上信息的传送：</p>
 <p>串行、并行</p>
 <p>3.单总线</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJoGIx"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%8D%95%E6%80%BB%E7%BA%BF.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJoGIx.png"
+                      alt="ppJoGIx.png"
+                ></a></p>
 <p>4.面向CPU的双总线结构</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJordI"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%8F%8C%E6%80%BB%E7%BA%BF.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJordI.png"
+                      alt="ppJordI.png"
+                ></a></p>
 <p>5.以存储器为中心的双总线结构</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYSZn0"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%8F%8C%E6%80%BB%E7%BA%BF1.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSZn0.png"
+                      alt="ppYSZn0.png"
+                ></a></p>
 <h3 id="二、总线的分类"><a href="#二、总线的分类" class="headerlink" title="二、总线的分类"></a>二、总线的分类</h3><p>1.片内总线</p>
 <p>2.系统总线：计算机各部件之间的信息传输线</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYSEXq"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSEXq.png"
+                      alt="ppYSEXq.png"
+                ></a></p>
 <p>3.通信总线：用于计算机系统之间或计算机系统与其他系统（如控制仪表、移动通信等）之间的通信</p>
 <p>传输方式：串行通信总线、并行通信总线</p>
 <h3 id="三、总线的特性和性能指标"><a href="#三、总线的特性和性能指标" class="headerlink" title="三、总线的特性和性能指标"></a>三、总线的特性和性能指标</h3><p>1.机械特性：尺寸、形状、管脚数及排列顺序</p>
@@ -1209,26 +1209,26 @@
     <content><![CDATA[<h1 id="总线结构"><a href="#总线结构" class="headerlink" title="总线结构"></a>总线结构</h1><h3 id="一、多总线结构"><a href="#一、多总线结构" class="headerlink" title="一、多总线结构"></a>一、多总线结构</h3><p>1.双总线结构</p>
 <p>通道：具有特殊功能的处理器，由通道对I&#x2F;O统一管理</p>
 <p>2.三总线结构：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJoNRO"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJoNRO.png"
+                      alt="ppJoNRO.png"
+                ></a></p>
 <p>3.三总线结构的另一种形式：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJo0Ld"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%841.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJo0Ld.png"
+                      alt="ppJo0Ld.png"
+                ></a></p>
 <p>4.四总线结构：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYSm7T"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%9B%9B%E6%80%BB%E7%BA%BF.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSm7T.png"
+                      alt="ppYSm7T.png"
+                ></a></p>
 ]]></content>
       <categories>
         <category>计算机组成原理</category>
@@ -1349,26 +1349,26 @@
                       alt="ppJf600.png"
                 ></a></p>
 <p>4.链式查询：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJotJK"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E9%93%BE%E5%BC%8F%E6%9F%A5%E8%AF%A2.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJotJK.png"
+                      alt="ppJotJK.png"
+                ></a></p>
 <p>5.计数器定时查询：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJo6FP"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E6%95%B0%E5%99%A8%E5%AE%9A%E6%97%B6%E6%9F%A5%E8%AF%A2.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJo6FP.png"
+                      alt="ppJo6FP.png"
+                ></a></p>
 <p>6.独立请求：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJo3ZR"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%8B%AC%E7%AB%8B%E8%AF%B7%E6%B1%82.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJo3ZR.png"
+                      alt="ppJo3ZR.png"
+                ></a></p>
 <h3 id="二、总线通信控制："><a href="#二、总线通信控制：" class="headerlink" title="二、总线通信控制："></a>二、总线通信控制：</h3><p>1.目的：解决通信双方协调配合的问题</p>
 <p>2.总线传输周期：</p>
 <p><a href="https://imgse.com/i/ppJf2kT"><img  
@@ -1389,12 +1389,12 @@
 <p>（2）从模块准备数据    （不占用总线，总线空闲）</p>
 <p>（3）从模块向主模块发送数据    （占用总线）</p>
 <p>7.分离式通信：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJo8d1"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%88%86%E7%A6%BB%E5%BC%8F%E9%80%9A%E4%BF%A1.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJo8d1.png"
+                      alt="ppJo8d1.png"
+                ></a></p>
 <p>8.分离通信的特点：</p>
 <p>（1）各模块有权申请占用总线</p>
 <p>（2）采用同步方式通信，不等对方回答</p>
@@ -1439,12 +1439,12 @@
                       alt="ppJfhp4.png"
                 ></a></p>
 <p>2.缓存-主存层次和主存-辅存层次：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJoDeA"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%BC%93%E5%AD%98-%E4%B8%BB%E5%AD%98%E5%92%8C%E4%B8%BB%E5%AD%98-%E8%BE%85%E5%AD%98.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJoDeA.png"
+                      alt="ppJoDeA.png"
+                ></a></p>
 <p>3.缓存-主存（速度）：主存储器、实地址、物理地址</p>
 <p>4.主存-辅存（容量）：虚拟存储器、虚地址、逻辑地址</p>
 ]]></content>
@@ -1466,12 +1466,12 @@
                       alt="ppJfBlj.png"
                 ></a></p>
 <p>2.主存和CPU的联系：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJfymq"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%BB%E5%AD%98%E5%92%8CCPU%E7%9A%84%E8%81%94%E7%B3%BB.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJfymq.png"
+                      alt="ppJfymq.png"
+                ></a></p>
 <p>3.主存储器中存储单元地址的分配：</p>
 <p>12345678H在存储器中的存储</p>
 <p>（1）高位字节地址为字地址 、大端大尾方式</p>
@@ -1482,12 +1482,12 @@
                       alt="ppJf41J.png"
                 ></a></p>
 <p>（2）低位字节地址为字地址、小端、小尾方式</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYSeBV"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E5%B0%8F%E7%AB%AF-%E5%B0%8F%E5%B0%BE.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSeBV.png"
+                      alt="ppYSeBV.png"
+                ></a></p>
 <p>（3）一个字四个字节</p>
 <p>假设地址线有24根，按字节寻址 2的24次方&#x3D;16MB</p>
 <p>若字长为16位，按字寻址，得到8MW</p>
@@ -1601,12 +1601,12 @@
                       alt="ppJfc7V.png"
                 ></a></p>
 <p>2.半导体片选线</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJoYi6"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%89%87%E9%80%89%E7%BA%BF.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJoYi6.png"
+                      alt="ppJoYi6.png"
+                ></a></p>
 <p>3.片选线的作用：使某一个或某些芯片同时工作</p>
 <h3 id="二、半导体存储芯片的译码驱动方式："><a href="#二、半导体存储芯片的译码驱动方式：" class="headerlink" title="二、半导体存储芯片的译码驱动方式："></a>二、半导体存储芯片的译码驱动方式：</h3><p>1.线选法：对容量大的数据不适用</p>
 <p>2.重合法：行、列地址分别进行译码，只能有一组是有效的</p>
@@ -1633,22 +1633,28 @@
 <p>3.协议：为网络中的数据交换建立的规则、标准或约定称之为协议</p>
 <p>4.协议的组成：语法、语义、同步</p>
 <p>5.常见的计算机网络协议：</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppYpLLt"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYpLLt.png"
+                      alt="ppYpLLt.png"
+                ></a></p>
 <p>6.协议是水平的、服务是垂直的</p>
 <p>7.实体：任何可以发送或接收信息的硬件或软件进程</p>
 <p>8.ICMP（互联网控制消息协议 ）：网络设备用来诊断网络通信问题的网络层协议 </p>
 <p>9.数据通信：计算机网络最基本的功能，包括连接控制、传输控制、差错控制、流量控制、路由选择、多路复用等子功能</p>
-<p>10.<img  
+<p>10.<a href="https://imgse.com/i/ppYpbQA"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/OSI-TCP%E3%80%81IP.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYpbQA.png"
+                      alt="ppYpbQA.png"
+                ></a></p>
+<p>11.<a href="https://imgse.com/i/ppYpXeP"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYpXeP.png"
+                      alt="ppYpXeP.png"
+                ></a></p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
@@ -1688,27 +1694,74 @@
   <entry>
     <title>计算机组成原理学习记录12</title>
     <url>/2023/03/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9512/</url>
-    <content><![CDATA[<h3 id="半导体存储芯片的译码驱动方式"><a href="#半导体存储芯片的译码驱动方式" class="headerlink" title="半导体存储芯片的译码驱动方式"></a>半导体存储芯片的译码驱动方式</h3><h3 id="一、线选法"><a href="#一、线选法" class="headerlink" title="一、线选法"></a>一、线选法</h3><p><img  
+    <content><![CDATA[<h3 id="半导体存储芯片的译码驱动方式"><a href="#半导体存储芯片的译码驱动方式" class="headerlink" title="半导体存储芯片的译码驱动方式"></a>半导体存储芯片的译码驱动方式</h3><h3 id="一、线选法"><a href="#一、线选法" class="headerlink" title="一、线选法"></a>一、线选法</h3><p><a href="https://imgse.com/i/ppYSAcn"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E7%BA%BF%E9%80%89%E6%B3%95.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppYSAcn.png"
+                      alt="ppYSAcn.png"
+                ></a></p>
 <h3 id="二、重合法"><a href="#二、重合法" class="headerlink" title="二、重合法"></a>二、重合法</h3><p>1.行译码</p>
 <p>2.列译码</p>
 <h3 id="随机存取存储器（RAM）"><a href="#随机存取存储器（RAM）" class="headerlink" title="随机存取存储器（RAM）"></a>随机存取存储器（RAM）</h3><p>一、静态RAM（SARM）</p>
-<p><img  
+<p><a href="https://imgse.com/i/ppJodQe"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://mystorage9.oss-cn-hangzhou.aliyuncs.com/img/%E9%9D%99%E6%80%81RAM.png"
-                     
-                ></p>
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJodQe.png"
+                      alt="ppJodQe.png"
+                ></a></p>
 <p>T1~4是触发器；T5、T6是行开关；T7、T8是列开关；T7、T8一列共用；A是触发器的原端</p>
 <p>二、动态RAM（DRAM）</p>
 <p>读数据线、写数据线</p>
 <p>1.读出与原信息相反，写入与输入信息相同</p>
 <p>2.三管动态RAM芯片</p>
 <p>3.单管动态RAM（4116）</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理学习记录13</title>
+    <url>/2023/03/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9513/</url>
+    <content><![CDATA[<h3 id="一、动态RAM的刷新"><a href="#一、动态RAM的刷新" class="headerlink" title="一、动态RAM的刷新"></a>一、动态RAM的刷新</h3><p>1.刷新与行地址有关</p>
+<p>2.刷新的方法：</p>
+<p>（1）集中式刷新（存取周期为0.5微秒）</p>
+<p>（2）分散式刷新（存取周期为1微秒）</p>
+<p>（3）异步刷新：分散式刷新和集中式刷新相结合、</p>
+<p>将刷新安排在指令译码阶段</p>
+<h3 id="二、动态RAM和静态RAM的比较"><a href="#二、动态RAM和静态RAM的比较" class="headerlink" title="二、动态RAM和静态RAM的比较"></a>二、动态RAM和静态RAM的比较</h3><p><a href="https://imgse.com/i/ppJoUzD"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/18/ppJoUzD.png"
+                      alt="ppJoUzD.png"
+                ></a></p>
+<h3 id="三、只读存储器（ROM）"><a href="#三、只读存储器（ROM）" class="headerlink" title="三、只读存储器（ROM）"></a>三、只读存储器（ROM）</h3><p>1.掩模ROM（MROM）</p>
+<p>行列选择线交叉处有MOS管为“1“</p>
+<p>行列选择线交叉处无MOS管为“0”</p>
+<p>2.PROM（一次性编程）</p>
+<p>熔丝断开为0</p>
+<p>熔丝连接为1</p>
+<p>3.EPROM（多次编程）</p>
+<p>N型沟道浮动栅MOS电路</p>
+<p>4.EEPROM（多次编程）</p>
+<p>电可擦写</p>
+<p>局部擦写</p>
+<p>全部擦写</p>
+<p>5.FLash Memory（闪速型存储器）</p>
+<h3 id="四、存储器与CPU的连接"><a href="#四、存储器与CPU的连接" class="headerlink" title="四、存储器与CPU的连接"></a>四、存储器与CPU的连接</h3><p>1.存储器容量的扩展</p>
+<p>（1）位扩展（增加存储字长）</p>
+<p>（2）字扩展（增加存储字的数量）</p>
+<p>（3）字、位扩展</p>
+<p>2.连接方式：</p>
+<p>（1）地址线的连接</p>
+<p>（2）数据线的连接</p>
+<p>（3）读&#x2F;写命令线的连接</p>
+<p>（4）片选线的连接</p>
+<p>（5）合理选择存储芯片</p>
+<p>（6）其他、时序、负载</p>
 ]]></content>
       <categories>
         <category>计算机组成原理</category>
