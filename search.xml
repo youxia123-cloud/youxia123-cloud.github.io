@@ -1770,4 +1770,36 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机网络学习记录3</title>
+    <url>/2023/03/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/</url>
+    <content><![CDATA[<h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><p>1.计算机网络已经由一种通信基础设施发展成为一种重要的信息服务基础设施</p>
+<h1 id="因特网概述"><a href="#因特网概述" class="headerlink" title="因特网概述"></a>因特网概述</h1><h3 id="一、网络、互联网和因特网"><a href="#一、网络、互联网和因特网" class="headerlink" title="一、网络、互联网和因特网"></a>一、网络、互联网和因特网</h3><p>1.网络由若干结点和连接这些结点的链路组成。</p>
+<p>2.多个网络通过互联网互连起来，即互联网</p>
+<p>3.因特网是世界上最大的互连网络</p>
+<h3 id="二、因特网发展的三个阶段"><a href="#二、因特网发展的三个阶段" class="headerlink" title="二、因特网发展的三个阶段"></a>二、因特网发展的三个阶段</h3><p>1.<a href="https://imgse.com/i/ppdh7ZQ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/22/ppdh7ZQ.png"
+                      alt="ppdh7ZQ.png"
+                ></a></p>
+<p>2.因特网服务提供者ISP</p>
+<p>3.第一层ISP：因特网主干网</p>
+<p>3.因特网制定标准的特点：面向公众</p>
+<p>4.指定标准的四个阶段：</p>
+<p>（1）因特网草案（还不是RFC文档）</p>
+<p>（2）建议标准（这个阶段称为RFC文档）</p>
+<p>（3）草案标准</p>
+<p>（4）因特网标准</p>
+<p>并非所有的RFC文档都是因特网标准</p>
+<h3 id="三、因特网的组成："><a href="#三、因特网的组成：" class="headerlink" title="三、因特网的组成："></a>三、因特网的组成：</h3><p>边缘部分：由所有连接在因特网的主机组成，用户直接使用，用来进行通信</p>
+<p>核心部分：由大量网络和连接这些网络的路由器组成，这部分是为边缘部分提供服务</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
