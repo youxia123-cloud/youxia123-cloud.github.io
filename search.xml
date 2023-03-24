@@ -1849,4 +1849,46 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录15</title>
+    <url>/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/</url>
+    <content><![CDATA[<h1 id="调高主存的访问速度"><a href="#调高主存的访问速度" class="headerlink" title="调高主存的访问速度"></a>调高主存的访问速度</h1><p>1.采用高速的器件</p>
+<p>2.采用层次结构：Cache-主存</p>
+<p>3.调整主存结构</p>
+<h3 id="一、单体多字系统"><a href="#一、单体多字系统" class="headerlink" title="一、单体多字系统"></a>一、单体多字系统</h3><p>1.<a href="https://imgse.com/i/ppBdBex"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBdBex.png"
+                      alt="ppBdBex.png"
+                ></a></p>
+<h3 id="二、多体并行系统"><a href="#二、多体并行系统" class="headerlink" title="二、多体并行系统"></a>二、多体并行系统</h3><p>1.高位交叉 顺序编址</p>
+<p>2.多体并行系统是采用多体模块组成的存储器，各模块有独立的地址寄存器（MAR），数据寄存器（MDR）、地址译码、驱动电路和读&#x2F;写电路，它们可以并行工作，又能交叉工作</p>
+<p>3.高位交叉编址的多体存储器：</p>
+<p><a href="https://imgse.com/i/ppBdcfe"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBdcfe.png"
+                      alt="ppBdcfe.png"
+                ></a></p>
+<p>4.低位交叉，各个体轮流编址</p>
+<p>低位交叉在不改变存取周期的前提下，增加存储器的带宽</p>
+<p>5.<a href="https://imgse.com/i/ppBw9tU"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBw9tU.png"
+                      alt="ppBw9tU.png"
+                ></a></p>
+<p>6.高位交叉用于存储器容量的扩展，低位交叉用于存储器带宽和访问速度的提高</p>
+<p>7.高性能存储芯片：</p>
+<p>（1）SDRAM（同步DRAM）：在系统时钟控制下进行读出和写入，CPU无需等待</p>
+<p>（2）RDRAM：主要解决存储器的带宽问题</p>
+<p>（3）带cache的DRAM：在DRAM中集成了一个由SRAM组成的Cache，有利于猝发式读取</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>

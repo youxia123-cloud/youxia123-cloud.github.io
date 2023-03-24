@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9514/" />
+    <link rel="canonical" href="http://example.com/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机组成原理学习记录14 |
+            计算机组成原理学习记录15 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录14</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录15</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-24 19:40:46</span>
-        <span class="mobile">2023-03-24 19:40</span>
+        <span class="pc">2023-03-24 20:21:56</span>
+        <span class="mobile">2023-03-24 20:21</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,42 +320,37 @@
             
 
             <div class="article-content markdown-body">
-                <h3 id="一、存储器与CPU的连接"><a href="#一、存储器与CPU的连接" class="headerlink" title="一、存储器与CPU的连接"></a>一、存储器与CPU的连接</h3><p>（1）写出对应的二进制地址码</p>
-<p>（2）确定芯片数量及类型</p>
-<p>（3）分配地址线</p>
-<p>（4）确定片选信号</p>
-<p>（5）确定片选逻辑</p>
-<h3 id="二、存储器的校验"><a href="#二、存储器的校验" class="headerlink" title="二、存储器的校验"></a>二、存储器的校验</h3><p>1.三倍冗余的代码可以检1位错，纠1位错</p>
-<p>四倍冗余的代码可以检2位错，纠1位错</p>
-<p>五倍冗余的代码可以检2位错，纠2位错</p>
-<p>（集合中有两个合法代码）</p>
-<p>2.编码的检测能力和纠错能力与任意两组合法代码之间二进制的最小差异数有关</p>
-<p>3.编码的最小距离：任意两组合法代码之间二进制位数的最小差异</p>
-<p>4.编码的检错能力、纠错能力与编码的最小距离有关</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppaPQit"><img  
+                <h1 id="调高主存的访问速度"><a href="#调高主存的访问速度" class="headerlink" title="调高主存的访问速度"></a>调高主存的访问速度</h1><p>1.采用高速的器件</p>
+<p>2.采用层次结构：Cache-主存</p>
+<p>3.调整主存结构</p>
+<h3 id="一、单体多字系统"><a href="#一、单体多字系统" class="headerlink" title="一、单体多字系统"></a>一、单体多字系统</h3><p>1.<a target="_blank" rel="noopener" href="https://imgse.com/i/ppBdBex"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/03/21/ppaPQit.png"
-                      alt="ppaPQit.png"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBdBex.png"
+                      alt="ppBdBex.png"
                 ></a></p>
-<p>5.汉明码的组成：</p>
-<p>汉明码采用奇偶校验，分组校验</p>
-<p>6.汉明码是一种非划分的方式</p>
-<p>7.<a target="_blank" rel="noopener" href="https://imgse.com/i/ppaiMm4"><img  
+<h3 id="二、多体并行系统"><a href="#二、多体并行系统" class="headerlink" title="二、多体并行系统"></a>二、多体并行系统</h3><p>1.高位交叉 顺序编址</p>
+<p>2.多体并行系统是采用多体模块组成的存储器，各模块有独立的地址寄存器（MAR），数据寄存器（MDR）、地址译码、驱动电路和读&#x2F;写电路，它们可以并行工作，又能交叉工作</p>
+<p>3.高位交叉编址的多体存储器：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppBdcfe"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/03/21/ppaiMm4.png"
-                      alt="ppaiMm4.png"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBdcfe.png"
+                      alt="ppBdcfe.png"
                 ></a></p>
-<p>8.汉明码检测位的取值：</p>
-<p>检测位的取值与该位所在的检测“小组”承担的奇偶校验任务有关</p>
-<p>9.各检测位Ci所承担的检测小组为</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppaiQ0J"><img  
+<p>4.低位交叉，各个体轮流编址</p>
+<p>低位交叉在不改变存取周期的前提下，增加存储器的带宽</p>
+<p>5.<a target="_blank" rel="noopener" href="https://imgse.com/i/ppBw9tU"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/03/21/ppaiQ0J.png"
-                      alt="ppaiQ0J.png"
+                     data-src="https://s1.ax1x.com/2023/03/24/ppBw9tU.png"
+                      alt="ppBw9tU.png"
                 ></a></p>
+<p>6.高位交叉用于存储器容量的扩展，低位交叉用于存储器带宽和访问速度的提高</p>
+<p>7.高性能存储芯片：</p>
+<p>（1）SDRAM（同步DRAM）：在系统时钟控制下进行读出和写入，CPU无需等待</p>
+<p>（2）RDRAM：主要解决存储器的带宽问题</p>
+<p>（3）带cache的DRAM：在DRAM中集成了一个由SRAM组成的Cache，有利于猝发式读取</p>
 
             </div>
 
@@ -363,11 +358,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机组成原理学习记录14</li>
+        <li>本文标题：计算机组成原理学习记录15</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-03-24 19:40:46</li>
+        <li>创建时间：2023-03-24 20:21:56</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/03/24/计算机组成原理学习记录14/
+            本文链接：http://youxia123-cloud.github.io/2023/03/24/计算机组成原理学习记录15/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -391,29 +386,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录15</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%953/"
+                            href="/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9514/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机网络学习记录3</span>
+                                    <span class="post-nav-title-item">计算机组成原理学习记录14</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -433,7 +413,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AD%98%E5%82%A8%E5%99%A8%E4%B8%8ECPU%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-text">一、存储器与CPU的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E6%A0%A1%E9%AA%8C"><span class="nav-text">二、存储器的校验</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%83%E9%AB%98%E4%B8%BB%E5%AD%98%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6"><span class="nav-text">调高主存的访问速度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%8D%95%E4%BD%93%E5%A4%9A%E5%AD%97%E7%B3%BB%E7%BB%9F"><span class="nav-text">一、单体多字系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E4%BD%93%E5%B9%B6%E8%A1%8C%E7%B3%BB%E7%BB%9F"><span class="nav-text">二、多体并行系统</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
