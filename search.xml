@@ -1802,4 +1802,51 @@
         <tag>计算机网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录14</title>
+    <url>/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9514/</url>
+    <content><![CDATA[<h3 id="一、存储器与CPU的连接"><a href="#一、存储器与CPU的连接" class="headerlink" title="一、存储器与CPU的连接"></a>一、存储器与CPU的连接</h3><p>（1）写出对应的二进制地址码</p>
+<p>（2）确定芯片数量及类型</p>
+<p>（3）分配地址线</p>
+<p>（4）确定片选信号</p>
+<p>（5）确定片选逻辑</p>
+<h3 id="二、存储器的校验"><a href="#二、存储器的校验" class="headerlink" title="二、存储器的校验"></a>二、存储器的校验</h3><p>1.三倍冗余的代码可以检1位错，纠1位错</p>
+<p>四倍冗余的代码可以检2位错，纠1位错</p>
+<p>五倍冗余的代码可以检2位错，纠2位错</p>
+<p>（集合中有两个合法代码）</p>
+<p>2.编码的检测能力和纠错能力与任意两组合法代码之间二进制的最小差异数有关</p>
+<p>3.编码的最小距离：任意两组合法代码之间二进制位数的最小差异</p>
+<p>4.编码的检错能力、纠错能力与编码的最小距离有关</p>
+<p><a href="https://imgse.com/i/ppaPQit"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/21/ppaPQit.png"
+                      alt="ppaPQit.png"
+                ></a></p>
+<p>5.汉明码的组成：</p>
+<p>汉明码采用奇偶校验，分组校验</p>
+<p>6.汉明码是一种非划分的方式</p>
+<p>7.<a href="https://imgse.com/i/ppaiMm4"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/21/ppaiMm4.png"
+                      alt="ppaiMm4.png"
+                ></a></p>
+<p>8.汉明码检测位的取值：</p>
+<p>检测位的取值与该位所在的检测“小组”承担的奇偶校验任务有关</p>
+<p>9.各检测位Ci所承担的检测小组为</p>
+<p><a href="https://imgse.com/i/ppaiQ0J"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/21/ppaiQ0J.png"
+                      alt="ppaiQ0J.png"
+                ></a></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
