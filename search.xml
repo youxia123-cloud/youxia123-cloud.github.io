@@ -1891,4 +1891,40 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录16</title>
+    <url>/2023/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/</url>
+    <content><![CDATA[<h1 id="高速缓冲存储器"><a href="#高速缓冲存储器" class="headerlink" title="高速缓冲存储器"></a>高速缓冲存储器</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.使用cache的原因：</p>
+<p><a href="https://imgse.com/i/pphcb5t"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/03/pphcb5t.png"
+                      alt="pphcb5t.png"
+                ></a></p>
+<p>2.cache的工作原理：</p>
+<p><a href="https://imgse.com/i/pphcLPP"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/03/pphcLPP.png"
+                      alt="pphcLPP.png"
+                ></a></p>
+<p>主存和缓存按块存储，块的大小相同、</p>
+<p>3.主存数量远远大于缓存</p>
+<p>命中：主存块调入缓存，主存块和缓存块建立了对应关系</p>
+<p>未命中：主存块未调入缓存，主存块和缓存块未建立对应关系</p>
+<p>用标记记录与某缓存块建立了对应关系的主存块号</p>
+<p>4.cache的命中率：</p>
+<p>CPU欲访问的信息在cache中的比率</p>
+<p>5.命中率和cache的容量与块长有关</p>
+<p>6.一般的cache块的大小取4~8个字</p>
+<p>7.块长取一个存取周期从主存调出的信息长度</p>
+<p>8.块的大小和多体交叉有关</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
