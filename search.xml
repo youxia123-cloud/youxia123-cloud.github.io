@@ -1927,4 +1927,44 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录17</title>
+    <url>/2023/04/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/</url>
+    <content><![CDATA[<h1 id="高速缓冲存储器"><a href="#高速缓冲存储器" class="headerlink" title="高速缓冲存储器"></a>高速缓冲存储器</h1><h3 id="一、主存系统的效率："><a href="#一、主存系统的效率：" class="headerlink" title="一、主存系统的效率："></a>一、主存系统的效率：</h3><p>1.效率e与命中率有关</p>
+<p><a href="https://imgse.com/i/ppjEqYQ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjEqYQ.png"
+                      alt="ppjEqYQ.png"
+                ></a></p>
+<p><a href="https://imgse.com/i/ppjELWj"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjELWj.png"
+                      alt="ppjELWj.png"
+                ></a></p>
+<p>2.访问cache和访问内存是同时进行的</p>
+<h3 id="二、cache的基本结构："><a href="#二、cache的基本结构：" class="headerlink" title="二、cache的基本结构："></a>二、cache的基本结构：</h3><p>1.<a href="https://imgse.com/i/ppjEXSs"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjEXSs.png"
+                      alt="ppjEXSs.png"
+                ></a></p>
+<h3 id="三、cache的读写操作："><a href="#三、cache的读写操作：" class="headerlink" title="三、cache的读写操作："></a>三、cache的读写操作：</h3><p>1.读操作：当CPU发出主存的地址后，首先判断该存储字是否在cache中，若命中，直接访问cache，将该字送至CPU中，若未命中，一方面要访问主存，将该字传送给CPU，与此同时，要将该字所在的主存块装入cache中，如果此时cache已经装满，就要执行替换算法，腾出空位	才将新的主存块调入</p>
+<p>2.写操作：</p>
+<p>写直达法</p>
+<p>写回法</p>
+<h3 id="四、cache的改进："><a href="#四、cache的改进：" class="headerlink" title="四、cache的改进："></a>四、cache的改进：</h3><p>1.增加cache的级数：</p>
+<p>片载cache</p>
+<p>片外cache</p>
+<p>2.统一缓存和分立缓存</p>
+<p>统一缓存是指指令和数据都存放在同一缓存内的cache中，分立缓存是指指令和数据分别存放在两个缓存中，一个称为指令cache，一个称为数据cache</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>

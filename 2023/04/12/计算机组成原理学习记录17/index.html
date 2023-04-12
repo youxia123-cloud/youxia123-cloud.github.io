@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/" />
+    <link rel="canonical" href="http://example.com/2023/04/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机组成原理学习记录16 |
+            计算机组成原理学习记录17 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录16</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录17</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-04-03 17:44:22</span>
-        <span class="mobile">2023-04-03 17:44</span>
+        <span class="pc">2023-04-12 21:19:56</span>
+        <span class="mobile">2023-04-12 21:19</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,31 +320,35 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="高速缓冲存储器"><a href="#高速缓冲存储器" class="headerlink" title="高速缓冲存储器"></a>高速缓冲存储器</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.使用cache的原因：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pphcb5t"><img  
+                <h1 id="高速缓冲存储器"><a href="#高速缓冲存储器" class="headerlink" title="高速缓冲存储器"></a>高速缓冲存储器</h1><h3 id="一、主存系统的效率："><a href="#一、主存系统的效率：" class="headerlink" title="一、主存系统的效率："></a>一、主存系统的效率：</h3><p>1.效率e与命中率有关</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppjEqYQ"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/03/pphcb5t.png"
-                      alt="pphcb5t.png"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjEqYQ.png"
+                      alt="ppjEqYQ.png"
                 ></a></p>
-<p>2.cache的工作原理：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pphcLPP"><img  
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppjELWj"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/03/pphcLPP.png"
-                      alt="pphcLPP.png"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjELWj.png"
+                      alt="ppjELWj.png"
                 ></a></p>
-<p>主存和缓存按块存储，块的大小相同、</p>
-<p>3.主存数量远远大于缓存</p>
-<p>命中：主存块调入缓存，主存块和缓存块建立了对应关系</p>
-<p>未命中：主存块未调入缓存，主存块和缓存块未建立对应关系</p>
-<p>用标记记录与某缓存块建立了对应关系的主存块号</p>
-<p>4.cache的命中率：</p>
-<p>CPU欲访问的信息在cache中的比率</p>
-<p>5.命中率和cache的容量与块长有关</p>
-<p>6.一般的cache块的大小取4~8个字</p>
-<p>7.块长取一个存取周期从主存调出的信息长度</p>
-<p>8.块的大小和多体交叉有关</p>
+<p>2.访问cache和访问内存是同时进行的</p>
+<h3 id="二、cache的基本结构："><a href="#二、cache的基本结构：" class="headerlink" title="二、cache的基本结构："></a>二、cache的基本结构：</h3><p>1.<a target="_blank" rel="noopener" href="https://imgse.com/i/ppjEXSs"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/12/ppjEXSs.png"
+                      alt="ppjEXSs.png"
+                ></a></p>
+<h3 id="三、cache的读写操作："><a href="#三、cache的读写操作：" class="headerlink" title="三、cache的读写操作："></a>三、cache的读写操作：</h3><p>1.读操作：当CPU发出主存的地址后，首先判断该存储字是否在cache中，若命中，直接访问cache，将该字送至CPU中，若未命中，一方面要访问主存，将该字传送给CPU，与此同时，要将该字所在的主存块装入cache中，如果此时cache已经装满，就要执行替换算法，腾出空位	才将新的主存块调入</p>
+<p>2.写操作：</p>
+<p>写直达法</p>
+<p>写回法</p>
+<h3 id="四、cache的改进："><a href="#四、cache的改进：" class="headerlink" title="四、cache的改进："></a>四、cache的改进：</h3><p>1.增加cache的级数：</p>
+<p>片载cache</p>
+<p>片外cache</p>
+<p>2.统一缓存和分立缓存</p>
+<p>统一缓存是指指令和数据都存放在同一缓存内的cache中，分立缓存是指指令和数据分别存放在两个缓存中，一个称为指令cache，一个称为数据cache</p>
 
             </div>
 
@@ -352,11 +356,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机组成原理学习记录16</li>
+        <li>本文标题：计算机组成原理学习记录17</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-04-03 17:44:22</li>
+        <li>创建时间：2023-04-12 21:19:56</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/04/03/计算机组成原理学习记录16/
+            本文链接：http://youxia123-cloud.github.io/2023/04/12/计算机组成原理学习记录17/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -380,29 +384,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/04/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录17</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/"
+                            href="/2023/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录15</span>
+                                    <span class="post-nav-title-item">计算机组成原理学习记录16</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -422,7 +411,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-text">高速缓冲存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="nav-text">一、概述</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-text">高速缓冲存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%BB%E5%AD%98%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%88%E7%8E%87%EF%BC%9A"><span class="nav-text">一、主存系统的效率：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81cache%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-text">二、cache的基本结构：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81cache%E7%9A%84%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="nav-text">三、cache的读写操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81cache%E7%9A%84%E6%94%B9%E8%BF%9B%EF%BC%9A"><span class="nav-text">四、cache的改进：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
