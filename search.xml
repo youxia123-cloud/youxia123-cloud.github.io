@@ -1967,4 +1967,44 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录18</title>
+    <url>/2023/04/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9518/</url>
+    <content><![CDATA[<h1 id="高速缓冲存储器"><a href="#高速缓冲存储器" class="headerlink" title="高速缓冲存储器"></a>高速缓冲存储器</h1><h3 id="一、cache-主存的地址映射："><a href="#一、cache-主存的地址映射：" class="headerlink" title="一、cache-主存的地址映射："></a>一、cache-主存的地址映射：</h3><p>1.直接映射：</p>
+<p><a href="https://imgse.com/i/ppxafe0"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppxafe0.png"
+                      alt="ppxafe0.png"
+                ></a></p>
+<p>每个缓存块i可以和若干个主存块对应</p>
+<p>每个主存块j只能和一个缓存块对应</p>
+<p>2.全相联映射：</p>
+<p><a href="https://imgse.com/i/ppxa2yn"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppxa2yn.png"
+                      alt="ppxa2yn.png"
+                ></a></p>
+<p>3.组相联映射：</p>
+<p><a href="https://imgse.com/i/ppxaRLq"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppxaRLq.png"
+                      alt="ppxaRLq.png"
+                ></a></p>
+<p>某一主存块j按模Q映射到缓存的第i组中的任一块</p>
+<h3 id="二、替换算法："><a href="#二、替换算法：" class="headerlink" title="二、替换算法："></a>二、替换算法：</h3><p>1.先进先出（FIFO算法）</p>
+<p>2.近期最少使用（LRU）算法</p>
+<h3 id="三、总结："><a href="#三、总结：" class="headerlink" title="三、总结："></a>三、总结：</h3><p>1.直接：某一主存块只能固定映射到某一缓存块（不灵活）</p>
+<p>2.全相联：某一主存块能映射到任一缓存块（成本高）</p>
+<p>3.组相联：某一主存块只能映射到某一缓存组中的任一缓存块（直接映射和全相联映射的折中）</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
