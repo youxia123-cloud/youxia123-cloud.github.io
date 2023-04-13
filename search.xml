@@ -2007,4 +2007,72 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录19</title>
+    <url>/2023/04/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9519/</url>
+    <content><![CDATA[<h1 id="辅助存储器"><a href="#辅助存储器" class="headerlink" title="辅助存储器"></a>辅助存储器</h1><h3 id="一、概述："><a href="#一、概述：" class="headerlink" title="一、概述："></a>一、概述：</h3><p>1.特点：不直接与cpu交换信息</p>
+<p>2.磁表面存储器的技术指标：</p>
+<p>（1）记录密度、  道密度 、位密度</p>
+<p>（2）存储容量</p>
+<p>（3）平均寻址时间  寻道时间 + 等待时间</p>
+<p>辅存的速度：</p>
+<p>寻址时间</p>
+<p>磁头读写时间</p>
+<p>（4）数据传输率</p>
+<p>（5）误码率</p>
+<h3 id="二、磁记录的原理和方式："><a href="#二、磁记录的原理和方式：" class="headerlink" title="二、磁记录的原理和方式："></a>二、磁记录的原理和方式：</h3><p>1.写</p>
+<p><a href="https://imgse.com/i/ppx0cSe"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppx0cSe.png"
+                      alt="ppx0cSe.png"
+                ></a></p>
+<p>2.读</p>
+<p><a href="https://imgse.com/i/ppx0ROA"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppx0ROA.png"
+                      alt="ppx0ROA.png"
+                ></a></p>
+<h3 id="三、硬磁盘存储器："><a href="#三、硬磁盘存储器：" class="headerlink" title="三、硬磁盘存储器："></a>三、硬磁盘存储器：</h3><p>1.硬磁盘存储器的类型：</p>
+<p>（1）固定磁头和移动磁头</p>
+<p>（2）可换盘和固定盘</p>
+<p>2.硬磁盘存储器的结构：</p>
+<p><a href="https://imgse.com/i/ppx0gQH"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppx0gQH.png"
+                      alt="ppx0gQH.png"
+                ></a></p>
+<p>3.磁盘控制器：</p>
+<p>（1）接受主机发来的命令，转换成磁盘驱动器的控制命令</p>
+<p>（2）实现主机和驱动器之间的数据格式转换</p>
+<p>（3）控制磁盘驱动器读写</p>
+<p>（4）磁盘控制器是主机和磁盘驱动器之间的接口，对主机来说，通过总线连接，对硬盘直接进行控制</p>
+<p>4.盘片：一般采用硬质铝合金材料制作</p>
+<h3 id="四、软磁盘存储器："><a href="#四、软磁盘存储器：" class="headerlink" title="四、软磁盘存储器："></a>四、软磁盘存储器：</h3><p>1.软磁盘存储器和硬磁盘存储器的对比：</p>
+<p><a href="https://imgse.com/i/ppx0feI"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppx0feI.png"
+                      alt="ppx0feI.png"
+                ></a></p>
+<h3 id="五、光盘存储器："><a href="#五、光盘存储器：" class="headerlink" title="五、光盘存储器："></a>五、光盘存储器：</h3><p>1.采用光存储技术、利用激光写入和读出</p>
+<p>2.<a href="https://imgse.com/i/ppx02yd"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/13/ppx02yd.png"
+                      alt="ppx02yd.png"
+                ></a></p>
+<p>3.光盘的存储原理：</p>
+<p>（1）只读型和只写一次型：热作用</p>
+<p>（2）可擦写光盘：热磁效应</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
