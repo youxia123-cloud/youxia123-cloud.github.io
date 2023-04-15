@@ -2075,4 +2075,81 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录20</title>
+    <url>/2023/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9520/</url>
+    <content><![CDATA[<h1 id="输入输出设备"><a href="#输入输出设备" class="headerlink" title="输入输出设备"></a>输入输出设备</h1><h3 id="一、输入输出系统的发展概述："><a href="#一、输入输出系统的发展概述：" class="headerlink" title="一、输入输出系统的发展概述："></a>一、输入输出系统的发展概述：</h3><p>1.早期：</p>
+<p>分散连接、CPU和I&#x2F;O设备<strong>串行</strong>工作，采用程序查询方式</p>
+<p>2.接口模块和DMA阶段：</p>
+<p>总线连接</p>
+<p>CPU和I&#x2F;O设备<strong>并行</strong>工作：中断方式</p>
+<p>​					    DMA方式</p>
+<p>3.具有通道结构的阶段：</p>
+<p>通道可以看做一个处理器</p>
+<p>4.具有I&#x2F;O处理机的阶段：</p>
+<p>数据的输入输出系统逐渐的从CPU中独立出来</p>
+<h3 id="二、输入输出系统的组成："><a href="#二、输入输出系统的组成：" class="headerlink" title="二、输入输出系统的组成："></a>二、输入输出系统的组成：</h3><p>1.I&#x2F;O软件：</p>
+<p>（1）I&#x2F;O指令：CPU指令的一部分</p>
+<p>（2）通道指令：通道自身的指令</p>
+<p>通道指令要指出数组的首地址、传送字数、操作命令</p>
+<p>通道可以执行通道指令</p>
+<p>通道执行组成通道程序</p>
+<p>2.I&#x2F;O硬件：</p>
+<p>设备、I&#x2F;O接口</p>
+<p>设备、设备控制器、通道</p>
+<h3 id="三、I-x2F-O设备和主机的联系方式："><a href="#三、I-x2F-O设备和主机的联系方式：" class="headerlink" title="三、I&#x2F;O设备和主机的联系方式："></a>三、I&#x2F;O设备和主机的联系方式：</h3><p>1.I&#x2F;O设备编址方式：</p>
+<p>（1）统一编址  用取数、存树指令</p>
+<p>（2）不统一编址（单独编址）  有专门的I&#x2F;O指令</p>
+<p>2.设备选址：用设备选择电路识别是否被选中</p>
+<p>3.传送方式：</p>
+<p>（1）串行</p>
+<p>（2）并行</p>
+<p>4.联络方式：</p>
+<p>（1）立即响应</p>
+<p>（2）异步工作采用应答信号</p>
+<p><a href="https://imgse.com/i/p9pbMZ9"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/15/p9pbMZ9.png"
+                      alt="p9pbMZ9.png"
+                ></a></p>
+<p>（3）同步工作采用同步时标</p>
+<p>5.I&#x2F;O设备和主机的连接方式：</p>
+<p>（1）辐射式连接：不便于增删设备	</p>
+<p><a href="https://imgse.com/i/p9pbuqJ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/15/p9pbuqJ.png"
+                      alt="p9pbuqJ.png"
+                ></a></p>
+<p>（2）总线连接：便于增删设备</p>
+<h3 id="四、I-x2F-O设备和主机信息传送的控制方式："><a href="#四、I-x2F-O设备和主机信息传送的控制方式：" class="headerlink" title="四、I&#x2F;O设备和主机信息传送的控制方式："></a>四、I&#x2F;O设备和主机信息传送的控制方式：</h3><p>1.程序查询方式：</p>
+<p>CPU和I&#x2F;O串行工作</p>
+<p><a href="https://imgse.com/i/p9pbnr4"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/15/p9pbnr4.png"
+                      alt="p9pbnr4.png"
+                ></a></p>
+<p>2.程序中断方式：</p>
+<p>I&#x2F;O工作：自身的准备（CPU不查询）、与主机交换信息（CPU暂停现行程序）</p>
+<p>CPU没有踏步等待现象</p>
+<p>3.DMA方式：内存和I&#x2F;O通过DMA控制器进行交换</p>
+<p>周期挪用（周期窃取）</p>
+<p><a href="https://imgse.com/i/p9pbQaR"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/15/p9pbQaR.png"
+                      alt="p9pbQaR.png"
+                ></a></p>
+<p>指令需要预取</p>
+<p>CPU和I&#x2F;O并行工作</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
