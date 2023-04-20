@@ -2223,4 +2223,101 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录22</title>
+    <url>/2023/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9522/</url>
+    <content><![CDATA[<h1 id="程序查询方式"><a href="#程序查询方式" class="headerlink" title="程序查询方式"></a>程序查询方式</h1><h3 id="一、程序查询的流程："><a href="#一、程序查询的流程：" class="headerlink" title="一、程序查询的流程："></a>一、程序查询的流程：</h3><p>1.单个设备查询：</p>
+<p><a href="https://imgse.com/i/p9kOizd"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9kOizd.png"
+                      alt="p9kOizd.png"
+                ></a></p>
+<p>2.需要使用测试指令、传送指令、转移指令</p>
+<p>3.多个设备查询时，需要根据优先级来逐步查询</p>
+<h3 id="二、程序流程："><a href="#二、程序流程：" class="headerlink" title="二、程序流程："></a>二、程序流程：</h3><p>1.保存、寄存器保存</p>
+<p>2.<a href="https://imgse.com/i/p9kOkQA"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9kOkQA.png"
+                      alt="p9kOkQA.png"
+                ></a></p>
+<h3 id="三、程序查询的接口电路："><a href="#三、程序查询的接口电路：" class="headerlink" title="三、程序查询的接口电路："></a>三、程序查询的接口电路：</h3><p>1.<a href="https://imgse.com/i/p9kOPRH"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9kOPRH.png"
+                      alt="p9kOPRH.png"
+                ></a></p>
+<p>2.DBR是数据缓存器</p>
+<p>3.D是准备信号，查询D信号是否为1</p>
+<p>4.SEL是设备选择电路</p>
+<h1 id="程序中断方式"><a href="#程序中断方式" class="headerlink" title="程序中断方式"></a>程序中断方式</h1><h3 id="一、中断的概念："><a href="#一、中断的概念：" class="headerlink" title="一、中断的概念："></a>一、中断的概念：</h3><p>1.计算机在执行程序的过程中，当遇到异常情况和特殊请求时，计算机停止现行程序的运行，转向对这些异常情况或特殊请求的处理，处理结束后再返回到现行程序的间断处，继续执行原程序，这就是中断。</p>
+<h3 id="二、I-x2F-O中断的产生："><a href="#二、I-x2F-O中断的产生：" class="headerlink" title="二、I&#x2F;O中断的产生："></a>二、I&#x2F;O中断的产生：</h3><p>1.以打印机为例：</p>
+<p>cpu与打印机并行工作</p>
+<p><a href="https://imgse.com/i/p9kOELt"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9kOELt.png"
+                      alt="p9kOELt.png"
+                ></a></p>
+<h3 id="三、程序中断的方式的接口电路："><a href="#三、程序中断的方式的接口电路：" class="headerlink" title="三、程序中断的方式的接口电路："></a>三、程序中断的方式的接口电路：</h3><p>1.配置中断请求触发器和中断屏蔽触发器：</p>
+<p>INTR  中断请求触发器：INTR&#x3D;1  表示有请求</p>
+<p>MASK  中断屏蔽触发器   MASK&#x3D;1表示被屏蔽</p>
+<p>D  完成触发器</p>
+<p>2.排队器：</p>
+<p>硬件实现：在CPU内或在接口电路中（链式排队器）</p>
+<p><a href="https://imgse.com/i/p9kOAsI"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9kOAsI.png"
+                      alt="p9kOAsI.png"
+                ></a></p>
+<p>INTR&#x3D;1有请求，即INTR非&#x3D;0</p>
+<p>3.中断向量地址形成部件：</p>
+<p>硬件实现：由硬件产生向量地址，再由向量地址找到入口地址</p>
+<p>中断向量地址形成部件只有一个输入为1，输出是一个向量地址（设备编码器：产生中断服务程序的入口地址）</p>
+<p>编码器中只有一组三态门是有效的</p>
+<p>4.程序中断方式接口电路的基本组成</p>
+<h3 id="四、I-x2F-O中断的处理过程："><a href="#四、I-x2F-O中断的处理过程：" class="headerlink" title="四、I&#x2F;O中断的处理过程："></a>四、I&#x2F;O中断的处理过程：</h3><p>1.CPU响应中断的条件和时间：</p>
+<p>（1）条件：允许中断触发器EINT&#x3D;1，用开中断指令将EINT置1，用关中断指令将EINT置0</p>
+<p>（2）时间：当D&#x3D;1，且MASK&#x3D;0时</p>
+<p>在每条指令执行阶段的结束前，CPU发出中断查询信号（INTR置1）</p>
+<p>2.中断处理过程：</p>
+<p><a href="https://imgse.com/i/p9Ap14P"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9Ap14P.png"
+                      alt="p9Ap14P.png"
+                ></a></p>
+<h3 id="五、中断服务程序流程："><a href="#五、中断服务程序流程：" class="headerlink" title="五、中断服务程序流程："></a>五、中断服务程序流程：</h3><p>1.中断服务程序的流程：</p>
+<p>（1）保护现场：</p>
+<p><a href="https://imgse.com/i/p9ApQAI"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9ApQAI.png"
+                      alt="p9ApQAI.png"
+                ></a></p>
+<p>（2）中断服务：对不同的I&#x2F;O设备具有不同内容的服务设备</p>
+<p>（3）恢复现场：出栈指令	</p>
+<p>（4）中断返回：中断返回指令</p>
+<p>2.单重中断和多重中断：</p>
+<p>（1）单重中断：不允许中断现行的中断服务程序</p>
+<p>（2）多重中断：允许级别更高的中断源 中断现行的中断服务程序</p>
+<p>3.主程序和服务程序抢占CPU的示意图：</p>
+<p><a href="https://imgse.com/i/p9AplNt"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/20/p9AplNt.png"
+                      alt="p9AplNt.png"
+                ></a></p>
+<p>宏观上CPU和I&#x2F;O并行工作</p>
+<p>微观上CPU中断现行程序为I&#x2F;O服务</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
