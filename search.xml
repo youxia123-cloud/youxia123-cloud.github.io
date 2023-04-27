@@ -2412,4 +2412,57 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录24</title>
+    <url>/2023/04/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9524/</url>
+    <content><![CDATA[<h1 id="数据在计算机中的表示"><a href="#数据在计算机中的表示" class="headerlink" title="数据在计算机中的表示"></a>数据在计算机中的表示</h1><h3 id="一、数的表示："><a href="#一、数的表示：" class="headerlink" title="一、数的表示："></a>一、数的表示：</h3><p>1.无符号数：</p>
+<p><a href="https://imgse.com/i/p9Q4i6g"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4i6g.png"
+                      alt="p9Q4i6g.png"
+                ></a></p>
+<p>寄存器的位数反映了无符号的表示范围</p>
+<p>2.有符号数：</p>
+<p>（1）机器数和真值：</p>
+<p>真值：带符号的数</p>
+<p>机器数：符号数字化的数 </p>
+<p><a href="https://imgse.com/i/p9Q4Amj"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4Amj.png"
+                      alt="p9Q4Amj.png"
+                ></a></p>
+<p>3.原码表示法：</p>
+<p><a href="https://imgse.com/i/p9Q4E0s"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4E0s.png"
+                      alt="p9Q4E0s.png"
+                ></a></p>
+<p>例：x &#x3D; +1110，则[x]的原码&#x3D;0,1110 用逗号把符号位和数值位隔开</p>
+<p><a href="https://imgse.com/i/p9Q4FXQ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4FXQ.png"
+                      alt="p9Q4FXQ.png"
+                ></a></p>
+<p>用小数点将符号位和数值位隔开</p>
+<p>注：原码是保存在计算机中的数</p>
+<p><a href="https://imgse.com/i/p9Q4V7n"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4V7n.png"
+                      alt="p9Q4V7n.png"
+                ></a></p>
+<p>4.原码的特点：简单、直观</p>
+<p>但是使用原码做加法时，会出现问题</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
