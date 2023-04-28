@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/04/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9524/" />
+    <link rel="canonical" href="http://example.com/2023/04/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9525/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机组成原理学习记录24 |
+            计算机组成原理学习记录25 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录24</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录25</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-04-27 21:59:39</span>
-        <span class="mobile">2023-04-27 21:59</span>
+        <span class="pc">2023-04-28 21:36:00</span>
+        <span class="mobile">2023-04-28 21:36</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,48 +320,35 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="数据在计算机中的表示"><a href="#数据在计算机中的表示" class="headerlink" title="数据在计算机中的表示"></a>数据在计算机中的表示</h1><h3 id="一、数的表示："><a href="#一、数的表示：" class="headerlink" title="一、数的表示："></a>一、数的表示：</h3><p>1.无符号数：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9Q4i6g"><img  
+                <h1 id="补码表示"><a href="#补码表示" class="headerlink" title="补码表示"></a>补码表示</h1><h3 id="一、补码的概念："><a href="#一、补码的概念：" class="headerlink" title="一、补码的概念："></a>一、补码的概念：</h3><p>1.用时钟引出补码的概念，时钟计时以12为模，可以用正数替代负数（-3和9）</p>
+<p>2.一个负数加上“模”，即得到该负数的补数</p>
+<p>3.一个正数和一个负数互为补数时，它们绝对值之和即为模数</p>
+<p>4.四位的二进制的补码的模是16，超出的位数会被丢掉</p>
+<p>5.正数的补数是它本身，负数的补码符号位不变，其余位取反，末位加一</p>
+<p>6.<a target="_blank" rel="noopener" href="https://imgse.com/i/p91CvPP"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4i6g.png"
-                      alt="p9Q4i6g.png"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91CvPP.png"
+                      alt="p91CvPP.png"
                 ></a></p>
-<p>寄存器的位数反映了无符号的表示范围</p>
-<p>2.有符号数：</p>
-<p>（1）机器数和真值：</p>
-<p>真值：带符号的数</p>
-<p>机器数：符号数字化的数 </p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9Q4Amj"><img  
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p91CX5t"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4Amj.png"
-                      alt="p9Q4Amj.png"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91CX5t.png"
+                      alt="p91CX5t.png"
                 ></a></p>
-<p>3.原码表示法：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9Q4E0s"><img  
+<p>小数的补码模2时，小数点之前是两位</p>
+<p>注：第一位是符号位</p>
+<p>7.负数补码求原码：符号位不变，其余各位取反，末位加一</p>
+<p>8.正0和负0的补码是相同的</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p91Cx8f"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4E0s.png"
-                      alt="p9Q4E0s.png"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91Cx8f.png"
+                      alt="p91Cx8f.png"
                 ></a></p>
-<p>例：x &#x3D; +1110，则[x]的原码&#x3D;0,1110 用逗号把符号位和数值位隔开</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9Q4FXQ"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4FXQ.png"
-                      alt="p9Q4FXQ.png"
-                ></a></p>
-<p>用小数点将符号位和数值位隔开</p>
-<p>注：原码是保存在计算机中的数</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9Q4V7n"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/04/27/p9Q4V7n.png"
-                      alt="p9Q4V7n.png"
-                ></a></p>
-<p>4.原码的特点：简单、直观</p>
-<p>但是使用原码做加法时，会出现问题</p>
+<p><strong>注：在定点小数中，原码是不能表示出-1这个值的</strong> </p>
+<p><strong>因为负小数的原码是1.xxxxxxx的形式，所以只能表示十进制-0.x，而不能表示-1.0</strong> </p>
 
             </div>
 
@@ -369,11 +356,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机组成原理学习记录24</li>
+        <li>本文标题：计算机组成原理学习记录25</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-04-27 21:59:39</li>
+        <li>创建时间：2023-04-28 21:36:00</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/04/27/计算机组成原理学习记录24/
+            本文链接：http://youxia123-cloud.github.io/2023/04/28/计算机组成原理学习记录25/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -397,29 +384,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/04/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9525/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录25</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/04/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9523/"
+                            href="/2023/04/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9524/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录23</span>
+                                    <span class="post-nav-title-item">计算机组成原理学习记录24</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -439,7 +411,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据在计算机中的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%EF%BC%9A"><span class="nav-text">一、数的表示：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA"><span class="nav-text">补码表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%A1%A5%E7%A0%81%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-text">一、补码的概念：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

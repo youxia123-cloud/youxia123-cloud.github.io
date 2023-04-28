@@ -2465,4 +2465,44 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录25</title>
+    <url>/2023/04/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9525/</url>
+    <content><![CDATA[<h1 id="补码表示"><a href="#补码表示" class="headerlink" title="补码表示"></a>补码表示</h1><h3 id="一、补码的概念："><a href="#一、补码的概念：" class="headerlink" title="一、补码的概念："></a>一、补码的概念：</h3><p>1.用时钟引出补码的概念，时钟计时以12为模，可以用正数替代负数（-3和9）</p>
+<p>2.一个负数加上“模”，即得到该负数的补数</p>
+<p>3.一个正数和一个负数互为补数时，它们绝对值之和即为模数</p>
+<p>4.四位的二进制的补码的模是16，超出的位数会被丢掉</p>
+<p>5.正数的补数是它本身，负数的补码符号位不变，其余位取反，末位加一</p>
+<p>6.<a href="https://imgse.com/i/p91CvPP"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91CvPP.png"
+                      alt="p91CvPP.png"
+                ></a></p>
+<p><a href="https://imgse.com/i/p91CX5t"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91CX5t.png"
+                      alt="p91CX5t.png"
+                ></a></p>
+<p>小数的补码模2时，小数点之前是两位</p>
+<p>注：第一位是符号位</p>
+<p>7.负数补码求原码：符号位不变，其余各位取反，末位加一</p>
+<p>8.正0和负0的补码是相同的</p>
+<p><a href="https://imgse.com/i/p91Cx8f"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/28/p91Cx8f.png"
+                      alt="p91Cx8f.png"
+                ></a></p>
+<p><strong>注：在定点小数中，原码是不能表示出-1这个值的</strong> </p>
+<p><strong>因为负小数的原码是1.xxxxxxx的形式，所以只能表示十进制-0.x，而不能表示-1.0</strong> </p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
