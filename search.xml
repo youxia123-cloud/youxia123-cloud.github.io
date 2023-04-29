@@ -2546,4 +2546,58 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录26</title>
+    <url>/2023/04/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9526/</url>
+    <content><![CDATA[<h1 id="数的表示"><a href="#数的表示" class="headerlink" title="数的表示"></a>数的表示</h1><h3 id="一、反码定义："><a href="#一、反码定义：" class="headerlink" title="一、反码定义："></a>一、反码定义：</h3><p>1.整数的反码：</p>
+<p><a href="https://imgse.com/i/p917SyV"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/29/p917SyV.png"
+                      alt="p917SyV.png"
+                ></a></p>
+<p>小数的反码：</p>
+<p><a href="https://imgse.com/i/p91TXJs"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/29/p91TXJs.png"
+                      alt="p91TXJs.png"
+                ></a></p>
+<p>用逗号将符号位和数值位隔开</p>
+<p>2.正数的反码就是它本身，负数的反码是符号位不变，其余位数取反</p>
+<p>3.正0和负0的反码不相同</p>
+<h3 id="二、三种机器数的小结："><a href="#二、三种机器数的小结：" class="headerlink" title="二、三种机器数的小结："></a>二、三种机器数的小结：</h3><p>1.最高位为<strong>符号位</strong>，书写上用“，”（整数）或“.”（小数）将数值位和符号位隔开</p>
+<p>2.对于正数，原码&#x3D;补码&#x3D;反码</p>
+<p>对于负数，符号位为1，其数值部分</p>
+<p>原码除符号位外每位取反末位加一得到补码</p>
+<p>原码除符号位外每位取反得到反码</p>
+<p>3.<a href="https://imgse.com/i/p91TzQ0"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/29/p91TzQ0.png"
+                      alt="p91TzQ0.png"
+                ></a></p>
+<h3 id="三、移码表示："><a href="#三、移码表示：" class="headerlink" title="三、移码表示："></a>三、移码表示：</h3><p>1.补码很难直接判断其真值的大小</p>
+<p>2.<a href="https://imgse.com/i/p91Tvzq"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/29/p91Tvzq.png"
+                      alt="p91Tvzq.png"
+                ></a></p>
+<p>移码中符号位为1表示正数，符号位为0表示负数</p>
+<p>3.移码没有小数形式的定义</p>
+<p>4.正数的补码和移码符号位不同，数值位相同</p>
+<p>   负数的补码和移码符号位不同，数值位相同</p>
+<p>5.补码与移码只差一个符号位</p>
+<p>6.正0和负0的移码是相同</p>
+<p>7.最小的真值的移码全为0</p>
+<p>8.用移码表示浮点数的阶码</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
