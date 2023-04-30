@@ -2600,4 +2600,68 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录27</title>
+    <url>/2023/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9527/</url>
+    <content><![CDATA[<h1 id="数的定点表示和浮点表示"><a href="#数的定点表示和浮点表示" class="headerlink" title="数的定点表示和浮点表示"></a>数的定点表示和浮点表示</h1><h3 id="一、定点表示："><a href="#一、定点表示：" class="headerlink" title="一、定点表示："></a>一、定点表示：</h3><p>1.小数点按照约定的方式标出</p>
+<p>2.<a href="https://imgse.com/i/p98pTzT"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/30/p98pTzT.png"
+                      alt="p98pTzT.png"
+                ></a></p>
+<p>3.可以分为小数定点机和整数定点机</p>
+<p>4.定点表示的范围：<a href="https://imgse.com/i/p98pHQU"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/30/p98pHQU.png"
+                      alt="p98pHQU.png"
+                ></a></p>
+<h3 id="二、浮点表示："><a href="#二、浮点表示：" class="headerlink" title="二、浮点表示："></a>二、浮点表示：</h3><p><strong>1.为什么要引入浮点数表示</strong>：</p>
+<p>（1）编程困难，程序员要调节小数点的位置</p>
+<p>（2）数的表示范围小，为了能表示两个大小相差很大的数据，需要很长的机器字长</p>
+<p>（3）数据存储单元的利用率很低</p>
+<p>2.浮点数的表示：</p>
+<p><a href="https://imgse.com/i/p98pbyF"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/30/p98pbyF.png"
+                      alt="p98pbyF.png"
+                ></a></p>
+<p>S是小数、可正可负</p>
+<p>j是整数、可正可负</p>
+<p>3.浮点数的表示形式：</p>
+<p><a href="https://imgse.com/i/p98pqL4"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/30/p98pqL4.png"
+                      alt="p98pqL4.png"
+                ></a></p>
+<p>Sf     代表浮点数的符号</p>
+<p>n      其位数反映浮点数的精度</p>
+<p>m     其位数反映浮点数的表示范围</p>
+<p>jf 和 m 共同表示小数点的实际位置</p>
+<p>4.浮点数的表示范围：</p>
+<p><a href="https://imgse.com/i/p98pOeJ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/04/30/p98pOeJ.png"
+                      alt="p98pOeJ.png"
+                ></a></p>
+<p>上溢：阶码  &gt;  最大阶码</p>
+<p>下溢：阶码  &lt;  最小阶码   按机器零处理</p>
+<p>注：尾数的位数影响数的精度</p>
+<p>5.浮点数的规格化形式：</p>
+<p>尾数的基数不同，浮点数的规格化形式不同</p>
+<p>6.浮点数的规格化：</p>
+<p><strong>基数r越大，可以表示的浮点数的范围越大</strong></p>
+<p><strong>基数r越大，浮点数的精度降低</strong></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
