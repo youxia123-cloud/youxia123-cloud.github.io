@@ -2747,4 +2747,81 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录29</title>
+    <url>/2023/05/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9529/</url>
+    <content><![CDATA[<h1 id="定点运算"><a href="#定点运算" class="headerlink" title="定点运算"></a>定点运算</h1><h3 id="一、溢出判断："><a href="#一、溢出判断：" class="headerlink" title="一、溢出判断："></a>一、溢出判断：</h3><p>1.一位符号位的判断：参加操作的两个数（减法时即为被减数和“求补”以后的减数）符号相同，其结果的符号与原操作数的符号不同，即为溢出</p>
+<p>2.硬件实现：最高有效位的进位与符号位的近位相异或，如果结果为1则溢出</p>
+<p>3.两位符号位判断溢出：</p>
+<p><a href="https://imgse.com/i/p96hRUg"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p96hRUg.png"
+                      alt="p96hRUg.png"
+                ></a></p>
+<p>结果的双符号位相同，未溢出</p>
+<p>结果的双符号位不同，发生溢出</p>
+<p>4.最高符号位代表其真正的符号</p>
+<p>A、X均为n+1位，用减法标记GS控制求补逻辑</p>
+<p><a href="https://imgse.com/i/p96hW5Q"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p96hW5Q.png"
+                      alt="p96hW5Q.png"
+                ></a></p>
+<h3 id="二、乘法运算："><a href="#二、乘法运算：" class="headerlink" title="二、乘法运算："></a>二、乘法运算：</h3><p>1.符号位单独处理</p>
+<p>2.原码的乘法运算：</p>
+<p><a href="https://imgse.com/i/p965zB6"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p965zB6.png"
+                      alt="p965zB6.png"
+                ></a></p>
+<p>3.原码乘法的特点：</p>
+<p>（1）绝对值运算</p>
+<p>（2）用移位的次数判断乘法是否结束</p>
+<p>（3）移位是逻辑移位</p>
+<p>4.原码一位乘的硬件配置：</p>
+<p><a href="https://imgse.com/i/p96IKUS"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p96IKUS.png"
+                      alt="p96IKUS.png"
+                ></a></p>
+<p>A、X、Q均为n+1位</p>
+<p>移位和加受末位乘数的控制</p>
+<h3 id="三、除法运算："><a href="#三、除法运算：" class="headerlink" title="三、除法运算："></a>三、除法运算：</h3><p>1.商符单独处理（符号位异或形成）</p>
+<p>2.余数不动低位补0，减右移移位的除数</p>
+<p>3.在机器中，采用一位字长加法器</p>
+<p>4.原码除法：</p>
+<p><a href="https://imgse.com/i/p96oFaT"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p96oFaT.png"
+                      alt="p96oFaT.png"
+                ></a></p>
+<p>约定：（1）小数定点除法X* &lt;  Y<em>，整数定点除法X * &gt;  Y</em></p>
+<p>​	   （2）被除数不等于0</p>
+<p>​	   （3）除数不能为0</p>
+<p>5.恢复余数法：</p>
+<p>移位操作是逻辑左移</p>
+<p>6.不恢复余数法（加减交替法）：</p>
+<p>（1）加减交替，移位是逻辑左移</p>
+<p>（2）上商n+1次，第一次上商判断溢出，移n次，加n+1次</p>
+<p>（3）用移位的次数判断除法是否结束</p>
+<p>7.原码加减交替除法硬件配置：</p>
+<p><a href="https://imgse.com/i/p96oaLt"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/13/p96oaLt.png"
+                      alt="p96oaLt.png"
+                ></a></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
