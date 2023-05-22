@@ -2891,4 +2891,43 @@
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录30</title>
+    <url>/2023/05/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9530/</url>
+    <content><![CDATA[<h1 id="浮点运算"><a href="#浮点运算" class="headerlink" title="浮点运算"></a>浮点运算</h1><h3 id="一、浮点加减运算："><a href="#一、浮点加减运算：" class="headerlink" title="一、浮点加减运算："></a>一、浮点加减运算：</h3><p>1.<a href="https://imgse.com/i/p9ID6FU"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/22/p9ID6FU.png"
+                      alt="p9ID6FU.png"
+                ></a></p>
+<p>2.对阶原则：小阶向大阶看齐</p>
+<p>3.规格化：提高浮点数的精度</p>
+<p>4.尾数规格化数的定义：</p>
+<p><a href="https://imgse.com/i/p9IDsoT"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/22/p9IDsoT.png"
+                      alt="p9IDsoT.png"
+                ></a></p>
+<p>5.规格化数的判断：</p>
+<p><a href="https://imgse.com/i/p9IDcYF"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/22/p9IDcYF.png"
+                      alt="p9IDcYF.png"
+                ></a></p>
+<p>原码不论正数、负数，第一数位为1</p>
+<p>补码符号位和第一数位不同</p>
+<p>6.特例：[-0.5]补不是规格化的数</p>
+<p>[-1]补是规格化的数</p>
+<p>7.左规：尾数左移一位，阶码减一，直到数符和第一数位不同为止</p>
+<p>8.当尾数溢出（&gt;1）的时候，需要右规</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
