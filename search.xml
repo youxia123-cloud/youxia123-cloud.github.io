@@ -2994,4 +2994,40 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录31</title>
+    <url>/2023/05/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9531/</url>
+    <content><![CDATA[<h1 id="算术逻辑单元"><a href="#算术逻辑单元" class="headerlink" title="算术逻辑单元"></a>算术逻辑单元</h1><h3 id="一、ALU电路："><a href="#一、ALU电路：" class="headerlink" title="一、ALU电路："></a>一、ALU电路：</h3><p>1.<a href="https://imgse.com/i/p9L9A4e"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/27/p9L9A4e.png"
+                      alt="p9L9A4e.png"
+                ></a></p>
+<p>2.ALU电路是一个组合逻辑电路，Ki不同取值，Fi不同</p>
+<h3 id="二、快速进位链："><a href="#二、快速进位链：" class="headerlink" title="二、快速进位链："></a>二、快速进位链：</h3><p>1.并行加法器</p>
+<p><a href="https://imgse.com/i/p9L9V9H"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/27/p9L9V9H.png"
+                      alt="p9L9V9H.png"
+                ></a></p>
+<p>2.Ci-1是低位产生的进位</p>
+<p>3.Ai与Bi相乘是本地进位，Ai和Bi相加是传送条件</p>
+<p>4.进位链：传送进位的电路</p>
+<p>5.串行进位链：进行串行传送</p>
+<p>6.设与非门的级延迟时间为Ty，则n位全加器产生进位的全部时间为2nTy</p>
+<p>7.并行进位链：n位加法器的进位同时产生（先行进位，跳跃进位）</p>
+<p>8.改进的方法：</p>
+<p>（1）单重分组跳跃进位链：</p>
+<p>n位全加器分为若干个小组，小组中的进位同时产生，小组与小组之间采用串行进位</p>
+<p>（2）双重分组跳跃进位链：</p>
+<p>n位全加器分为若干大组，大组之间又包含若干小组，每个大组中小组的最高位进位同时产生。大组与大组之间采用串行进位</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
