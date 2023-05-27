@@ -3030,4 +3030,58 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录32</title>
+    <url>/2023/05/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9532/</url>
+    <content><![CDATA[<h1 id="机器指令"><a href="#机器指令" class="headerlink" title="机器指令"></a>机器指令</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.机器指令是指计算机系统的CPU能够直接识别指向的操作命令</p>
+<p>2.指令集是软件和硬件的交界</p>
+<h3 id="二、指令的一般形式："><a href="#二、指令的一般形式：" class="headerlink" title="二、指令的一般形式："></a>二、指令的一般形式：</h3><p>1.<a href="https://imgse.com/i/p9LiCBq"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/27/p9LiCBq.png"
+                      alt="p9LiCBq.png"
+                ></a></p>
+<p>2.操作码：反映机器做什么操作</p>
+<p>3.操作码的分类：</p>
+<p>（1）长度固定</p>
+<p>（2）长度可变，采用扩展操作码技术</p>
+<p>操作码的位数随地址数的减少而增加</p>
+<p>4.三地址指令操作码每减少一种最多可以构成2的4次方种二地址指令</p>
+<p>二地址指令操作码每减少一种最多可以构成2的4种一地址指令</p>
+<p>5.在指令执行的过程中，经常出现的高频指令用短操作码表示，不经常出现的指令用长操作码表示</p>
+<p>6.地址码：</p>
+<p>以四地址为例：</p>
+<p><a href="https://imgse.com/i/p9LiPH0"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/27/p9LiPH0.png"
+                      alt="p9LiPH0.png"
+                ></a></p>
+<h3 id="三、指令字长："><a href="#三、指令字长：" class="headerlink" title="三、指令字长："></a>三、指令字长：</h3><p>1.<a href="https://imgse.com/i/p9LiFEV"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/05/27/p9LiFEV.png"
+                      alt="p9LiFEV.png"
+                ></a></p>
+<p>2.指令字长固定：</p>
+<p>指令字长&#x3D;存储字长</p>
+<p>3.指令字长可变：按字节的倍数变化</p>
+<p>4.当用一些硬件资源代替指令字中的地址码字段后可以：</p>
+<p>（1）扩大指令的寻址范围</p>
+<p>（2）缩短指令字长</p>
+<p>（3）减少访存次数</p>
+<p>5.当指令的地址字段为寄存器时：</p>
+<p>（1）三地址 OP R1，R2，R3</p>
+<p>（2）二地址 OP R1，R2</p>
+<p>（3）一地址 OP R1</p>
+<p>可以缩短指令字长</p>
+<p>指令执行阶段不访存</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
