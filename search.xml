@@ -3119,4 +3119,39 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录34</title>
+    <url>/2023/07/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9534/</url>
+    <content><![CDATA[<h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><h3 id="一、寻址的定义"><a href="#一、寻址的定义" class="headerlink" title="一、寻址的定义"></a>一、寻址的定义</h3><p>1.寻址方式是指确定本条指令的数据地址以及下一条将要执行的指令的地址的方法，它与硬件结构紧密相关，而且直接影响指令格式和指令的功能</p>
+<p>2.寻址方式分为指令寻址和数据寻址</p>
+<h3 id="二、指令寻址"><a href="#二、指令寻址" class="headerlink" title="二、指令寻址"></a>二、指令寻址</h3><p>1.指令寻址分为顺序寻址和跳跃寻址</p>
+<p>2.顺序寻址可以通过程序计数器PC加1，自动形成下一条指令的地址，跳跃寻址通过转移类指令实现</p>
+<h3 id="三、数据寻址"><a href="#三、数据寻址" class="headerlink" title="三、数据寻址"></a>三、数据寻址</h3><p>1.数据寻址方式种类较多，在指令字中必须设一字段来指明属于哪一种寻址方式</p>
+<p>2.指令的地址码字段通常都不代表指令的真实地址，我们称之为形式地址，记为A。操作数的真实地址称为有效地址，记为EA。它由寻址方式和形式地址共同确定。</p>
+<p>3.指令的格式：</p>
+<p><a href="https://imgse.com/i/pCDaY40"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/02/pCDaY40.png"
+                      alt="pCDaY40.png"
+                ></a></p>
+<p>4.数据寻址的类型：</p>
+<p>（1）立即寻址</p>
+<p>（2）直接寻址</p>
+<p>（3）隐含寻址</p>
+<p>（4）间接寻址</p>
+<p>（5）寄存器寻址</p>
+<p>（6）寄存器间接寻址</p>
+<p>（7）基址寻址</p>
+<p>（8）变址寻址</p>
+<p>（9）相对寻址</p>
+<p>（10）堆栈寻址</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
