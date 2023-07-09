@@ -3269,4 +3269,35 @@
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录35</title>
+    <url>/2023/07/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9535/</url>
+    <content><![CDATA[<h1 id="RISC技术"><a href="#RISC技术" class="headerlink" title="RISC技术"></a>RISC技术</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>1.RISC：精简指令集计算机</p>
+<p>CISC：复杂指令集计算机</p>
+<p>2.典型程序中80%的语句仅仅使用处理机中20%的指令</p>
+<p>3.执行频率高的简单指令，因为复杂指令的存在，执行速度无法提高</p>
+<h3 id="二、RISC的主要特征："><a href="#二、RISC的主要特征：" class="headerlink" title="二、RISC的主要特征："></a>二、RISC的主要特征：</h3><p>1.选用使用频度较高的一些简单指令，复杂指令的功能由简单指令来组合</p>
+<p>2.指令长度固定，指令格式种类少，寻址的方式少</p>
+<p>3.只用LOAD&#x2F;STORE指令访存</p>
+<p>4.CPU中有多个通用寄存器</p>
+<p>5.采用流水技术一个时钟周期内完成一条指令</p>
+<p>6.采用组合逻辑实现控制器</p>
+<h3 id="三、CISC的主要特征："><a href="#三、CISC的主要特征：" class="headerlink" title="三、CISC的主要特征："></a>三、CISC的主要特征：</h3><p>1.系统指令复杂庞大，各种指令使用频度相差大</p>
+<p>2.指令长度不固定，指令格式种类多、寻址方式多</p>
+<p>3.访存指令不受限制</p>
+<p>4.CPU中设有专用寄存器</p>
+<p>5.大多数指令需要多个时钟周期</p>
+<p>6.采用微程序控制器</p>
+<h3 id="四、RISC和CISC的对比："><a href="#四、RISC和CISC的对比：" class="headerlink" title="四、RISC和CISC的对比："></a>四、RISC和CISC的对比：</h3><p>1.RISC更能够充分利用VLSI芯片的面积</p>
+<p>2.RISC更能提高计算机的运算速度，便于实现指令流水</p>
+<p>3.RISC便于设计，可以降低成本，提高可靠性</p>
+<p>4.RISC不易实现指令系统的兼容性</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
