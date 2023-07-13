@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/07/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9538/" />
+    <link rel="canonical" href="http://example.com/2023/07/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9539/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机组成原理学习记录38 |
+            计算机组成原理学习记录39 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录38</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机组成原理学习记录39</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-07-13 12:04:34</span>
-        <span class="mobile">2023-07-13 12:04</span>
+        <span class="pc">2023-07-13 12:06:54</span>
+        <span class="mobile">2023-07-13 12:06</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,49 +320,66 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="指令流水"><a href="#指令流水" class="headerlink" title="指令流水"></a>指令流水</h1><h3 id="一、如何提高机器速度："><a href="#一、如何提高机器速度：" class="headerlink" title="一、如何提高机器速度："></a>一、如何提高机器速度：</h3><p>1.提高访存速度：高速芯片、Cache、多体并行</p>
-<p>2.提高I&#x2F;O和主机之间的传送速度：中断、DMA、通道、I&#x2F;O处理机、多总线</p>
-<p>3.提高运算器速度：高速芯片、改进算法、快速进位链</p>
-<p>4.为了调高整机的处理能力，除了采用高速部件，还可以改进系统结构，开发系统的并行性</p>
-<h3 id="二、系统的并行性："><a href="#二、系统的并行性：" class="headerlink" title="二、系统的并行性："></a>二、系统的并行性：</h3><p>1.并行：</p>
-<p>并发：两个或两个以上的事件在同一时间段发生</p>
-<p>同时：两个或两个以上的事件在同一时刻发生</p>
-<p>2.并行性的等级：</p>
-<p>过程级（程序、进程）是粗粒度的，可以用软件实现</p>
-<p>指令级（指令之间、指令内部）是细粒度的，用硬件实现</p>
-<h3 id="三、指令流水原理："><a href="#三、指令流水原理：" class="headerlink" title="三、指令流水原理："></a>三、指令流水原理：</h3><p>1.指令的串行执行：</p>
-<p>在取指令时只会用到取指令部件，在执行指令时只会用到执行指令部件，总有一个部件空闲</p>
-<p>2.指令的二级流水：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChdcKH"><img  
+                <h1 id="指令流水"><a href="#指令流水" class="headerlink" title="指令流水"></a>指令流水</h1><h3 id="一、流水线的性能指标："><a href="#一、流水线的性能指标：" class="headerlink" title="一、流水线的性能指标："></a>一、流水线的性能指标：</h3><p>1.吞吐率：单位时间内流水线完成指令或输出结果的数量</p>
+<p>最大吞吐率</p>
+<p>实际吞吐率</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChU2Se"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/07/13/pChdcKH.png"
-                      alt="pChdcKH.png"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChU2Se.png"
+                      alt="pChU2Se.png"
                 ></a></p>
-<p>若取指和执行阶段时间上完全重叠，指令周期减半，速度提高一倍（理性情况下）</p>
-<p>3.影响指令流水效率加倍的因素：</p>
-<p>（1）执行时间  &gt;  取址时间</p>
-<p>解决方案：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChdgrd"><img  
+<p>2.加速比Sp：m段流水线的速度与等功能的非流水线的速度之比</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChUfOA"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/07/13/pChdgrd.png"
-                      alt="pChdgrd.png"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUfOA.png"
+                      alt="pChUfOA.png"
                 ></a></p>
-<p>（2）条件转移指令对指令流水的影响：</p>
-<p>必须等上条指令执行结束，才能确定下条指令的地址</p>
-<p>造成时间的损失</p>
-<p>解决方案：猜测法</p>
-<h3 id="四、影响指令流水线性能的因素："><a href="#四、影响指令流水线性能的因素：" class="headerlink" title="四、影响指令流水线性能的因素："></a>四、影响指令流水线性能的因素：</h3><p>1.结构相关：不同的指令争用同一功能部件造成资源冲突</p>
-<p>解决方案：</p>
-<p>（1）停顿</p>
-<p>（2）指令存储器和数据存储器分开</p>
-<p>（3）指令预取技术（适用于访存周期短的情况）</p>
-<p>2.数据相关：不同指令因为重叠操作，可能改变操作数的读&#x2F;写访问顺序</p>
-<p>（1）写后读相关（RAW）</p>
-<p>（2）读后写相关（WAR）</p>
-<p>（3）写后写相关（WAW）</p>
-<p>3.控制相关：由转移指令引起</p>
+<p>3.效率：流水线各功能段的利用率</p>
+<p>由于流水线有建立时间和排空时间，因此各功能段的设备不可能一直处于工作状态</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChUTFf"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUTFf.png"
+                      alt="pChUTFf.png"
+                ></a></p>
+<p>效率的计算：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChULlQ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChULlQ.png"
+                      alt="pChULlQ.png"
+                ></a></p>
+<h3 id="二、流水线的多发技术："><a href="#二、流水线的多发技术：" class="headerlink" title="二、流水线的多发技术："></a>二、流水线的多发技术：</h3><p>1.超标量技术：</p>
+<p>每个时钟周期内可以并发多条独立指令，配置多个功能部件</p>
+<p>不能调整指令的执行顺序，通过编译优化技术，把	可并行执行的指令搭配起来</p>
+<p>2.超流水线技术：</p>
+<p>在一个时钟周期内再分段（3段）</p>
+<p>在一个时钟周期内一个功能部件使用多次（3次）</p>
+<p>不同的指令处在同一个流水段中，相互之间的信号不能叠加</p>
+<p>不能调整指令的执行顺序，靠编译程序解决优化问题</p>
+<p>3.超长指令字技术：</p>
+<p>由编译程序挖掘出指令间潜在的并行性，将多条能并行操作的指令组合成一条具有多个操作字码的超长指令字（可达几百位）</p>
+<p>采用多个处理部件</p>
+<h3 id="三、流水线结构："><a href="#三、流水线结构：" class="headerlink" title="三、流水线结构："></a>三、流水线结构：</h3><p>1.指令流水线结构：完成一条指令分6段，每段需要一个时钟周期</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChapkV"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChapkV.png"
+                      alt="pChapkV.png"
+                ></a></p>
+<p>若流水线不出现断流 则 1 个时钟周期出 1 个结果</p>
+<p>不采用流水线的话 则 6 个时钟周期出 1 个结果</p>
+<p>理想情况下，6级流水的速度是不采用流水技术的6倍</p>
+<p>2.运算流水线：完成浮点数加减运算可以分为对阶、尾数求和、规格化三段</p>
+<p>分段原则：每段操作时间尽量一致</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pChUzT0"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUzT0.png"
+                      alt="pChUzT0.png"
+                ></a></p>
 
             </div>
 
@@ -370,11 +387,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机组成原理学习记录38</li>
+        <li>本文标题：计算机组成原理学习记录39</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-07-13 12:04:34</li>
+        <li>创建时间：2023-07-13 12:06:54</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/07/13/计算机组成原理学习记录38/
+            本文链接：http://youxia123-cloud.github.io/2023/07/13/计算机组成原理学习记录39/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -398,29 +415,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/07/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9539/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">计算机组成原理学习记录39</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/07/11/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/"
+                            href="/2023/07/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9538/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">操作系统学习记录6</span>
+                                    <span class="post-nav-title-item">计算机组成原理学习记录38</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -440,7 +442,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4"><span class="nav-text">指令流水</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E6%9C%BA%E5%99%A8%E9%80%9F%E5%BA%A6%EF%BC%9A"><span class="nav-text">一、如何提高机器速度：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%80%A7%EF%BC%9A"><span class="nav-text">二、系统的并行性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="nav-text">三、指令流水原理：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%BD%B1%E5%93%8D%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%80%A7%E8%83%BD%E7%9A%84%E5%9B%A0%E7%B4%A0%EF%BC%9A"><span class="nav-text">四、影响指令流水线性能的因素：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4"><span class="nav-text">指令流水</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%EF%BC%9A"><span class="nav-text">一、流水线的性能指标：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%A4%9A%E5%8F%91%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-text">二、流水线的多发技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-text">三、流水线结构：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

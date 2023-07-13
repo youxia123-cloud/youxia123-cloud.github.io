@@ -3517,4 +3517,75 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录39</title>
+    <url>/2023/07/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9539/</url>
+    <content><![CDATA[<h1 id="指令流水"><a href="#指令流水" class="headerlink" title="指令流水"></a>指令流水</h1><h3 id="一、流水线的性能指标："><a href="#一、流水线的性能指标：" class="headerlink" title="一、流水线的性能指标："></a>一、流水线的性能指标：</h3><p>1.吞吐率：单位时间内流水线完成指令或输出结果的数量</p>
+<p>最大吞吐率</p>
+<p>实际吞吐率</p>
+<p><a href="https://imgse.com/i/pChU2Se"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChU2Se.png"
+                      alt="pChU2Se.png"
+                ></a></p>
+<p>2.加速比Sp：m段流水线的速度与等功能的非流水线的速度之比</p>
+<p><a href="https://imgse.com/i/pChUfOA"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUfOA.png"
+                      alt="pChUfOA.png"
+                ></a></p>
+<p>3.效率：流水线各功能段的利用率</p>
+<p>由于流水线有建立时间和排空时间，因此各功能段的设备不可能一直处于工作状态</p>
+<p><a href="https://imgse.com/i/pChUTFf"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUTFf.png"
+                      alt="pChUTFf.png"
+                ></a></p>
+<p>效率的计算：</p>
+<p><a href="https://imgse.com/i/pChULlQ"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChULlQ.png"
+                      alt="pChULlQ.png"
+                ></a></p>
+<h3 id="二、流水线的多发技术："><a href="#二、流水线的多发技术：" class="headerlink" title="二、流水线的多发技术："></a>二、流水线的多发技术：</h3><p>1.超标量技术：</p>
+<p>每个时钟周期内可以并发多条独立指令，配置多个功能部件</p>
+<p>不能调整指令的执行顺序，通过编译优化技术，把	可并行执行的指令搭配起来</p>
+<p>2.超流水线技术：</p>
+<p>在一个时钟周期内再分段（3段）</p>
+<p>在一个时钟周期内一个功能部件使用多次（3次）</p>
+<p>不同的指令处在同一个流水段中，相互之间的信号不能叠加</p>
+<p>不能调整指令的执行顺序，靠编译程序解决优化问题</p>
+<p>3.超长指令字技术：</p>
+<p>由编译程序挖掘出指令间潜在的并行性，将多条能并行操作的指令组合成一条具有多个操作字码的超长指令字（可达几百位）</p>
+<p>采用多个处理部件</p>
+<h3 id="三、流水线结构："><a href="#三、流水线结构：" class="headerlink" title="三、流水线结构："></a>三、流水线结构：</h3><p>1.指令流水线结构：完成一条指令分6段，每段需要一个时钟周期</p>
+<p><a href="https://imgse.com/i/pChapkV"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChapkV.png"
+                      alt="pChapkV.png"
+                ></a></p>
+<p>若流水线不出现断流 则 1 个时钟周期出 1 个结果</p>
+<p>不采用流水线的话 则 6 个时钟周期出 1 个结果</p>
+<p>理想情况下，6级流水的速度是不采用流水技术的6倍</p>
+<p>2.运算流水线：完成浮点数加减运算可以分为对阶、尾数求和、规格化三段</p>
+<p>分段原则：每段操作时间尽量一致</p>
+<p><a href="https://imgse.com/i/pChUzT0"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/13/pChUzT0.png"
+                      alt="pChUzT0.png"
+                ></a></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
