@@ -3690,4 +3690,87 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录42</title>
+    <url>/2023/07/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9542/</url>
+    <content><![CDATA[<h1 id="控制单元"><a href="#控制单元" class="headerlink" title="控制单元"></a>控制单元</h1><h3 id="一、微操作命令的分析："><a href="#一、微操作命令的分析：" class="headerlink" title="一、微操作命令的分析："></a>一、微操作命令的分析：</h3><p>1.微操作命令：指令解释的过程中由控制单元发出的一些指令</p>
+<p>2.完成一条指令分为四个周期：</p>
+<p>（1）取址周期</p>
+<p>（2）间址周期</p>
+<p>（3）执行周期</p>
+<p>（4）中断周期</p>
+<p>3.取址周期的微操作：</p>
+<p>PC—–&gt;MAR—–&gt;地址线</p>
+<p>1—–&gt;R</p>
+<p>M(MAR)—–&gt;MDR</p>
+<p>OP(IR)—–&gt;CU</p>
+<p>PC+1—–&gt;PC</p>
+<p>4.间址周期的微操作：</p>
+<p>指令形式地址—–&gt;MAR</p>
+<p>Ad(IR)—–&gt;MAR</p>
+<p>1—–&gt;R  (读操作命令)</p>
+<p>M(MAR)—–&gt;MDR</p>
+<p>MDR—–&gt;Ad(IR)</p>
+<p>5.执行周期的微操作：</p>
+<p> 5.1非访存类的指令</p>
+<p>（1）CLA 清A     0—–&gt;ACC</p>
+<p>（2）COM 取反   ACC的反—–&gt;ACC</p>
+<p>（3）SHR 算术右移   L(ACC)—–&gt;R(ACC),     ACCo—–&gt;ACCo</p>
+<p>（4）CSL  循环左移   R(ACC)—–&gt;L(ACC),     ACCo—–&gt;ACCo</p>
+<p>（5）STP  停机指令    0—–&gt;G</p>
+<p> 5.2访存指令</p>
+<p>（1）加法指令</p>
+<p>ADD X：</p>
+<p>Ad(IR)—–&gt;MAR</p>
+<p>1—–&gt;R</p>
+<p>M(MAR)—–&gt;MDR</p>
+<p>(ACC)+(MDR)—–&gt;ACC</p>
+<p>（2）存数指令</p>
+<p>STA X：</p>
+<p>Ad(IR)—–&gt;MAR</p>
+<p>1—–&gt;W</p>
+<p>ACC—–&gt;MDR</p>
+<p>MDR—–&gt;M(MAR)</p>
+<p>（3）取数指令</p>
+<p>LDA X:</p>
+<p>Ad(IR)—–&gt;MAR</p>
+<p>1—–&gt;R</p>
+<p>M(MAR)—–&gt;MDR</p>
+<p>MDR—–&gt;ACC</p>
+<p> 5.3转移指令</p>
+<p>（1）无条件转 </p>
+<p>JMP X：</p>
+<p>Ad(IR)—–&gt;PC</p>
+<p>（2）条件转移</p>
+<p>BAN X:     (负则转)</p>
+<p>6.三类指令的指令周期：</p>
+<p><a href="https://imgse.com/i/pCHw18s"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/20/pCHw18s.png"
+                      alt="pCHw18s.png"
+                ></a></p>
+<p>7.中断周期：</p>
+<p>程序断点存入“0”地址：</p>
+<p>0—–&gt;MAR</p>
+<p>1—–&gt;W</p>
+<p>PC—–&gt;MDR</p>
+<p>MDR—–&gt;M(MAR)</p>
+<p>向量地址—–&gt;PC</p>
+<p>0—–&gt;EINT(置“0”)</p>
+<p>程序断点进栈：</p>
+<p>(SP) -1 —–&gt;MAR</p>
+<p>1—–&gt;W</p>
+<p>PC—–&gt;MDR</p>
+<p>MDR—–&gt;M(MAR)</p>
+<p>向量地址—–&gt;PC</p>
+<p>0—–&gt;EINT(置“0”)</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
