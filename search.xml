@@ -3773,4 +3773,84 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录43</title>
+    <url>/2023/07/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9543/</url>
+    <content><![CDATA[<h1 id="控制单元的功能"><a href="#控制单元的功能" class="headerlink" title="控制单元的功能"></a>控制单元的功能</h1><h3 id="一、控制单元的外特性："><a href="#一、控制单元的外特性：" class="headerlink" title="一、控制单元的外特性："></a>一、控制单元的外特性：</h3><p>1.输入信号：</p>
+<p>（1）时钟</p>
+<p>CU受时钟控制</p>
+<p>一个时钟脉冲发一个操作命令或一组需要同时执行的操作命令</p>
+<p>（2）指令寄存器   OP(IR)—–&gt;CU</p>
+<p>控制信号与操作码有关</p>
+<p>（3）标志</p>
+<p>CU受标志控制</p>
+<p>（4）外来信号</p>
+<p>如   INTR 中断请求</p>
+<p>​       HRQ 总线请求</p>
+<p>2.输出信号：</p>
+<p>（1）CPU内的各种控制信号</p>
+<p>（2）送至控制总线的信号：访存控制信号、读命令、写命令	、中断响应信号、总线响应信号、访I&#x2F;O存储器的控制信号</p>
+<h3 id="二、控制信号举例："><a href="#二、控制信号举例：" class="headerlink" title="二、控制信号举例："></a>二、控制信号举例：</h3><p>1.不采用CPU内部总线方式</p>
+<p>（1）取址周期：</p>
+<p><a href="https://imgse.com/i/pCbumCD"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/21/pCbumCD.png"
+                      alt="pCbumCD.png"
+                ></a></p>
+<p>（2）间址周期：</p>
+<p><a href="https://imgse.com/i/pCbuKvd"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/21/pCbuKvd.png"
+                      alt="pCbuKvd.png"
+                ></a></p>
+<p>（3）执行周期：</p>
+<p><a href="https://imgse.com/i/pCbu1bt"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/21/pCbu1bt.png"
+                      alt="pCbu1bt.png"
+                ></a></p>
+<p>2.采用CPU内部总线方式</p>
+<p><a href="https://imgse.com/i/pCbuJ58"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/21/pCbuJ58.png"
+                      alt="pCbuJ58.png"
+                ></a></p>
+<h3 id="三、多级时序系统："><a href="#三、多级时序系统：" class="headerlink" title="三、多级时序系统："></a>三、多级时序系统：</h3><p>1机器周期：</p>
+<p>（1）机器周期：所有指令执行过程中的一个基准时间</p>
+<p>（2）确定机器周期所需考虑的因素：</p>
+<p>每条指令的执行步骤</p>
+<p>每一个步骤所需要的时间</p>
+<p>（3）基准时间的确定：以完成最复杂指令功能的时间为例</p>
+<p>以访问一次寄存器的时间为基准</p>
+<p>若指令字长&#x3D;存储字长，则取址周期&#x3D;机器周期</p>
+<p>2.时钟周期：</p>
+<p>（1）时钟周期：一个机器周期内可以完成若干个微操作，每个微操作需要一定的时间，将一个机器周期划分为若干个时间相等的时间段（节拍、状态、时钟周期）</p>
+<p>（2）<strong>时钟周期是控制计算机操作的最小单位时间</strong></p>
+<p>（3）用时钟周期控制产生一个或几个微操作命令</p>
+<p>3.机器周期、节拍（状态）组成多级时序系统</p>
+<p>一个指令周期包含若干个机器周期</p>
+<p>一个机器周期包含了若干个时钟周期</p>
+<p>4.机器的主频f越快机器的速度也越快</p>
+<p>在机器周期所含的时钟周期相同的前提下，两机平均指令执行速度之比等于两机主频之比</p>
+<p>5.机器速度不仅与主频有关，还与机器周期中所含的时钟周期数以及指令周期中所含的机器周期数有关</p>
+<h3 id="四、控制方式："><a href="#四、控制方式：" class="headerlink" title="四、控制方式："></a>四、控制方式：</h3><p>产生不同微操作命令序列所用的时序控制方式</p>
+<p>1.同步控制方式：任一微操作均由统一基准时标的时序信号控制</p>
+<p>采用定长的机器周期</p>
+<p>采用不定长的机器周期：机器周期内节拍数不等</p>
+<p>采用中央控制和局部控制结合的方式：局部控制节拍宽度和中央控制的节拍宽度一致</p>
+<p>2.异步控制方式：无基准时标信号，无固定的周期节拍和严格的时钟同步，采用应答方式</p>
+<p>3.联合控制方式：同步与异步控制方式结合</p>
+<p>4.人工控制方式：Reset，连续和单条指令执行转换开关、符合停机开关</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
