@@ -3853,4 +3853,95 @@
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机组成原理学习记录44</title>
+    <url>/2023/07/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9544/</url>
+    <content><![CDATA[<h1 id="组合逻辑设计"><a href="#组合逻辑设计" class="headerlink" title="组合逻辑设计"></a>组合逻辑设计</h1><h3 id="一、组合逻辑控制单元框图："><a href="#一、组合逻辑控制单元框图：" class="headerlink" title="一、组合逻辑控制单元框图："></a>一、组合逻辑控制单元框图：</h3><p>1.CU外特性</p>
+<p><a href="https://imgse.com/i/pCqKU4f"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/07/22/pCqKU4f.png"
+                      alt="pCqKU4f.png"
+                ></a></p>
+<h3 id="二、微操作的节拍安排："><a href="#二、微操作的节拍安排：" class="headerlink" title="二、微操作的节拍安排："></a>二、微操作的节拍安排：</h3><p>1.采用同步控制方式</p>
+<p>2.一个机器周期内有多个节拍</p>
+<p>3.CPU内部结构采用非总线的方式</p>
+<p>4.安排微操作时序的原则：</p>
+<p>（1）微操作的先后顺序不能随意修改</p>
+<p>（2）被控对象不同的微操作尽量安排在一个节拍内</p>
+<p>（3）占用时间较短的微操作尽量安排在一个节拍内完成，并允许有先后顺序</p>
+<p>5.取指周期的微操作的节拍安排：</p>
+<p>T0     PC—–&gt;MAR</p>
+<p>​	 1—–&gt;R</p>
+<p>T1     M(MAR)—–&gt;MDR</p>
+<p>​	 (PC)+1—–&gt;PC</p>
+<p>T2     MDR—–&gt;IR</p>
+<p>​	 OP(IR)—–&gt;ID</p>
+<p>6.间址周期微操作的节拍安排：</p>
+<p>T0     Ad(IR)——&gt;MAR</p>
+<p>​	 1—–&gt;R</p>
+<p>T1     M(MAR)—–&gt;MDR</p>
+<p>T2     MDR—–&gt;Ad(IR)</p>
+<p>7.执行周期微操作的节拍安排：</p>
+<p>（1）CLK</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     0—–&gt;AC</p>
+<p>（2）COM(取反指令)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     AC非—–&gt;AC</p>
+<p>（3）SHR(逻辑右移)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     L(AC)—–&gt;R(AC)</p>
+<p>​	 AC0—–&gt;AC0</p>
+<p>（4）CSL(循环左移)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     R(AC)—–&gt;L(AC)     AC0—–&gt;ACn</p>
+<p>（5）STP(停机指令)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     0—–&gt;G</p>
+<p>（6）ADD X</p>
+<p>T0     Ad(IR)—–&gt;MAR     1—–&gt;R</p>
+<p>T1     M(MAR)—–&gt;MDR</p>
+<p>T2     (AC)+(MDR)—–&gt;AC</p>
+<p>（7）STA X(将累加器中保存的数据存入给定的存储单元，存储单元的地址是X)</p>
+<p>T0     Ad(IR)—–&gt;MAR     1—–&gt;W</p>
+<p>T1     AC—–&gt;MDR</p>
+<p>T2     MDR—–&gt;M(MAR)</p>
+<p>（8）LDA X(将地址为X的内存单元保存的数据取出，保存在CPU中，放在累加器)</p>
+<p>T0     Ad(IR)—–&gt;MAR     1—–&gt;R</p>
+<p>T1     M(MAR)—–&gt;MDR</p>
+<p>T2     MDR—–&gt;AC</p>
+<p>（9）JMP X(跳转指令)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     Ad(IR)—–&gt;PC</p>
+<p>（10）BAN X(条件跳转指令，计算结果小于0，跳转到X)</p>
+<p>T0</p>
+<p>T1</p>
+<p>T2     A0*Ad(IR) + A0非 * PC—–&gt;PC</p>
+<p>8.中断周期的微操作节拍安排：</p>
+<p>T0     0—–&gt;MAR     1—–&gt;W    (硬件关中断)</p>
+<p>T1     PC—–&gt;MDR</p>
+<p>T2     MDR—–&gt;M(MAR)     向量地址—–&gt;PC</p>
+<p>由中断隐指令完成</p>
+<h3 id="三、组合逻辑设计步骤："><a href="#三、组合逻辑设计步骤：" class="headerlink" title="三、组合逻辑设计步骤："></a>三、组合逻辑设计步骤：</h3><p>1.列出操作时间表</p>
+<p>2.写出微操作命令的最简表达式</p>
+<p>3.画出逻辑图</p>
+<p>4.特点：</p>
+<p>（1）思路清晰，简单明了</p>
+<p>（2）庞杂，调试困难，修改困难</p>
+<p>（3）速度快（RISC）</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
