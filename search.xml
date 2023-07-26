@@ -4139,4 +4139,38 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录9</title>
+    <url>/2023/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/</url>
+    <content><![CDATA[<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h3 id="一、二叉树的遍历："><a href="#一、二叉树的遍历：" class="headerlink" title="一、二叉树的遍历："></a>一、二叉树的遍历：</h3><p>1.先序遍历（根左右）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PreOrder</span><span class="params">(TreeNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,T-&gt;data);</span><br><span class="line">        PreOrder(T-&gt;lchild);</span><br><span class="line">        PreOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>2.中序遍历（左根右）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrder</span><span class="params">(TreeNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrder(T-&gt;lchild);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,T-&gt;data);</span><br><span class="line">        InOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>3.后序遍历（左右根）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PostOrder</span><span class="params">(TreeNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        PostOrder(T-&gt;lchild);</span><br><span class="line">        PostOrder(T-&gt;rchild);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,T-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>4.遍历的复杂度是树的高度</p>
+<p>5.二叉树的层序遍历：</p>
+<p>（1）初始化一个辅助队列</p>
+<p>（2）根节点入队</p>
+<p>（3）若队列非空，则队头结点出队，访问该节点，并将其左右孩子插入队尾（如果有的话）</p>
+<p>（4）重复步骤三直到队列为空</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">LeaveOrder</span><span class="params">(TreeNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    LinkQueue Q;</span><br><span class="line">    Initqueue(Q);   <span class="comment">//初始化辅助队列Q</span></span><br><span class="line">    TreeNode p;</span><br><span class="line">    EnQueue(Q,T);  <span class="comment">//将根结点入队</span></span><br><span class="line">    <span class="keyword">while</span>(!IsEmpty(Q))</span><br><span class="line">    &#123;</span><br><span class="line">        DeQueue(Q,p);     <span class="comment">//队头结点出队</span></span><br><span class="line">        <span class="built_in">printf</span>(p-&gt;data);  <span class="comment">//访问出队结点</span></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=<span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            EnQueue(Q,p-&gt;lchild);  <span class="comment">//左孩子不为空，左孩子入队</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=<span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            EnQueue(Q,p-&gt;rchild);  <span class="comment">//右孩子不为空，右孩子入队</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="二、由遍历序列构造二叉树："><a href="#二、由遍历序列构造二叉树：" class="headerlink" title="二、由遍历序列构造二叉树："></a>二、由遍历序列构造二叉树：</h3><p>1.如果只给出二叉树的前&#x2F;中&#x2F;后&#x2F;层序遍历序列中的一种，不能唯一确定一棵二叉树</p>
+<p>2.前序遍历序列中第一个结点必然是根结点</p>
+<p>3.后序遍历序列中最后一个结点必然是根结点</p>
+<p>4.已知中序+前序、中序+后序、中序+层序的一种就可以恢复出二叉树</p>
+<p>5.找到根节点，划分出左右子树</p>
+<p>6.前序、后序、层序的两两组合无法唯一确定一棵二叉树</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
