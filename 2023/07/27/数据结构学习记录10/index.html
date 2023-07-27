@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/07/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/" />
+    <link rel="canonical" href="http://example.com/2023/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9510/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            计算机网络学习记录4 |
+            数据结构学习记录10 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">计算机网络学习记录4</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录10</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-07-26 22:22:58</span>
-        <span class="mobile">2023-07-26 22:22</span>
+        <span class="pc">2023-07-27 19:21:13</span>
+        <span class="mobile">2023-07-27 19:21</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -285,7 +285,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
                     </li>
                 
             </ul>
@@ -297,7 +297,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
                     </li>
                 
             </ul>
@@ -320,38 +320,23 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="计算机网络的三种交换方式"><a href="#计算机网络的三种交换方式" class="headerlink" title="计算机网络的三种交换方式"></a>计算机网络的三种交换方式</h1><h3 id="一、电报交换："><a href="#一、电报交换：" class="headerlink" title="一、电报交换："></a>一、电报交换：</h3><p>1.电报交换的三个步骤：</p>
-<p>（1）建立连接：分配通信资源</p>
-<p>（2）通话：一直占用通信资源</p>
-<p>（3）释放连接：归还通信资源</p>
-<p>2.计算机之间的数据传送是突发式的，当使用电路交换来传送计算机数据时，其线路的传送效率一般都会很低，线路上真正使用传送数据的时间往往不到10%甚至1%</p>
-<h3 id="二、分组交换："><a href="#二、分组交换：" class="headerlink" title="二、分组交换："></a>二、分组交换：</h3><p>1.主机</p>
-<p>2.交换节点</p>
-<p>3.发送方的任务：构造分组、发送分组</p>
-<p>4.交换节点的任务：缓存分组、转发分组</p>
-<p>5.接受方的任务：接受分组、还原报文</p>
-<p>6.分组交换的优点：</p>
-<p>（1）没有建立连接和释放连接的过程</p>
-<p>（2）分组传输过程中逐段占用通信链路，有较高的通信线路利用率</p>
-<p>（3）交换节点可以为每一个分组独立选择转发路由，使得网络有很好的生存性</p>
-<p>7.分组交换的缺点：</p>
-<p>（1）分组首部带来了额外的传输开销</p>
-<p>（2）交换节点存储转发分组会造成一定的时延</p>
-<p>（3）无法确保通行时端到端通信资源全部可用，在通信量较大的时候可能造成网络拥塞</p>
-<p>（4）分组可能会带来失序和丢失的问题</p>
-<h3 id="三、报文交换："><a href="#三、报文交换：" class="headerlink" title="三、报文交换："></a>三、报文交换：</h3><p>1.报文交换是分组交换的前身</p>
-<p>2.在报文交换中，报文被整个的发送，不是拆分成为若干个分组来发送</p>
-<p>3.交换节点将报文整体接收完成后才能查找转发表，将整个报文转发到下一个节点</p>
-<p>4.报文交换比分组交换带来的转发时延要长很多，需要交换节点具有的缓存空间也大很多</p>
-<h3 id="四、三种交换方式的对比："><a href="#四、三种交换方式的对比：" class="headerlink" title="四、三种交换方式的对比："></a>四、三种交换方式的对比：</h3><p>1.<a target="_blank" rel="noopener" href="https://imgse.com/i/pCv9cAU"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://s1.ax1x.com/2023/07/26/pCv9cAU.png"
-                      alt="pCv9cAU.png"
-                ></a></p>
-<p>2.如果要连续传送大量数据，并且数据传送时间远远大于建立连接的时间，则使用电路交换可以有较高的传输效率。然而计算机的数据传送是突发式的，使用电路交换通信线路的利用率会很低</p>
-<p>3.报文交换和分组交换都不需要事先建立连接，在传送计算机的突发数据时，可以提高通信线路的利用率</p>
-<p>4.将报文搞成若干个更小的分组进行分组交换，比将整个报文进行报文交换的时延要小，可以避免太长的报文长时间占用链路，有利于进行差错控制，同时具有更高的灵活性。</p>
+                <h1 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h1><h3 id="一、线索二叉树的定义："><a href="#一、线索二叉树的定义：" class="headerlink" title="一、线索二叉树的定义："></a>一、线索二叉树的定义：</h3><p>1.在中序遍历、前序遍历、后序遍历中，定义前驱和后继</p>
+<p>2.n个结点具有n+1个空链域，用前驱线索表示左孩子指针，用后继线索来表示右孩子指针</p>
+<p>3.指向前驱、后继的指针称为线索</p>
+<ol start="4">
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//线索二叉树结点的定义</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ThreadNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ThreadNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">    <span class="type">int</span> ltag,rtag; <span class="comment">//左右线索标志</span></span><br><span class="line">&#125;ThreadNode,*ThreadNode</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>tag为0表示指向的是左右孩子</p>
+<p>tag为1表示指向的是左右线索</p>
+<h3 id="二、二叉树的线索化："><a href="#二、二叉树的线索化：" class="headerlink" title="二、二叉树的线索化："></a>二、二叉树的线索化：</h3><p>1.找中序前驱：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义如下的全局变量，用于查找结点p的前驱</span></span><br><span class="line">TreeNode *p; <span class="comment">//p为目标结点</span></span><br><span class="line">TreeNode *pre = <span class="literal">NULL</span>;  <span class="comment">//指向当前访问结点的前驱</span></span><br><span class="line">TreeNode *final = <span class="literal">NULL</span>; <span class="comment">//用于记录最终的结果</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//中序遍历</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">InOrder</span><span class="params">(TreeNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrder(T-&gt;lchild);</span><br><span class="line">        visit(T);</span><br><span class="line">        InOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//访问结点p</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">visit</span><span class="params">(TreeNode *q)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(q==p)</span><br><span class="line">    &#123;</span><br><span class="line">        final = pre;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        pre = q;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>2.中序线索化：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//线索二叉树的结点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ThreadNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ThreadNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">    <span class="type">int</span> ltag,rtag; <span class="comment">//左右线索标志</span></span><br><span class="line">&#125;ThreadNode,*ThreadNode</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义全局变量pre，指向访问结点的前驱</span></span><br><span class="line">ThreadNode *pre = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//中序遍历二叉树，一边遍历，一边线索化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">InThread</span><span class="params">(ThreadNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InThread(T-&gt;lchild);</span><br><span class="line">        visit(T);</span><br><span class="line">        InThread(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">visit</span><span class="params">(ThreadNode *q)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(q-&gt;lchild == <span class="literal">NULL</span>)  <span class="comment">//左子树为空，建立前驱线索</span></span><br><span class="line">    &#123;</span><br><span class="line">        q-&gt;lchild = pre;</span><br><span class="line">        q-&gt;ltag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(pre != <span class="literal">NULL</span>&amp;&amp; pre-&gt;rchild == <span class="literal">NULL</span>)  <span class="comment">//建立后继线索</span></span><br><span class="line">    &#123;</span><br><span class="line">        pre-&gt;rchild = q;</span><br><span class="line">        pre-&gt;rtag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    pre = q;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//中序线索化二叉树T：</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">CreateInThread</span><span class="params">(ThreadNode T)</span></span><br><span class="line">&#123;</span><br><span class="line">    pre = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InThread(T);</span><br><span class="line">        <span class="keyword">if</span>(pre-&gt;rchild==<span class="literal">NULL</span>)</span><br><span class="line">            pre-&gt;rtag = <span class="number">1</span>;  <span class="comment">//处理遍历的最后一个结点</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>3.中序遍历的最后一个结点右孩子指针必然为空</p>
 
             </div>
 
@@ -359,11 +344,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：计算机网络学习记录4</li>
+        <li>本文标题：数据结构学习记录10</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-07-26 22:22:58</li>
+        <li>创建时间：2023-07-27 19:21:13</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/07/26/计算机网络学习记录4/
+            本文链接：http://youxia123-cloud.github.io/2023/07/27/数据结构学习记录10/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -378,7 +363,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>&nbsp;
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -387,29 +372,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9510/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录10</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%959/"
+                            href="/2023/07/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%954/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录9</span>
+                                    <span class="post-nav-title-item">计算机网络学习记录4</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -429,7 +399,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E4%B8%89%E7%A7%8D%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F"><span class="nav-text">计算机网络的三种交换方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%B5%E6%8A%A5%E4%BA%A4%E6%8D%A2%EF%BC%9A"><span class="nav-text">一、电报交换：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%EF%BC%9A"><span class="nav-text">二、分组交换：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2%EF%BC%9A"><span class="nav-text">三、报文交换：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%B8%89%E7%A7%8D%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%9A"><span class="nav-text">四、三种交换方式的对比：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">线索二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-text">一、线索二叉树的定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%BA%BF%E7%B4%A2%E5%8C%96%EF%BC%9A"><span class="nav-text">二、二叉树的线索化：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
