@@ -4312,4 +4312,34 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录13</title>
+    <url>/2023/07/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9513/</url>
+    <content><![CDATA[<h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><h3 id="一、并查集的定义："><a href="#一、并查集的定义：" class="headerlink" title="一、并查集的定义："></a>一、并查集的定义：</h3><p>1.用互不相交的树，表示多个集合</p>
+<p>2.判断两个元素是否属于同一个集合：分别查到两个元素的根，判断根结点是否相同</p>
+<p>3.把两个集合并为一个集合：让一棵树成为另一棵树的子树</p>
+<p>4.并查集是集合的一种具体的实现，只进行并和查两种基本操作</p>
+<ol start="5">
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 13</span></span><br><span class="line"><span class="type">int</span> UFSets[SIZE];  <span class="comment">//集合元素数组</span></span><br><span class="line"><span class="comment">//初始化并查集</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Initial</span><span class="params">(<span class="type">int</span> s[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        S[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//查操作</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Find</span><span class="params">(<span class="type">int</span> S[],<span class="type">int</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(S[x]&gt;=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        x = S[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//并操作</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Union</span><span class="params">(<span class="type">int</span> S[],<span class="type">int</span> Root1,<span class="type">int</span> Root2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(Root1==Root2) <span class="keyword">return</span>;</span><br><span class="line">    S[Root2] = Root1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>6.查操作的时间复杂度为O(n)</p>
+<p>7.Union操作的优化：</p>
+<p>（1）用根结点的绝对值表示树的结点总数</p>
+<p>（2）Union操作，让小树合并到大树</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//优化后的并操作</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Union</span><span class="params">(<span class="type">int</span> S[],<span class="type">int</span> Root1,<span class="type">int</span> Root2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(Root1==Root2) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(S[Root2]&gt;S[Root1])</span><br><span class="line">    &#123;</span><br><span class="line">        S[Root1] += S[Root2];  <span class="comment">//累加结点总数</span></span><br><span class="line">        S[Root2] = Root1;   <span class="comment">//小树合并到大树</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        S[Root2] += S[Root1];  <span class="comment">//累加结点总数</span></span><br><span class="line">        S[Root1] = Root2;   <span class="comment">//小树合并到大树</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>8.对查操作的优化：（压缩路径）</p>
+<p>先找到根结点，再将查找路径上的所有结点都挂到根结点下</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">Find</span><span class="params">(<span class="type">int</span> S[],<span class="type">int</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> root = x;</span><br><span class="line">    <span class="keyword">while</span>(S[root]&gt;=<span class="number">0</span>) root = S[root];  <span class="comment">//循环找到根</span></span><br><span class="line">    <span class="keyword">while</span>(x!=root)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t = S[x]; </span><br><span class="line">        S[x] = root;</span><br><span class="line">        x = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
