@@ -4392,4 +4392,48 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录15</title>
+    <url>/2023/08/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/</url>
+    <content><![CDATA[<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、图的邻接矩阵存储："><a href="#一、图的邻接矩阵存储：" class="headerlink" title="一、图的邻接矩阵存储："></a>一、图的邻接矩阵存储：</h3><p>1.图没有顺序存储的方式，但是可以通过二维数组来表示元素之间的关系</p>
+<p>2.邻接矩阵是表示顶点之间相邻关系的矩阵。假设图G&#x3D;(V,E)具有n个顶点，则邻接矩阵是具有如下性质的n阶方阵：</p>
+<p><a href="https://imgse.com/i/pPC2Bes"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/08/01/pPC2Bes.png"
+                      alt="pPC2Bes.png"
+                ></a></p>
+<p>3.图的邻接矩阵表示法的特点：</p>
+<p>（1）无向图的邻接矩阵是对称的，而有向图的邻接矩阵不一定对称</p>
+<p>（2）对于无向图，顶点Vi的度是邻接矩阵中第i行（或第i列）的非零元素的个数</p>
+<p>（3）对于有向图，顶点Vi的度是邻接矩阵中第i行和第i列的非零元素之和</p>
+<p>（4）邻接矩阵确定图的边数，所花费的时间代价很大</p>
+<p>4.图的邻接矩阵存储结构定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 100  <span class="comment">/*图中最大顶点个数*/</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> n,e;     <span class="comment">//顶点数，边数</span></span><br><span class="line">    <span class="type">char</span> vexs[MAX]; <span class="comment">//顶点数组</span></span><br><span class="line">    <span class="type">int</span> edges[MAX][MAX]; <span class="comment">//边的邻接矩阵</span></span><br><span class="line">&#125;MGraph;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.建立图的邻接矩阵算法：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">CreateMGraph</span><span class="params">(MGraph *G)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j,k;</span><br><span class="line">    <span class="type">char</span> ch1,ch2;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入顶点数：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;G-&gt;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入边数：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;G-&gt;e);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入各顶点信息（每个顶点以回车作为结束）:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;G-&gt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;输入第%d个顶点：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;(G-&gt;vexs[i]));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;G-&gt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;G-&gt;n;j++)</span><br><span class="line">            G-&gt;edges[i][j] = <span class="number">0</span>;  <span class="comment">//将邻接矩阵元素全部置为0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;G-&gt;e;k++)</span><br><span class="line">    &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;建立第%d条边（输入格式：顶点1，顶点2）:&quot;</span>,k+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c,%c&quot;</span>,&amp;ch1,&amp;ch2);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;G-&gt;n;i++)</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;G-&gt;n;j++)</span><br><span class="line">                <span class="keyword">if</span>(ch1==G-&gt;vexs[i] &amp;&amp; ch2==G-&gt;vexs[j])</span><br><span class="line">                &#123;</span><br><span class="line">                    G-&gt;edges[i][j] = <span class="number">1</span>;</span><br><span class="line">                    G-&gt;edges[j][i] = <span class="number">1</span>;  <span class="comment">//无向图邻接矩阵</span></span><br><span class="line">                &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="二、图的邻接表存储："><a href="#二、图的邻接表存储：" class="headerlink" title="二、图的邻接表存储："></a>二、图的邻接表存储：</h3><p>1.邻接表是图的一种顺序存储和链式存储相结合的存储方法，类似于树的孩子链表表示法</p>
+<p>2.对于图G中的每一个顶点Vi，将所有邻接于Vi的顶点Vj连成一个单链表，这个单链表称为顶点	Vi的邻接表。将所有顶点的邻接表表头放在数组中，就构成了图的邻接表</p>
+<p>3.邻接表中有两种结点结构，顶点表和边表</p>
+<p>4.顶点表的结点结构由顶点域（vertex）和指向第一条边邻接边的指针域（firstedge）构成</p>
+<p>边表结点由邻接点域（adjvex）和指向下一条邻接边的指针域（next）构成</p>
+<p>5.对于网的边表需要在增加一个存储边上信息（如权值）的域（info）</p>
+<p>6.图的邻接表表示法的特点：</p>
+<p>（1）无向图中若有n个顶点、e条边、它的邻接表需要n个表头指针和2e个边结点</p>
+<p>有向图中有n个顶点，e条边，则它的邻接表需要n个表头指针和e个边结点</p>
+<p>（2）对于无向图，顶点Vi的度是第i个链表的结点数</p>
+<p>对于有向图，顶点Vi的出度是第i个链表的结点数，而要求入度必须遍历整个邻接表，在所有链表中找邻接点域的值为i的边结点的个数</p>
+<p>7.图的邻接表存储：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 100   <span class="comment">//最大顶点数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> VertexType</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span>   //定义边表结点</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> adjvex;  <span class="comment">//邻接点域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span>  <span class="comment">//指向下一个邻接点的指针域</span></span><br><span class="line">&#125;EdgeNode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vexnode</span>   //定义顶点表结点</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VertexType data;  <span class="comment">//顶点域</span></span><br><span class="line">    EdgeNode *firstedge;  <span class="comment">//指向第一条边结点</span></span><br><span class="line">&#125;VHeadNode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VHeadNode adjlist[MAX];  <span class="comment">//邻接表头结点数组</span></span><br><span class="line">    <span class="type">int</span> n,e;    <span class="comment">//顶点数，边数</span></span><br><span class="line">&#125;AdjList;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
