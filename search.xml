@@ -4436,4 +4436,41 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录16</title>
+    <url>/2023/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/</url>
+    <content><![CDATA[<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、图的十字链表存储："><a href="#一、图的十字链表存储：" class="headerlink" title="一、图的十字链表存储："></a>一、图的十字链表存储：</h3><p>1.十字链表是有向图的一种链式存储结构，它结合了邻接表和逆邻接表的特性</p>
+<p>2.邻接表反映的是顶点的出度情况</p>
+<p>逆邻接表反映的是顶点的入度情况</p>
+<p>3.十字链表也包含两部分：顶点节 点和弧节点。顶点节点包括顶点信息和两个指针（分别指向第一个入弧和第一个出弧），弧 节点包括两个数据域（弧尾、弧头）和两个指针域（分别指向同弧头和同弧尾的弧） </p>
+<p>4.弧结点的定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span>  //定义弧结点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> tail;  <span class="comment">//弧尾下标</span></span><br><span class="line">    <span class="type">int</span> head;  <span class="comment">//弧头下标</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span> *<span class="title">hlink</span>;</span>  <span class="comment">//指针，指向同弧头的弧</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span> *<span class="title">tlink</span>;</span>  <span class="comment">//指针，指向同弧尾的弧</span></span><br><span class="line">&#125;arcNode;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.顶点结点的定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vexNode</span>  //定义顶点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexType data;  <span class="comment">//顶点数据，VexType为顶点的数据类型，根据需要来定义</span></span><br><span class="line">    arcNode *firstin;  <span class="comment">//指针，指向第一个入弧</span></span><br><span class="line">    arcNode *firstout;  <span class="comment">//指针。指向第一个出弧</span></span><br><span class="line">&#125;vexNode;</span><br></pre></td></tr></table></figure></div>
+
+<p>6.有向图的十字链表存储的结构体定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MaxVnum 100  <span class="comment">//顶点的最大数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexNode Vex[MaxVnum];  <span class="comment">//顶点表</span></span><br><span class="line">    <span class="type">int</span> vexnum,edgenum;   <span class="comment">//顶点数，边数</span></span><br><span class="line">&#125;OLGragh;</span><br></pre></td></tr></table></figure></div>
+
+<p>7.十字链表存储稀疏有向图，可以高效访问每个顶点的出弧和入弧，很容易得到顶点的出度和入度</p>
+<h3 id="二、图的邻接多重表存储："><a href="#二、图的邻接多重表存储：" class="headerlink" title="二、图的邻接多重表存储："></a>二、图的邻接多重表存储：</h3><p>1.邻接多重表是无向图的一种链式存储结构。</p>
+<p>2.邻接表的关注点是 顶点，而邻接多重表的关注点是边，适合对边做访问标记、删除边等操作 </p>
+<p>3.邻接多重表类似 十字链表，也包含两部分：顶点节点和边节点。顶点节点包括 顶点信息和一个指针（指向第一个依附于该顶点的边），边节 点包括两个数据域（顶点 i、顶点 j）和两个指针域（分别指向 依附于 i、j 的下一条边）</p>
+<p>4.边节点的定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span>   //定义边节点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> i;  <span class="comment">//顶点下标</span></span><br><span class="line">    <span class="type">int</span> j;  <span class="comment">//顶点下标</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span> *<span class="title">jlink</span>;</span>  <span class="comment">//指针，指向与i同顶点的边</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span> *<span class="title">jlink</span>;</span>  <span class="comment">//指针，指向与j同顶点的边</span></span><br><span class="line">&#125;edgeNode;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.顶点节点的定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vexNode</span>  //定义顶点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexType data;   <span class="comment">//顶点数据，VexType为顶点的数据类型，根据需要定义</span></span><br><span class="line">    adgeNode *firstedge;   <span class="comment">//指针，指向第一条连接边</span></span><br><span class="line">&#125;VexNode;</span><br></pre></td></tr></table></figure></div>
+
+<p>6.无向图的邻接多重表存储的结构体定义：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MaxVnum 100  <span class="comment">//顶点数的最大值</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexNode Vex[MaxVnum];  <span class="comment">//顶点表</span></span><br><span class="line">    <span class="type">int</span> vexnum,edgenum;  <span class="comment">//顶点数，边数</span></span><br><span class="line">&#125;AMLGragh;</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
