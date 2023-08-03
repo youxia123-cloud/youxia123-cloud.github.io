@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/" />
+    <link rel="canonical" href="http://example.com/2023/08/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            数据结构学习记录16 |
+            数据结构学习记录17 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录16</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录17</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-08-02 20:08:02</span>
-        <span class="mobile">2023-08-02 20:08</span>
+        <span class="pc">2023-08-03 20:31:27</span>
+        <span class="mobile">2023-08-03 20:31</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,31 +320,32 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、图的十字链表存储："><a href="#一、图的十字链表存储：" class="headerlink" title="一、图的十字链表存储："></a>一、图的十字链表存储：</h3><p>1.十字链表是有向图的一种链式存储结构，它结合了邻接表和逆邻接表的特性</p>
-<p>2.邻接表反映的是顶点的出度情况</p>
-<p>逆邻接表反映的是顶点的入度情况</p>
-<p>3.十字链表也包含两部分：顶点节 点和弧节点。顶点节点包括顶点信息和两个指针（分别指向第一个入弧和第一个出弧），弧 节点包括两个数据域（弧尾、弧头）和两个指针域（分别指向同弧头和同弧尾的弧） </p>
-<p>4.弧结点的定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span>  //定义弧结点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> tail;  <span class="comment">//弧尾下标</span></span><br><span class="line">    <span class="type">int</span> head;  <span class="comment">//弧头下标</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span> *<span class="title">hlink</span>;</span>  <span class="comment">//指针，指向同弧头的弧</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">arcNode</span> *<span class="title">tlink</span>;</span>  <span class="comment">//指针，指向同弧尾的弧</span></span><br><span class="line">&#125;arcNode;</span><br></pre></td></tr></table></figure></div>
+                <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、图的遍历—广度优先搜索："><a href="#一、图的遍历—广度优先搜索：" class="headerlink" title="一、图的遍历—广度优先搜索："></a>一、图的遍历—广度优先搜索：</h3><p>1.图的遍历和树的遍历类似，是从图的某一顶点出发，按照某种搜索方式对图中所有顶点 访问一次且仅一次 </p>
+<p>2.广度优先搜索（BFS），又称宽度优先搜索，是最常见的图搜索方法 之一</p>
+<p>广度优先搜索：先访问的顶点，其邻接点先被访问</p>
+<p>3.BFS的步骤：</p>
+<p>（1）初始化图中所有顶点未被访问，初始化一个空队列</p>
+<p>（2）从图中的某个顶点v出发，访问v并标记已访问，将v入队</p>
+<p>（3）如果队列非空，则继续执行，否则算法结束</p>
+<p>（4）队头元素v出队，依次访问v的所有未被访问的邻接点，标记已经访问并入队，转向步骤三</p>
+<p>4.基于邻接矩阵的BFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS_AM</span><span class="params">(AMGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> u,w;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; Q;<span class="comment">//创建一个普通的队列，存放int类型</span></span><br><span class="line">    cout&lt;&lt;G.Vex[v]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    Q.<span class="built_in">push</span>(v);  <span class="comment">//源点v入队</span></span><br><span class="line">    <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        u = Q.<span class="built_in">front</span>();  <span class="comment">//去除队头元素赋值给u</span></span><br><span class="line">        Q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(G.Edge[u][w] &amp;&amp; !visited[w])</span><br><span class="line">            &#123;</span><br><span class="line">                cout&lt;&lt;G.Vex[w]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">                visited[w] = <span class="literal">true</span>;</span><br><span class="line">                Q.<span class="built_in">push</span>(w);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>5.顶点结点的定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vexNode</span>  //定义顶点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexType data;  <span class="comment">//顶点数据，VexType为顶点的数据类型，根据需要来定义</span></span><br><span class="line">    arcNode *firstin;  <span class="comment">//指针，指向第一个入弧</span></span><br><span class="line">    arcNode *firstout;  <span class="comment">//指针。指向第一个出弧</span></span><br><span class="line">&#125;vexNode;</span><br></pre></td></tr></table></figure></div>
+<p>5.基于邻接表的BFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS_AL</span><span class="params">(ALGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> u,w;</span><br><span class="line">    AdjNode *p;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; Q;</span><br><span class="line">    cout&lt;&lt;G.Vex[v].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    Q.<span class="built_in">push</span>(v); <span class="comment">//源点v入队</span></span><br><span class="line">    <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        u = Q.<span class="built_in">front</span>(); <span class="comment">//取出队头元素赋值给u</span></span><br><span class="line">        Q.<span class="built_in">pop</span>();</span><br><span class="line">        p = G.Vex[u].<span class="built_in">first</span>();</span><br><span class="line">        <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            w = p-&gt;v;</span><br><span class="line">            <span class="keyword">if</span>(!visited[w])</span><br><span class="line">            &#123;</span><br><span class="line">                cout&lt;&lt;G.Vex[w].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">                visited[w] = <span class="literal">true</span>;</span><br><span class="line">                Q.<span class="built_in">push</span>(w);</span><br><span class="line">            &#125;</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>6.有向图的十字链表存储的结构体定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MaxVnum 100  <span class="comment">//顶点的最大数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexNode Vex[MaxVnum];  <span class="comment">//顶点表</span></span><br><span class="line">    <span class="type">int</span> vexnum,edgenum;   <span class="comment">//顶点数，边数</span></span><br><span class="line">&#125;OLGragh;</span><br></pre></td></tr></table></figure></div>
+<h3 id="二、图的遍历—深度优先搜索："><a href="#二、图的遍历—深度优先搜索：" class="headerlink" title="二、图的遍历—深度优先搜索："></a>二、图的遍历—深度优先搜索：</h3><p>1.深度优先搜索沿着一条路径一直走下去，无法行进时，回退到刚刚访问的节点 </p>
+<p>2.深度优先遍历是按照深度优先搜索的方式对图进行遍历 </p>
+<p>3.深度优先搜索的特点：后被访问的顶点，其邻接点先被访问</p>
+<p>4.深度优先的递归实现步骤：</p>
+<p>（1）初始化图中所有顶点未被访问</p>
+<p>（2）从图中的某个顶点v出发，访问v并标记已访问</p>
+<p>（3）依次检查v的所有邻接点w，如果w未被访问，则从w出发进行深度优先遍历（递归调用，重复第二步和第三步）</p>
+<p>5.基于邻接矩阵的DFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS_AM</span><span class="params">(AMGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> w;</span><br><span class="line">    cout&lt;&lt;G.Vex[v]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)  <span class="comment">//依次检查v的所有邻接点</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(G.Edge[v][w] &amp;&amp; !visited[w])  <span class="comment">//v,w邻接而且w未被访问</span></span><br><span class="line">            <span class="built_in">DFS_AM</span>(G,w); <span class="comment">//从w顶点开始递归深度优先遍历</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>7.十字链表存储稀疏有向图，可以高效访问每个顶点的出弧和入弧，很容易得到顶点的出度和入度</p>
-<h3 id="二、图的邻接多重表存储："><a href="#二、图的邻接多重表存储：" class="headerlink" title="二、图的邻接多重表存储："></a>二、图的邻接多重表存储：</h3><p>1.邻接多重表是无向图的一种链式存储结构。</p>
-<p>2.邻接表的关注点是 顶点，而邻接多重表的关注点是边，适合对边做访问标记、删除边等操作 </p>
-<p>3.邻接多重表类似 十字链表，也包含两部分：顶点节点和边节点。顶点节点包括 顶点信息和一个指针（指向第一个依附于该顶点的边），边节 点包括两个数据域（顶点 i、顶点 j）和两个指针域（分别指向 依附于 i、j 的下一条边）</p>
-<p>4.边节点的定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span>   //定义边节点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> i;  <span class="comment">//顶点下标</span></span><br><span class="line">    <span class="type">int</span> j;  <span class="comment">//顶点下标</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span> *<span class="title">jlink</span>;</span>  <span class="comment">//指针，指向与i同顶点的边</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">edgeNode</span> *<span class="title">jlink</span>;</span>  <span class="comment">//指针，指向与j同顶点的边</span></span><br><span class="line">&#125;edgeNode;</span><br></pre></td></tr></table></figure></div>
-
-<p>5.顶点节点的定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vexNode</span>  //定义顶点类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexType data;   <span class="comment">//顶点数据，VexType为顶点的数据类型，根据需要定义</span></span><br><span class="line">    adgeNode *firstedge;   <span class="comment">//指针，指向第一条连接边</span></span><br><span class="line">&#125;VexNode;</span><br></pre></td></tr></table></figure></div>
-
-<p>6.无向图的邻接多重表存储的结构体定义：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MaxVnum 100  <span class="comment">//顶点数的最大值</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VexNode Vex[MaxVnum];  <span class="comment">//顶点表</span></span><br><span class="line">    <span class="type">int</span> vexnum,edgenum;  <span class="comment">//顶点数，边数</span></span><br><span class="line">&#125;AMLGragh;</span><br></pre></td></tr></table></figure></div>
+<p>6.基于邻接表的DFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS_AL</span><span class="params">(ALGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> w;</span><br><span class="line">    AdjNode *p;</span><br><span class="line">    cout&lt;&lt;G.Vex[v].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    p = G.Vex[v].first;</span><br><span class="line">    <span class="keyword">while</span>(p)</span><br><span class="line">    &#123;</span><br><span class="line">        w = p-&gt;v;</span><br><span class="line">        <span class="keyword">if</span>(!visited[w])</span><br><span class="line">            <span class="built_in">DFS_AL</span>(G,w);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
             </div>
@@ -353,11 +354,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：数据结构学习记录16</li>
+        <li>本文标题：数据结构学习记录17</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-08-02 20:08:02</li>
+        <li>创建时间：2023-08-03 20:31:27</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/08/02/数据结构学习记录16/
+            本文链接：http://youxia123-cloud.github.io/2023/08/03/数据结构学习记录17/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -381,29 +382,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/08/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录17</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/08/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9515/"
+                            href="/2023/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9516/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录15</span>
+                                    <span class="post-nav-title-item">数据结构学习记录16</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -423,7 +409,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-text">图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E7%9A%84%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%E5%AD%98%E5%82%A8%EF%BC%9A"><span class="nav-text">一、图的十字链表存储：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8%E5%AD%98%E5%82%A8%EF%BC%9A"><span class="nav-text">二、图的邻接多重表存储：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-text">图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E2%80%94%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%EF%BC%9A"><span class="nav-text">一、图的遍历—广度优先搜索：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E2%80%94%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%EF%BC%9A"><span class="nav-text">二、图的遍历—深度优先搜索：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

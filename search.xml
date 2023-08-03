@@ -4473,4 +4473,42 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录17</title>
+    <url>/2023/08/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9517/</url>
+    <content><![CDATA[<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、图的遍历—广度优先搜索："><a href="#一、图的遍历—广度优先搜索：" class="headerlink" title="一、图的遍历—广度优先搜索："></a>一、图的遍历—广度优先搜索：</h3><p>1.图的遍历和树的遍历类似，是从图的某一顶点出发，按照某种搜索方式对图中所有顶点 访问一次且仅一次 </p>
+<p>2.广度优先搜索（BFS），又称宽度优先搜索，是最常见的图搜索方法 之一</p>
+<p>广度优先搜索：先访问的顶点，其邻接点先被访问</p>
+<p>3.BFS的步骤：</p>
+<p>（1）初始化图中所有顶点未被访问，初始化一个空队列</p>
+<p>（2）从图中的某个顶点v出发，访问v并标记已访问，将v入队</p>
+<p>（3）如果队列非空，则继续执行，否则算法结束</p>
+<p>（4）队头元素v出队，依次访问v的所有未被访问的邻接点，标记已经访问并入队，转向步骤三</p>
+<p>4.基于邻接矩阵的BFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS_AM</span><span class="params">(AMGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> u,w;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; Q;<span class="comment">//创建一个普通的队列，存放int类型</span></span><br><span class="line">    cout&lt;&lt;G.Vex[v]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    Q.<span class="built_in">push</span>(v);  <span class="comment">//源点v入队</span></span><br><span class="line">    <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        u = Q.<span class="built_in">front</span>();  <span class="comment">//去除队头元素赋值给u</span></span><br><span class="line">        Q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(G.Edge[u][w] &amp;&amp; !visited[w])</span><br><span class="line">            &#123;</span><br><span class="line">                cout&lt;&lt;G.Vex[w]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">                visited[w] = <span class="literal">true</span>;</span><br><span class="line">                Q.<span class="built_in">push</span>(w);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.基于邻接表的BFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS_AL</span><span class="params">(ALGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> u,w;</span><br><span class="line">    AdjNode *p;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; Q;</span><br><span class="line">    cout&lt;&lt;G.Vex[v].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    Q.<span class="built_in">push</span>(v); <span class="comment">//源点v入队</span></span><br><span class="line">    <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        u = Q.<span class="built_in">front</span>(); <span class="comment">//取出队头元素赋值给u</span></span><br><span class="line">        Q.<span class="built_in">pop</span>();</span><br><span class="line">        p = G.Vex[u].<span class="built_in">first</span>();</span><br><span class="line">        <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            w = p-&gt;v;</span><br><span class="line">            <span class="keyword">if</span>(!visited[w])</span><br><span class="line">            &#123;</span><br><span class="line">                cout&lt;&lt;G.Vex[w].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">                visited[w] = <span class="literal">true</span>;</span><br><span class="line">                Q.<span class="built_in">push</span>(w);</span><br><span class="line">            &#125;</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="二、图的遍历—深度优先搜索："><a href="#二、图的遍历—深度优先搜索：" class="headerlink" title="二、图的遍历—深度优先搜索："></a>二、图的遍历—深度优先搜索：</h3><p>1.深度优先搜索沿着一条路径一直走下去，无法行进时，回退到刚刚访问的节点 </p>
+<p>2.深度优先遍历是按照深度优先搜索的方式对图进行遍历 </p>
+<p>3.深度优先搜索的特点：后被访问的顶点，其邻接点先被访问</p>
+<p>4.深度优先的递归实现步骤：</p>
+<p>（1）初始化图中所有顶点未被访问</p>
+<p>（2）从图中的某个顶点v出发，访问v并标记已访问</p>
+<p>（3）依次检查v的所有邻接点w，如果w未被访问，则从w出发进行深度优先遍历（递归调用，重复第二步和第三步）</p>
+<p>5.基于邻接矩阵的DFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS_AM</span><span class="params">(AMGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> w;</span><br><span class="line">    cout&lt;&lt;G.Vex[v]&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)  <span class="comment">//依次检查v的所有邻接点</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(G.Edge[v][w] &amp;&amp; !visited[w])  <span class="comment">//v,w邻接而且w未被访问</span></span><br><span class="line">            <span class="built_in">DFS_AM</span>(G,w); <span class="comment">//从w顶点开始递归深度优先遍历</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>6.基于邻接表的DFS：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS_AL</span><span class="params">(ALGragh G,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> w;</span><br><span class="line">    AdjNode *p;</span><br><span class="line">    cout&lt;&lt;G.Vex[v].data&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    visited[v] = <span class="literal">true</span>;</span><br><span class="line">    p = G.Vex[v].first;</span><br><span class="line">    <span class="keyword">while</span>(p)</span><br><span class="line">    &#123;</span><br><span class="line">        w = p-&gt;v;</span><br><span class="line">        <span class="keyword">if</span>(!visited[w])</span><br><span class="line">            <span class="built_in">DFS_AL</span>(G,w);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
