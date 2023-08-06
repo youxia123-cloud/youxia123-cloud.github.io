@@ -4573,4 +4573,34 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录20</title>
+    <url>/2023/08/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9520/</url>
+    <content><![CDATA[<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h3 id="一、拓扑排序："><a href="#一、拓扑排序：" class="headerlink" title="一、拓扑排序："></a>一、拓扑排序：</h3><p>1.一个无环的有向图称为有向无环图 </p>
+<p>2.用顶点表示活动，用弧表示活动之间的优先关系的有向图，称为顶点表示活动的网 ，简称 AOV 网 </p>
+<p>3.在 AOV 网中，若从顶点 i 到顶点 j 之间存在一条有向路径，称顶点 i 是顶点 j 的前驱，或者称顶点 j 是顶点 i 的后继。若是图中的弧，则称顶点 i 是顶点 j 的直接前驱，顶点 j 是顶点 i 的直接后驱</p>
+<p>4.拓扑排序是指将 AOV 网中的顶点排成一个线性序列，该 序列必须满足：若从顶点 i 到顶点 j 有一条路径，则该序列中 顶点 i 一定在顶点 j 之前 </p>
+<p>5.拓扑排序的步骤：</p>
+<p>（1）找到所有入度为0的顶点：遍历图中所有的顶点，记录入度为0的顶点 </p>
+<p>（2）选择一个入度为0的顶点并输出：从步骤1中找到的入度为0的顶点中任选一个，将其输出到排序结果中，并将其从图中删除。</p>
+<p>（3）更新剩余顶点的入度：对于被删除的顶点所指向的顶点，将其入度减1。</p>
+<p>（4）重复步骤2和步骤3，直到所有顶点都被输出或删除</p>
+<p>6.拓扑排序的代码实现：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">TopologicalSort</span><span class="params">(ALGragh G,<span class="type">int</span> topo[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//有向图采用邻接表存储</span></span><br><span class="line">    <span class="type">int</span> i,m;</span><br><span class="line">    satck&lt;<span class="type">int</span>&gt; S;</span><br><span class="line">    <span class="built_in">FindInDegree</span>(G); <span class="comment">//求出各顶点的入度存入数组indegree[]中</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;G.vexnum;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!indegree[i])</span><br><span class="line">            S.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    m = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!S.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">    	i = S.<span class="built_in">top</span>();</span><br><span class="line">        S.<span class="built_in">pop</span>();</span><br><span class="line">        topo[m] = i;</span><br><span class="line">        m++;</span><br><span class="line">        AdjNode *p = G.Vex[i].first;</span><br><span class="line">        <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> k = p-&gt;v;</span><br><span class="line">            --indegree[k];</span><br><span class="line">            <span class="keyword">if</span>(indegree[k]==<span class="number">0</span>)</span><br><span class="line">                S.<span class="built_in">push</span>(k);</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(m&lt;G.vexnum)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>7.求有向图中各顶点的入度需要遍历邻接表，算法的时间复杂度为 O(e)。度数为 0 的顶点 入栈的时间复杂度为 O(n)，若有向图无环，每个顶点出栈后其邻接点入度减 1，时间复杂度 为 O(e)。总的时间复杂度为 O(n+e)</p>
+<p>8.拓扑排序的应用场景：</p>
+<p>（1）任务调度：拓扑排序可以用于任务调度，其中任务可以表示为有向图中的顶点，依赖关系可以表示为有向边。通过拓扑排序，可以确定任务的执行顺序，保证没有任务的依赖关系被违反 </p>
+<p>（2）编译顺序：在编译器中，源代码中的文件可以看作是顶点，而文件之间的依赖关系可以看作是有向边。拓扑排序可以确定编译的顺序，保证每个文件在被使用之前已经编译完成 </p>
+<p>（3）课程安排：拓扑排序可以用于大学课程的安排，其中课程可以看作是顶点，而先修课程关系可以看作是有向边。通过拓扑排序，可以确定学习课程的顺序，保证没有先修课程的要求被违反 </p>
+<p>（4）网络通信 ：拓扑排序可以用于确定网络中设备之间的通信顺序。在网络拓扑图中，设备可以表示为顶点，而设备之间的依赖关系（例如路由路径）可以表示为有向边。通过拓扑排序，可以决定设备之间的通信顺序，确保数据包能够按照正确的路径传输 </p>
+<p>（5）依赖关系分析：拓扑排序可以用于分析软件或系统中的各种依赖关系。通过拓扑排序，可以清楚地了解到各个组件之间的依赖关系，进而用于系统设计、优化和维护等方面 </p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
