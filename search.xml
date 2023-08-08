@@ -4644,4 +4644,42 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录22</title>
+    <url>/2023/08/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9522/</url>
+    <content><![CDATA[<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h3 id="一、平衡二叉搜索树："><a href="#一、平衡二叉搜索树：" class="headerlink" title="一、平衡二叉搜索树："></a>一、平衡二叉搜索树：</h3><p>1.平衡二叉查找树（Balanced Binary Search Tree，BBST），简称平衡二叉树，由苏联数学 家 Adelson-Velskii 和 Landis 提出，所以又称为 AVL 树</p>
+<p>2.平衡二叉树可以是空树，若非空，则满足以下的性质：</p>
+<p>（1）左右子树高度差的绝对值不超过 1 </p>
+<p>（2）左右子树也是平衡二叉树 </p>
+<p>节点左右子树的高度之差称为平衡因子。二叉查找树中，每个节点的平衡因子绝对值不 超过 1 即为平衡二叉树 </p>
+<p>3.平衡二叉树除了适度平衡性，还具有局部性：</p>
+<p>（1）单次插入、删除后，至多有 O(1)处出现不平衡； </p>
+<p>（2）总可以在 O(logn)时间内，使这 O(1)处不平衡重新调整为平衡 </p>
+<p>4.插入操作后，调整平衡可以分为四种情况：</p>
+<p>（1）LL型：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">LL_Rotation</span><span class="params">(AVLTree &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    AVLTree temp = T-&gt;lchild;</span><br><span class="line">    T-&gt;lchild = temp-&gt;rchild;</span><br><span class="line">    temp-&gt;rchild = T;</span><br><span class="line">    <span class="built_in">updateHeight</span>(T);</span><br><span class="line">    <span class="built_in">updateHeight</span>(temp);</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>（2）RR型</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">RR_Rotation</span><span class="params">(AVLTree &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    AVLTree temp = T-&gt;rchild;</span><br><span class="line">    T-&gt;rchild = temp-&gt;lchild;</span><br><span class="line">    temp-&gt;lchild = T;</span><br><span class="line">    <span class="built_in">updateHeight</span>(T);</span><br><span class="line">    <span class="built_in">updateHeight</span>(temp);</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>（3）LR型</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">LR_Rotation</span><span class="params">(AVLTree &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    T-&gt;lchild = <span class="built_in">RR_Rotation</span>(T-&gt;lchild);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">LL_Rotation</span>(T);</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure></div>
+
+<p>（4）RL型</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">RL_Rotation</span><span class="params">(AVLTree &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    T-&gt;rchild = <span class="built_in">LL_Rotation</span>(T-&gt;rchild);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">RR_Rotation</span>(T); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.平衡二叉树的插入操作：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">Insert</span><span class="params">(AVLTree &amp;T,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)  <span class="comment">//如果T为空，创建新的节点</span></span><br><span class="line">    &#123;</span><br><span class="line">        T = <span class="keyword">new</span> AVLNode;</span><br><span class="line">        T-&gt;lchild = T-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">        T-&gt;data = x;</span><br><span class="line">        T-&gt;height = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> T;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(T-&gt;data==x) <span class="keyword">return</span> T;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;T-&gt;data) <span class="comment">//插入左子树</span></span><br><span class="line">    &#123;</span><br><span class="line">        T-&gt;lchild = <span class="built_in">Insert</span>(T-&gt;lchild,x);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Height</span>(T-&gt;lchild)-<span class="built_in">Height</span>(T-&gt;rchild)==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(x&lt;T-&gt;lchild-&gt;data)</span><br><span class="line">                T = <span class="built_in">LL_Rotation</span>(T);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            	T = <span class="built_in">LR_Rotation</span>(T);</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="comment">//插入右子树</span></span><br><span class="line">    &#123;</span><br><span class="line">        T-&gt;rchild = <span class="built_in">Insert</span>(T-&gt;rchild,x);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Height</span>(T-&gt;rchild)-<span class="built_in">Height</span>(T-&gt;lchild)==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(x&gt;T-&gt;rchild-&gt;data)</span><br><span class="line">                T = <span class="built_in">RR_Rotation</span>(T);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                T = <span class="built_in">RL_Rotation</span>(T);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">updataHeight</span>(T);</span><br><span class="line">    <span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>6.平衡二叉树的创建：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">Create</span><span class="params">(AVLTree &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n,x;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;x;</span><br><span class="line">        T = <span class="built_in">Insert</span>(T,x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
