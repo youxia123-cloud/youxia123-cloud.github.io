@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Knight">
-    <link rel="canonical" href="http://example.com/2023/08/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9525/" />
+    <link rel="canonical" href="http://example.com/2023/08/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9526/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="/images/dragon.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/dragon.svg">
@@ -14,7 +14,7 @@
     
     <title>
         
-            数据结构学习记录25 |
+            数据结构学习记录26 |
         
         MyBlog
     </title>
@@ -257,7 +257,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录25</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">数据结构学习记录26</h1></span>
             </div>
 
             
@@ -276,8 +276,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-08-11 21:40:06</span>
-        <span class="mobile">2023-08-11 21:40</span>
+        <span class="pc">2023-08-12 21:27:37</span>
+        <span class="mobile">2023-08-12 21:27</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -320,36 +320,33 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h3 id="一、散列表查找："><a href="#一、散列表查找：" class="headerlink" title="一、散列表查找："></a>一、散列表查找：</h3><p>1.散列表是根据关键字直接进行访问的数据结构</p>
-<p>2.散列表通过散列函数将关键字映射到存 储地址，建立了关键字和存储地址之间的一种直接映射关系。这里的存储地址可以是数组下 标、索引、内存地址等 </p>
-<p>3.散列函数（Hash function），又称为哈希函数，是将关键字映射到存储地址的函数 </p>
-<p>4.常见的散列函数有：</p>
-<p>（1）直接定址法</p>
-<p>（2）除留余数法</p>
-<p>（3）随机数法</p>
-<p>（4）数字分析法</p>
-<p>（5）平方取中法</p>
-<p>（6）折叠法</p>
-<p>（7）基数转换法</p>
-<p>（8）全域散列法</p>
-<p>5.散列函数设计中的冲突处理的方法有以下的三种：</p>
-<p>（1）开放地址法</p>
-<p>根据增量序列的不同，开放地址法又分为线性探测法、二次探测法、随机探测法、再散列法 </p>
-<p>（2）链地址法</p>
-<p>（3）建立公共溢出区</p>
-<p>6.散列表能够快速地查找和插入常见数据类型的数据，对其他数据类型需要相应的转 换。其查找和插入的效率与处理冲突的方法有关，不同的冲突处理方法效率不同 </p>
-<p>7.散列表查找的一般步骤：</p>
-<p>（1）使用哈希函数将要查找的键转换为散列值 </p>
-<p>（2）根据散列值计算出对应的数组索引位置 </p>
-<p>（3）在索引位置上查找是否存在对应的键值对，如果存在则返回对应的值，否则表示查找失败 </p>
-<p>8.在c++中可以使用标准库中的unordered_map 实现散列表，一些常用的成员函数如下：</p>
-<p>（1）insert：插入键值对到散列表中</p>
-<p>（2）erase：从散列表中删除特定的键值对</p>
-<p>（3）clear：清空散列表中所有的键值对</p>
-<p>（4）find：查找特定的键是否存在</p>
-<p>（5）at：访问特定键对应的值，如果键不存在则抛出异常</p>
-<p>（6）size：返回散列表中键值对的数量</p>
-<p>（7）empty：检查散列表是否为空</p>
+                <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h3 id="一、插入排序："><a href="#一、插入排序：" class="headerlink" title="一、插入排序："></a>一、插入排序：</h3><p>1.插入排序是一种简单直观的排序算法。它的基本思想是将待排序的元素逐个插入到已经有序的部分序列中，直到全部元素都插入完毕 </p>
+<p>2.插入排序的具体步骤：</p>
+<p>（1）假设第一个元素已经排好序</p>
+<p>（2）从第二个元素开始，将它与已排序的部分依次比较 </p>
+<p>（3）如果当前元素小于已排序部分的某个元素，则将其插入到该位置，并将后续元素依次后移 </p>
+<p>（4）重复第3步，直到所有元素都插入完毕 </p>
+<h3 id="二、希尔排序："><a href="#二、希尔排序：" class="headerlink" title="二、希尔排序："></a>二、希尔排序：</h3><p>1.希尔排序又称“缩小增量排序”，将待排序记录按下标的一定增量分组， 对每组记录使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至 1 时，整个序列基本有序，再对全部记录进行一次直接插入排序 </p>
+<p>2.希尔排序的基本步骤：</p>
+<p>（1）设待排序的记录存储在数组 r[1..n]中，增量序列为{d1, d2, …, dt}，n&gt;d1&gt;d2&gt;…&gt;dt&#x3D;1 </p>
+<p>（2）第一趟取增量 d1，所有间隔为 d1的记录分在一组，对每组记录进行直接插入排序 </p>
+<p>（3）第二趟取增量 d2，所有间隔为 d2的记录分在一组，对每组记录进行直接插入排序 </p>
+<p>（4）依次进行下去，直到所取增量 dt&#x3D;1，所有记录在一组中进行直接插入排序 </p>
+<h3 id="三、冒泡排序："><a href="#三、冒泡排序：" class="headerlink" title="三、冒泡排序："></a>三、冒泡排序：</h3><p>1.冒泡排序是一种最简单的交换排序算法，通过两两比较关键字，如果逆序就交换， 使关键字大的记录像泡泡一样冒出来放在尾部。重复执行若干次冒泡排序，最终得到有序序列 </p>
+<p>2.冒泡排序的基本步骤：</p>
+<p>（1）从数组的第一个元素开始，依次比较相邻的两个元素 </p>
+<p>（2）如果前一个元素大于后一个元素，则交换它们的位置，使较大的元素“冒泡”到后面 </p>
+<p>（3）继续对下一个相邻的元素进行比较和交换，直到将最大的元素排在数组的末尾 </p>
+<p>（4）重复步骤1~3，每一轮将当前未排序部分的最大元素放到已排序部分的末尾 </p>
+<p>（5）最终整个数组按照升序排列 </p>
+<p>3.冒泡排序的时间复杂度为O(n^2)，其中n为待排序元素的个数。它是一个稳定的排序算法，适用于数据量较小或数据已经部分有序的情况 </p>
+<h3 id="四、快速排序："><a href="#四、快速排序：" class="headerlink" title="四、快速排序："></a>四、快速排序：</h3><p>1.快速排序是一种高效的排序算法，它采用分治的思想，能够在平均情况下以O(nlogn)的时间复杂度对数组进行排序 </p>
+<p>2.快速排序的基本步骤：</p>
+<p>（1）选择一个基准元素（pivot），可以是数组中的任意一个元素 </p>
+<p>（2）将数组划分为两个子数组，使得左边的子数组中的所有元素都小于等于基准元素，右边的子数组中的所有元素都大于基准元素。这个过程称为分区（partition） </p>
+<p>（3）对左右子数组分别进行递归调用快速排序，直到子数组的大小为1或0，即达到了排序的基本情况 </p>
+<p>（4）将左子数组、基准元素和右子数组依次拼接起来，得到排序后的数组 </p>
+<p>3.快速排序算法的时间复杂度为O(nlogn)，其中n为待排序元素的个数。在最坏情况下，即每次分区都不平衡地划分数组时，时间复杂度退化为O(n^2)。为了避免最坏情况，可以选择合适的基准元素或使用随机化的快速排序算法 </p>
 
             </div>
 
@@ -357,11 +354,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：数据结构学习记录25</li>
+        <li>本文标题：数据结构学习记录26</li>
         <li>本文作者：Knight</li>
-        <li>创建时间：2023-08-11 21:40:06</li>
+        <li>创建时间：2023-08-12 21:27:37</li>
         <li>
-            本文链接：http://youxia123-cloud.github.io/2023/08/11/数据结构学习记录25/
+            本文链接：http://youxia123-cloud.github.io/2023/08/12/数据结构学习记录26/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -385,29 +382,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/08/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9526/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录26</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/08/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9524/"
+                            href="/2023/08/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9525/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">数据结构学习记录24</span>
+                                    <span class="post-nav-title-item">数据结构学习记录25</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -427,7 +409,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>目录</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%A3%E5%88%97%E8%A1%A8%E6%9F%A5%E6%89%BE%EF%BC%9A"><span class="nav-text">一、散列表查找：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%EF%BC%9A"><span class="nav-text">一、插入排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%EF%BC%9A"><span class="nav-text">二、希尔排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%EF%BC%9A"><span class="nav-text">三、冒泡排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%9A"><span class="nav-text">四、快速排序：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
