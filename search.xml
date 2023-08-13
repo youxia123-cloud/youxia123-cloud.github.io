@@ -4820,4 +4820,54 @@
         <tag>数据结构</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据结构学习记录27</title>
+    <url>/2023/08/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9527/</url>
+    <content><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h3 id="一、简单选择排序："><a href="#一、简单选择排序：" class="headerlink" title="一、简单选择排序："></a>一、简单选择排序：</h3><p>1.简单选择排序又称为直接选择排序，是一种最简单的选择排序算法，每次从待排序序列 中选择一个最小的放在最前面 </p>
+<p>2.简单选择排序的算法步骤如下：</p>
+<p>（1）设待排序的记录存储在数组 r[1..n]中，首先从 r[1..n]中选择一个关键字最小的记录 r[k]，r[k]与 r[1]交换 </p>
+<p>（2）第二趟排序，从 r[2..n]中选择一个关键字最小的记录 r[k]，r[k]与 r[2]交换 </p>
+<p>（3）重复上述过程，经过 n−1 趟排序，得到有序序列 </p>
+<ol start="3">
+<li></li>
+</ol>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">SimpleSeleSort</span><span class="params">(<span class="type">int</span> r[],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i,j,k,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        k = i;</span><br><span class="line">        <span class="keyword">for</span>(j = i+<span class="number">1</span>;j&lt;n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(r[j]&lt;r[k])</span><br><span class="line">                k = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(k!=i)</span><br><span class="line">        &#123;</span><br><span class="line">            temp = r[i];</span><br><span class="line">            r[i] = r[k];</span><br><span class="line">            r[k] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="二、堆排序："><a href="#二、堆排序：" class="headerlink" title="二、堆排序："></a>二、堆排序：</h3><p>1.堆排序是一种树形选择排序算法。简单选择排序算法每次选择一个关键字最小的记录需 要 O(n)的时间，而堆排序选择一个关键字最小的记录只需要 O(logn)的时间 </p>
+<p>2.堆可以看作一棵完全二叉树的顺序存储结构 。在这棵完全二叉树中，如果每一个节点的 值都大于等于左右孩子的值，称为最大堆（大顶堆）。如果每一个节点的值都小于等于左右 孩子的值，称为最小堆（小顶堆）</p>
+<p>3.堆排序的算法步骤：</p>
+<p>（1）构建初始堆</p>
+<p>（2）堆顶和最后一个记录交换，即r[1]和r[n]交换，将 r[1..n−1]重新调整为堆 </p>
+<p>（3）堆顶和最后一个记录交换，即 r[1]和 r[n−1]交换，将 r[1..n−2]重新调整为堆 </p>
+<p>（4）循环 n−1 次，得到一个有序序列 </p>
+<p>4.堆排序时多次交换关键字，可能会发生相等关键字排序前后位置不一致的情况，因此堆 排序是不稳定的排序方法 </p>
+<h3 id="三、合并排序："><a href="#三、合并排序：" class="headerlink" title="三、合并排序："></a>三、合并排序：</h3><p>1.合并排序就是采用分治的策略，将一个大的问题分成若干个小问题，先解决小问题，再 通过小问题解决大问题 </p>
+<p>2.合并排序是采用分治策略实现对 n 个元素进行排序的算法，是分治法的一个典型应用和 完美体现 </p>
+<p>3.合并排序的算法步骤：</p>
+<p>（1）分解—将待排序序列分成规模大致相等的两个子序列 </p>
+<p>（2）治理—对两个子序列进行合并排序 </p>
+<p>（3）合并—将排好序的有序子序列进行合并，得到最终的有序序列 </p>
+<h3 id="四、桶排序："><a href="#四、桶排序：" class="headerlink" title="四、桶排序："></a>四、桶排序：</h3><p>1.桶排序将待排序序列划分成若干个区间，每个区间可形象地看作一个桶，如果桶中的 记录多于一个则使用较快的排序方法进行排序，把每个桶中的记录收集起来，最终得到有序序列 </p>
+<p>2.桶排序的算法步骤：</p>
+<p>（1）确定桶的数量，并创建对应数量的空桶。桶的数量可以根据待排序数组的范围和数据分布情况来确定 </p>
+<p>（2）将待排序的数据依次分配到对应的桶中。具体的分配方式可以使用线性映射函数，将数据映射到桶的索引上 </p>
+<p>（3）对每个非空的桶进行单独排序。可以选择使用其他排序算法，比如插入排序、快速排序等。也可以使用递归的方式继续使用桶排序 </p>
+<p>（4）将所有非空桶中的元素按照顺序合并起来，形成有序的结果数组 </p>
+<h3 id="五、外部排序："><a href="#五、外部排序：" class="headerlink" title="五、外部排序："></a>五、外部排序：</h3><p>1.外部排序是一种用于处理大规模数据的排序算法，其中待排序的数据无法全部加载到内存中进行排序 </p>
+<p>2.在外部排序中，数据被分割成多个较小的块，并通过磁盘或文件系统进行读取和写入。这样可以将数据分为适应内存的大小，并对每个分块进行排序。最后，对已排序的分块进行合并，生成完整的有序数据 </p>
+<p>3.外部排序的基本步骤：</p>
+<p>（1）将待排序的大规模数据分割成适当大小的块，并一次性读取一块数据到内存中 </p>
+<p>（2）对每个块进行排序。可以使用内存中的排序算法，如快速排序或归并排序 </p>
+<p>（3）将排序后的块写回磁盘，并按照顺序进行编号，以便在后续合并阶段能够准确地读取并合并块 </p>
+<p>（4）重复步骤1-3，直到将所有数据都分割成了排序好的块，并写回磁盘 </p>
+<p>（5）对已排序的块进行合并。可以采用合并排序算法，将多个块逐个合并为一个有序的大块 </p>
+<p>合并后的结果是完整的有序数据</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
