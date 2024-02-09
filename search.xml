@@ -4913,8 +4913,8 @@
       </tags>
   </entry>
   <entry>
-    <title>书生·浦源实战营第一节课笔记</title>
-    <url>/2024/02/09/%E4%B9%A6%E7%94%9F%C2%B7%E6%B5%A6%E6%BA%90%E5%AE%9E%E6%88%98%E8%90%A5%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <title>书生·浦语实战营第一节课笔记</title>
+    <url>/2024/02/09/%E4%B9%A6%E7%94%9F%C2%B7%E6%B5%A6%E8%AF%AD%E5%AE%9E%E6%88%98%E8%90%A5%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="第一节课：书生·浦语大模型全链路开源体系"><a href="#第一节课：书生·浦语大模型全链路开源体系" class="headerlink" title="第一节课：书生·浦语大模型全链路开源体系"></a><strong>第一节课：书生·浦语大模型全链路开源体系</strong></h1><h3 id="一、大模型："><a href="#一、大模型：" class="headerlink" title="一、大模型："></a>一、大模型：</h3><p>1.大语言模型（large language model）已经成为当下热门的关键词之一</p>
 <p>2.专用模型：针对特定的任务，一个模型解决一个问题</p>
 <p>通用大模型：一个模型应对多种任务，多种模态</p>
@@ -4981,10 +4981,10 @@
 <p>LagentAgentLego：多模态智能体工具箱，支持多种类型的智能体系统，具有灵活的多模态工具调用接口，提供丰富的工具和算法功能</p>
 ]]></content>
       <categories>
-        <category>书生·浦源实战营</category>
+        <category>书生·浦语实战营</category>
       </categories>
       <tags>
-        <tag>书生·浦源实战营</tag>
+        <tag>书生·浦语实战营</tag>
       </tags>
   </entry>
 </search>
