@@ -5183,4 +5183,54 @@
         <tag>书生·浦语实战营</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机网络学习记录6</title>
+    <url>/2024/07/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%956/</url>
+    <content><![CDATA[<p>#计算机网络体系结构</p>
+<h3 id="一、常见的计算机网络体系结构"><a href="#一、常见的计算机网络体系结构" class="headerlink" title="一、常见的计算机网络体系结构"></a>一、常见的计算机网络体系结构</h3><p>1.OSI体系结构<br><a href="https://imgse.com/i/pkTWu0f"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWu0f.png"
+                      alt="pkTWu0f.png"
+                ></a></p>
+<p>法律上的国际标准<br>2.TIP、IP协议<br><a href="https://imgse.com/i/pkTWZ6I"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWZ6I.png"
+                      alt="pkTWZ6I.png"
+                ></a></p>
+<p>事实上的国际标准<br><a href="https://imgse.com/i/pkTWeXt"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWeXt.png"
+                      alt="pkTWeXt.png"
+                ></a></p>
+<p><strong>IP协议互联不同的网络接口</strong><br><strong>IP协议可以为各种网络应用提供服务</strong><br>3.原理分层：（适用于教学）<br><a href="https://imgse.com/i/pkTWnnP"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWnnP.png"
+                      alt="pkTWnnP.png"
+                ></a></p>
+<ol start="4">
+<li>（1）为什么要分层？<br><a href="https://imgse.com/i/pkTWV1A"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWV1A.png"
+                      alt="pkTWV1A.png"
+                ></a></li>
+</ol>
+<p>严格来说，传输媒体并不属于物理层<br>（2）如何标识网络中的各个主机（主机编码问题）？<br>如何从信号所表示的一连串比特流中地址和数据？<br>这些是数据链路层要解决的问题<br>（3）网络和主机共同编址的问题<br>路由器如何转发分组，如何进行路由选择？<br>这些是网络层要解决的问题<br>（4）如何解决进程之间基于网络的通信？<br>出现传输错误时，如何处理？<br>这些是运输层要解决的问题<br>（5）应用之间的交互完成特定的网络应用<br>这些事应用层的事情<br>5.总结：<br><a href="https://imgse.com/i/pkTWK78"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2024/07/20/pkTWK78.png"
+                      alt="pkTWK78.png"
+                ></a></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
