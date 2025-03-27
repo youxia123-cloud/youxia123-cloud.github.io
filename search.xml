@@ -5233,4 +5233,32 @@
         <tag>计算机网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Camel-AI学习记录1</title>
+    <url>/2025/03/27/Camel-AI%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</url>
+    <content><![CDATA[<h1 id="Camel-AI-学习记录1"><a href="#Camel-AI-学习记录1" class="headerlink" title="Camel-AI-学习记录1"></a>Camel-AI-学习记录1</h1><p>1.最近看了一下owl的开源Manus项目。准备先学习一下camel-AI这个框架</p>
+<p>2.第一步，安装camel-ai和相关的依赖</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">pip install camel-ai</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装工具库</span></span><br><span class="line">pip install &#x27;camel-ai[web_tools]&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置OPENAI_API_KEY</span></span><br><span class="line">export OPENAI_API_KEY=&#x27;your_openai_api_key&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置OPENAI_API_BASE</span></span><br><span class="line">export OPENAI_API_BASE=&quot;&lt;https://api.openai-proxy.org/v1&gt;&quot;</span><br></pre></td></tr></table></figure></div>
+
+<p>3.配置好之后，先运行一下github的实例，使用工具搜索，并回答问题，这里我对示例代码做了一些修改：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> camel.models <span class="keyword">import</span> ModelFactory</span><br><span class="line"><span class="keyword">from</span> camel.types <span class="keyword">import</span> ModelPlatformType, ModelType</span><br><span class="line"><span class="keyword">from</span> camel.agents <span class="keyword">import</span> ChatAgent</span><br><span class="line"><span class="keyword">from</span> camel.toolkits <span class="keyword">import</span> SearchToolkit</span><br><span class="line"></span><br><span class="line">model = ModelFactory.create(</span><br><span class="line">  model_platform=ModelPlatformType.OPENAI,</span><br><span class="line">  model_type=ModelType.GPT_3_5_TURBO,</span><br><span class="line">  url = <span class="string">&quot;&lt;https://api.openai-proxy.org/v1&gt;&quot;</span>,</span><br><span class="line">  api_key = <span class="string">&quot;your-openai-api-key&quot;</span>,</span><br><span class="line">  model_config_dict=&#123;<span class="string">&quot;temperature&quot;</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">search_tool = SearchToolkit().search_bing</span><br><span class="line"></span><br><span class="line">agent = ChatAgent(model=model, tools=[search_tool])</span><br><span class="line"></span><br><span class="line">response_1 = agent.step(<span class="string">&quot;CAMEL-AI是什么,如果你不知道，就搜一下&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response_1.msgs[<span class="number">0</span>].content)</span><br><span class="line"><span class="comment"># CAMEL-AI is the first LLM (Large Language Model) multi-agent framework</span></span><br><span class="line"><span class="comment"># and an open-source community focused on finding the scaling laws of agents.</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line">response_2 = agent.step(<span class="string">&quot;CAMEL ai 的github链接是什么?如果你不知道，请上网搜索，然后给出一个链接&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response_2.msgs[<span class="number">0</span>].content)</span><br><span class="line"><span class="comment"># The GitHub link to the CAMEL framework is</span></span><br><span class="line"><span class="comment"># &lt;https://github.com/camel-ai/camel&gt;.</span></span><br></pre></td></tr></table></figure></div>
+
+<p>对于APIkey，还是推荐写在.env文件中</p>
+<p>刚开始使用的搜索工具是baidu，但是没有搜索出链接，然后换成bing，运行之后结果：</p>
+<p><a href="https://imgse.com/i/pEDxeWd"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s21.ax1x.com/2025/03/27/pEDxeWd.png"
+                      alt="pEDxeWd.png"
+                ></a></p>
+<p>可以看到，智能体对输入的问题进行了搜索，并且给出了多个链接（要求他给出一个链接🤔）</p>
+<p>4.看了github上的介绍，camel运行不同的AI代理通过角色扮演和自主沟通来完成任务。之后会对其他场景的使用做进一步的探究</p>
+]]></content>
+      <categories>
+        <category>Camel-AI</category>
+      </categories>
+      <tags>
+        <tag>Camel-AI</tag>
+      </tags>
+  </entry>
 </search>
